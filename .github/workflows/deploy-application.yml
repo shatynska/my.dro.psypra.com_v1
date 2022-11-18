@@ -42,9 +42,8 @@ jobs:
       - name: Export deployment matrix
         id: export-deployment-matrix
         run: 
-          descr="description"
-          echo $descr
-          echo "::set-output name=deployment-matrix::$(echo $descr)"
+          echo "deployment-matrix={\"include\":[{\"name\":\"server\",\"ip\":\"185.233.36.64\"},{\"username\":\"root\",\"port\":\"22\"}]}" >> $GITHUB_OUTPUT
+
 
 
   prepare-release-on-servers:
