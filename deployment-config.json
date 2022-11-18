@@ -1,14 +1,1 @@
-[
-    {
-        "name": "server", 
-        "ip": "185.233.36.64",
-        "username": "root", 
-        "password": "la6ZvHWw8Ph2",
-        "port": "22", 
-        "beforeHooks": "", 
-        "afterHooks": "", 
-        "path": "/var/www/my.dro.psypra.com"
-
-    }
-
-]
+[{"name":"server","ip":"185.233.36.64","username":"root","password":"la6ZvHWw8Ph2","port":"22","beforeHooks":"","afterHooks":"","path":"/var/www/my.dro.psypra.com/current"}]
