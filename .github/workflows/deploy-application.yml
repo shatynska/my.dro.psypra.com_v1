@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  cteate-deployment-atrifacts:
+  create-deployment-artifacts:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
     outputs:
