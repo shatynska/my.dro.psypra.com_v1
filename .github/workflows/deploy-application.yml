@@ -47,7 +47,7 @@ jobs:
 
 
   prepare-release-on-servers:
-    name: "${{ deployment-matrix.server.name }}: Prepare release"
+    name: "${{ matrix.name }}: Prepare release"
     runs-on: ubuntu-latest
     needs: create-deployment-artifacts
     strategy:
