@@ -42,7 +42,7 @@ jobs:
       - name: Export deployment matrix
         id: export-deployment-matrix
         run: 
-          JSON='cat ./deployment-config.json'
+          JSON='hell00000'
           JSON="${JSON//'%'/'%25'}"
           JSON="${JSON//$'\n'/'%0A'}"
           JSON="${JSON//$'\r'/'%0D'}"
