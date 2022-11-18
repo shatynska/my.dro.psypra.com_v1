@@ -42,12 +42,9 @@ jobs:
       - name: Export deployment matrix
         id: export-deployment-matrix
         run: 
-          JSON='hell00000'
-          JSON="${JSON//'%'/'%25'}"
-          JSON="${JSON//$'\n'/'%0A'}"
-          JSON="${JSON//$'\r'/'%0D'}"
-          echo $JSON
-          echo "::set-output name=deployment-matrix::$(echo $JSON)"
+          descr="description"
+          echo $descr
+          echo "::set-output name=deployment-matrix::$(echo $descr)"
 
 
   prepare-release-on-servers:
