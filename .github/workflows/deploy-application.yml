@@ -46,7 +46,8 @@ jobs:
           JSON="${JSON//'%'/'%25'}"
           JSON="${JSON//$'\n'/'%0A'}"
           JSON="${JSON//$'\r'/'%0D'}"
-          echo "::set-output name=deployment-matrix::$JSON"
+          echo "deployment-matrix=$JSON" >> $GITHUB_OUTPUT
+
 
   prepare-release-on-servers:
     name: "${{ matrix.server.name }}: Prepare release"
