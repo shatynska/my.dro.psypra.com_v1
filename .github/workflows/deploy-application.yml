@@ -71,10 +71,10 @@ jobs:
         env:
           GITHUB_SHA: ${{ github.sha }}
         with:
-          host: ${{ matrix.server.host }}
-          username: ${{ matrix.server.username }}
+          host: 185.233.36.64
+          username: root
           password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ matrix.server.port }}
+          port: 22
           envs: GITHUB_SHA
           script:
             mkdir -p "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
