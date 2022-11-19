@@ -64,5 +64,6 @@ jobs:
           username: "root"
           password: "la6ZvHWw8Ph2"
           port: "22"
-          script: whoami
+          source: ${{ github.sha }}.tar.gz
+          target: /var/www/my.dro.psypra.com/artifacts
         
