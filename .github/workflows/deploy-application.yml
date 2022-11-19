@@ -76,9 +76,9 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           envs: GITHUB_SHA
-          script:
+          script: |
             mkdir -p "/var/www/my.dro.psypra.com/releases/${GITHUB_SHA}"
-            tar xzf /var/www/my.dro.psypra.com/artifacts/${GITHUB_SHA}.tar.gz -C "/var/www/my.dro.psypra.com/current"
+            tar xzf /var/www/my.dro.psypra.com/artifacts/${GITHUB_SHA}.tar.gz -C "/var/www/my.dro.psypra.com/releases/${GITHUB_SHA}"
             mkdir -p /var/www/my.dro.psypra.com/storage/{app,public,framework,logs}
             mkdir -p /var/www/my.dro.psypra.com/storage/framework/{cache,sessions,testing,views}
             chmod -R 0777 /var/www/my.dro.psypra.com/storage
