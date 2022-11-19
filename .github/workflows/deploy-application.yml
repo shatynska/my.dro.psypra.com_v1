@@ -42,7 +42,7 @@ jobs:
       - name: Export deployment matrix
         id: export-deployment-matrix
         run: 
-          echo "deployment-matrix={\"include\":[{\"name\":\"server\",\"ip\":\"185.233.36.64\",\"username\":\"root\",\"port\":\"22\",\"path\":\"/var/www/my.dro.psypra.com\"}]}" >> $GITHUB_OUTPUT
+          echo "deployment-matrix={\"name\":\"server\",\"ip\":\"185.233.36.64\",\"username\":\"root\",\"port\":\"22\",\"path\":\"/var/www/my.dro.psypra.com\"}" >> $GITHUB_OUTPUT
 
 
 
