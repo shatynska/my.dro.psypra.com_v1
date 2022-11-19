@@ -77,8 +77,4 @@ jobs:
           port: 22
           envs: GITHUB_SHA
           script:
-            mkdir -p "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
-            tar xzf ${{ matrix.server.path }}/artifacts/${GITHUB_SHA}.tar.gz "${{ matrix.server.path }}/current"
-            mkdir -p ${{ matrix.server.path }}/storage/{app,public,framework,logs}
-            mkdir -p ${{ matrix.server.path }}/storage/framework/{cache,sessions,testing,views}
-            chmod -R 0777 ${{ matrix.server.path }}/storage
+            tar xzf /var/www/my.dro.psypra.com/artifacts/${GITHUB_SHA}.tar.gz -C "/var/www/my.dro.psypra.com/current"
