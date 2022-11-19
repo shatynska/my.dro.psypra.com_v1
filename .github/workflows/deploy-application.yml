@@ -60,10 +60,10 @@ jobs:
       - name: Upload
         uses: appleboy/scp-action@master
         with:
-          host: "185.233.36.64"
-          username: "root"
+          host: ${{ matrix.server.path }}
+          username: ${{ matrix.server.username }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: "22"
+          port: ${{ matrix.server.port }}
           source: ${{ github.sha }}.tar.gz
           target: /var/www/my.dro.psypra.com/artifacts
       - name: Extract archive and create directories
@@ -71,10 +71,10 @@ jobs:
         env:
           GITHUB_SHA: ${{ github.sha }}
         with:
-          host: "185.233.36.64"
-          username: "root"
+          host: ${{ matrix.server.path }}
+          username: ${{ matrix.server.username }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: "22"
+          port: ${{ matrix.server.port }}
           envs: GITHUB_SHA
           script:
             mkdir -p "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
