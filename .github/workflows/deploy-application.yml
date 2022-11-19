@@ -47,12 +47,22 @@ jobs:
 
 
   prepare-release-on-servers:
-    name: "${{ matrix.name }}: Prepare release"
+    name: "${{ matrix.server.name }}: Prepare release"
     runs-on: ubuntu-latest
     needs: create-deployment-artifacts
     strategy:
-      matrix: ${{ fromJson(needs.create-deployment-artifacts.outputs.deployment-matrix) }}
+      matrix: 
+        server: ${{ fromJson(needs.create-deployment-artifacts.outputs.deployment-matrix) }}
     steps:
       - uses: actions/download-artifact@v3
         with:
           name: app-build
+      - name: Upload
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ matrix.server.ip }}
+          username: ${{ matrix.server.username }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ matrix.server.port }}
+          source: ${{ github.sha }}.tar.gz
+          target: ${{ matrix.server.path }}/artifacts
