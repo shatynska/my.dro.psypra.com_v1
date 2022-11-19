@@ -60,12 +60,12 @@ jobs:
       - name: Upload
         uses: appleboy/scp-action@master
         with:
-          host: ${{ matrix.server.host }}
-          username: ${{ matrix.server.username }}
+          host: 185.233.36.64
+          username: root
           password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ matrix.server.port }}
+          port: 22
           source: ${{ github.sha }}.tar.gz
-          target: ${{ matrix.server.path }}/artifacts
+          target: /var/www/my.dro.psypra.com/artifacts
       - name: Extract archive and create directories
         uses: appleboy/ssh-action@master
         env:
