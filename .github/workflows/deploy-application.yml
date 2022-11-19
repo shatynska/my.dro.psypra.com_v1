@@ -77,5 +77,5 @@ jobs:
           port: "22"
           envs: GITHUB_SHA
           script:
-            mkdir -p "${{ matrix.server.path }}/var/www/my.dro.psypra.com/releases/${GITHUB_SHA}"
-            tar xzf /var/www/my.dro.psypra.com/artifacts/${GITHUB_SHA}.tar.gz -C "/var/www/my.dro.psypra.com/releases/${GITHUB_SHA}"
+            mkdir -p "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
+            tar xzf ${{ matrix.server.path }}/artifacts/${GITHUB_SHA}.tar.gz -C "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
