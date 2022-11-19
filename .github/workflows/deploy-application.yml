@@ -65,7 +65,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ matrix.server.port }}
           source: ${{ github.sha }}.tar.gz
-          target: /var/www/my.dro.psypra.com/artifacts
+          target: ${{ matrix.server.path }}/artifacts
       - name: Extract archive and create directories
         uses: appleboy/ssh-action@master
         env:
