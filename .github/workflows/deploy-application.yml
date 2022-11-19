@@ -5,12 +5,18 @@ on:
     branches:
       - main
 
+env:
+  SERVER_NAME: server
+  SERVER_HOST: 185.233.36.64
+  SERVER_USERNAME: root
+  SERVER_PORT: 22
+  SERVER_PATH: /var/www/my.dro.psypra.com
+
+
 jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
-    outputs:
-      deployment-matrix: ${{ steps.export-deployment-matrix.outputs.deployment-matrix }}
     steps:
       - uses: actions/checkout@v3
 
@@ -39,20 +45,10 @@ jobs:
           name: app-build
           path: ${{ github.sha }}.tar.gz
 
-      - name: Export deployment matrix
-        id: export-deployment-matrix
-        run: 
-          echo "deployment-matrix=[{\"name\":\"server\",\"ip\":\"185.233.36.64\",\"username\":\"root\",\"port\":\"22\",\"path\":\"/var/www/my.dro.psypra.com\"}]" >> $GITHUB_OUTPUT
-
-
-
   prepare-release-on-servers:
-    name: "${{ matrix.server.name }}: Prepare release"
+    name: "Prepare release"
     runs-on: ubuntu-latest
     needs: create-deployment-artifacts
-    strategy:
-      matrix: 
-        server: ${{ fromJson(needs.create-deployment-artifacts.outputs.deployment-matrix) }}
     steps:
       - uses: actions/download-artifact@v3
         with:
