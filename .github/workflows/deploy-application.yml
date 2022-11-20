@@ -44,6 +44,7 @@ jobs:
         with:
           name: app-build
           path: ${{ github.sha }}.tar.gz
+          retention-days: 1
 
   prepare-release-on-servers:
     name: "Prepare release"
