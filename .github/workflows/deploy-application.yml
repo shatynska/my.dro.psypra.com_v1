@@ -124,8 +124,7 @@ jobs:
           envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH,ENV_PATH,LARAVEL_ENV
           script: |
             printf "%s" "$LARAVEL_ENV" > "${BASE_PATH}/.env"
-            ln -s -f ${BASE_PATH}/.env $RELEASE_PATH
+            ln -s -f ../.env $RELEASE_PATH
             rm -r $RELEASE_PATH/storage
-            ln -s -f $STORAGE_PATH $RELEASE_PATH
-            ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
-            service php8.1-fpm reload
+            ln -s -f ../storage $RELEASE_PATH
+            ln -s -n -f ./releases/${{ github.sha }} $ACTIVE_RELEASE_PATH
