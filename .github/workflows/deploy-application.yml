@@ -128,3 +128,23 @@ jobs:
             rm -r $RELEASE_PATH/storage
             ln -s -f ../../storage $RELEASE_PATH
             ln -s -n -f ./releases/${{ github.sha }} $ACTIVE_RELEASE_PATH
+
+  clean-up:
+    name: "Clean up"
+    runs-on: ubuntu-latest
+    needs: [ create-deployment-artifacts, prepare-release-on-servers, run-before-hooks, activate-release ]
+    steps:
+      - name: Activate release
+        uses: appleboy/ssh-action@master
+        env:
+          RELEASES_PATH: ${{ env.SERVER_PATH }}/releases
+          ARTIFACTS_PATH: ${{ env.SERVER_PATH }}/artifacts
+        with:
+          host: ${{ env.SERVER_HOST }}
+          username: ${{ env.SERVER_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ env.SERVER_PORT }}
+          envs: RELEASES_PATH,ARTIFACTS_PATH
+          script: |
+            cd $RELEASES_PATH && ls -t -1 | tail -n +6 | xargs rm -rf
+            cd $ARTIFACTS_PATH && ls -t -1 | tail -n +6 | xargs rm -rf
