@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Models\Specialist;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +15,14 @@ use App\Models\Listing;
 */
 
 Route::get('/', function () {
-    return view('welcome', [
-        'heading' => 'Latest listings', 
-        'listings' => Listing::all(),
+    return view('specialists', [
+        'heading' => 'Specialists', 
+        'specialists' => Specialist::all(),
     ]);
 });
 
-Route::get('/listings/{id}', function ($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
+Route::get('/specialists/{specialist}', function (Specialist $specialist) {
+    return view('specialist', [
+        'specialist' => $specialist
     ]);
 });
