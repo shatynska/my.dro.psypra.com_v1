@@ -7,4 +7,4 @@
 
 </p>
 
-<?php /**PATH /var/www/resources/views/listing.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/my.dro.psypra.com/current/resources/views/listing.blade.php ENDPATH**/ ?>
