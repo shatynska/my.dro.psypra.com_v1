@@ -122,7 +122,7 @@ jobs:
         port: ${{ env.SERVER_PORT }}
         envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH
         script: |
-          cd ${RELEASE_PATH}
+          cd $ACTIVE_RELEASE_PATH
           php artisan migrate --force
 
   activate-release:
