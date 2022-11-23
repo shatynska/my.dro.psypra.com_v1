@@ -115,14 +115,21 @@ jobs:
         ACTIVE_RELEASE_PATH: ${{ env.SERVER_PATH }}/current
         STORAGE_PATH: ${{ env.SERVER_PATH }}/storage
         BASE_PATH: ${{ env.SERVER_PATH }}
+        DB_CONNECTION: mysql
+        DB_HOST: db
+        DB_DATABASE: my_dro
+        DB_PORT: 3306
+        DB_USER: root
+        DB_PASSWORD: root
       with:
         host: ${{ env.SERVER_HOST }}
         username: ${{ env.SERVER_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         port: ${{ env.SERVER_PORT }}
-        envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH
+        envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH,DB_CONNECTION,DB_HOST,DB_DATABASE,DB_PORT,DB_USER,DB_PASSWORD
         script: |
           cd $ACTIVE_RELEASE_PATH
+
           php artisan migrate --force
 
   activate-release:
