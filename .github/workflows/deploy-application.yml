@@ -129,8 +129,8 @@ jobs:
         envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH,DB_CONNECTION,DB_HOST,DB_DATABASE,DB_PORT,DB_USER,DB_PASSWORD
         script: |
           cd $ACTIVE_RELEASE_PATH
-
-          php artisan migrate --force
+          pwd
+          php artisan migrate:fresh --seed
 
   activate-release:
     name: "Activate release"
