@@ -129,7 +129,7 @@ jobs:
         envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH,DB_CONNECTION,DB_HOST,DB_DATABASE,DB_PORT,DB_USER,DB_PASSWORD
         script: |
           cd $ACTIVE_RELEASE_PATH
-          docker exec -i $(docker ps -q -f name="my_dro_app.1*") bash 
+          docker exec -i $(docker ps -q -f name="my_dro_app.1*") sh 
           cd my.dro.psypra.com/current
           php artisan migrate:fresh --seed
           
