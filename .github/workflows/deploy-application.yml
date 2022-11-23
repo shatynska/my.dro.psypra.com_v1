@@ -34,6 +34,10 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --prefer-dist
 
+      - name: Run Migration
+        run: |
+        php artisan migrate --force  
+
       - name: Create deployment artifact
         env:
           GITHUB_SHA: ${{ github.sha }}
