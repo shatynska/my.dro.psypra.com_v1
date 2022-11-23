@@ -130,6 +130,7 @@ jobs:
         script: |
           cd $ACTIVE_RELEASE_PATH
           docker exec $(docker ps -q -f name="my_dro_app.1*") bash
+          pwd
           php artisan migrate:fresh --seed
 
   activate-release:
