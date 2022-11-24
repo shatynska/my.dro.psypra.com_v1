@@ -1,13 +1,38 @@
 <?php $__env->startSection('content'); ?>
+<div class="row">
 
-<h1>
-    <?php echo e($specialist['name']); ?>
+<div class="col-4">
+    <img src="<?php echo e(asset('images/no-image.jpg')); ?>" alt="" class="img-fluid">
+</div>
 
-</h1>
-<p>
-    <?php echo e($specialist['about_text']); ?>
 
-</p>
+<div class="col-8">
+    <h1>
+        <?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?>
+
+    </h1>
+    <p>
+        <?php echo e($specialist->year_of_birth); ?>
+
+    </p>
+    <p>
+        <?php echo e($specialist->year_of_starting); ?>
+
+    </p>
+    <p>
+        <?php echo e($specialist->about_text); ?>
+
+    </p>
+    <p>
+        <?php echo e($specialist->education_text); ?>
+
+    </p>
+    <p>
+        <?php echo e($specialist->doesnt_work_with); ?>
+
+    </p>
+</div>
+</div>
 
 <?php $__env->stopSection(); ?>
 

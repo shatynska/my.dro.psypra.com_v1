@@ -19,10 +19,14 @@ Route::get('/', function () {
         'heading' => 'Specialists', 
         'specialists' => Specialist::all(),
     ]);
-});
+})->name('home');
 
 Route::get('/specialists/{specialist}', function (Specialist $specialist) {
     return view('specialist', [
         'specialist' => $specialist
     ]);
+});
+
+Route::get('/hello', function() {
+    return str('hello world')->slug();
 });

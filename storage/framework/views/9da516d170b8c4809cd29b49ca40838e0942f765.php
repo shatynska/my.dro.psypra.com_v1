@@ -1,21 +1,29 @@
 <?php $__env->startSection('content'); ?>
+
 <h1>
     <?php echo e($heading); ?>
 
 </h1>
 <?php if (! (count($specialists) == 0)): ?>
+<div class="row">
 <?php $__currentLoopData = $specialists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialist): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<h3>
-    <a href="/specialists/<?php echo e($specialist['id']); ?>">
-        <?php echo e($specialist['name']); ?>
-
-    </a>
-</h3>
-<p>
-    <?php echo e($specialist['about_text']); ?>
-
-</p>
+<?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.specialist-card','data' => ['specialist' => $specialist]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('specialist-card'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['specialist' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($specialist)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+</div>
 <?php else: ?>
 <p>No specialist found</p>
 <?php endif; ?>
