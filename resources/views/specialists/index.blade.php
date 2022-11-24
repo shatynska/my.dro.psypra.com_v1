@@ -2,9 +2,6 @@
 
 @section('content')
 
-<h1>
-    {{$heading}}
-</h1>
 @unless(count($specialists) == 0)
 <div class="row">
 @foreach($specialists as $specialist)

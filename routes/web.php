@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Specialist;
+use App\Http\Controllers\SpecialistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +15,6 @@ use App\Models\Specialist;
 |
 */
 
-Route::get('/', function () {
-    return view('specialists', [
-        'heading' => 'Specialists', 
-        'specialists' => Specialist::all(),
-    ]);
-})->name('home');
+Route::get('/', [SpecialistController::class, 'index'])->name('home');
 
-Route::get('/specialists/{specialist}', function (Specialist $specialist) {
-    return view('specialist', [
-        'specialist' => $specialist
-    ]);
-});
-
-Route::get('/hello', function() {
-    return str('hello world')->slug();
-});
+Route::get('/specialists/{specialist}', [SpecialistController::class, 'show']);
