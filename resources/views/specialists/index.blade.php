@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-layout>
 
 @unless(count($specialists) == 0)
 <div class="row">
@@ -12,4 +10,4 @@
 <p>No specialist found</p>
 @endunless
 
-@endsection
+</x-layout>
