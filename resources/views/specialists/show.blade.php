@@ -1,5 +1,3 @@
-use App\Models\Specialty;
-
 <x-layout>
 
 <div class="row">
