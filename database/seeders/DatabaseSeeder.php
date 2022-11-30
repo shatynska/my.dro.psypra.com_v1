@@ -31,13 +31,40 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(2)->create();
 
-        Specialist::factory(10)->create();
+        Specialist::create(
+            [
+                'name' => 'Альона',
+                'last_name' => 'Шатинська',
+                'year_of_birth' => 1981,
+                'year_of_starting' => 2014,
+                'about_text' => fake()->text($maxNbChars = 200),
+                'education_text' => fake()->text($maxNbChars = 200),
+                'doesnt_work_with' => 'залежності',
+            ]
+        );
 
+        Specialist::create(
+            [
+                'name' => 'Ольга',
+                'last_name' => 'Петришин',
+                'year_of_birth' => 1985,
+                'year_of_starting' => 2019,
+                'about_text' => fake()->text($maxNbChars = 200),
+                'education_text' => fake()->text($maxNbChars = 200),
+                'doesnt_work_with' => 'втрати рідних',
+            ]
+        );
 
         $specialties = ["психолог", "психотерапевт", "психіатр"];
 
         foreach ($specialties as $specialty) {
             Specialty::create(['title' => $specialty]);
+        }
+                
+        foreach (Specialist::all() as $specialist) {
+            foreach(Specialty::all() as $specialty) {
+                $specialist->specialties()->attach($specialty->id);
+            }
         }
 
         $certificates = ["психолог", "психотерапевт", "психіатр"];
@@ -53,11 +80,23 @@ class DatabaseSeeder extends Seeder
             Quantity::create(['title' => $quantity]);
         }
 
+        foreach (Specialist::all() as $specialist) {
+            foreach (Quantity::all() as $quantity) {
+                $specialist->quantities()->attach($quantity->id);
+            }
+        }
+
 
         $ages = ["3+", "6+", "12+", "18+", "30+", "60+"];
 
         foreach ($ages as $age) {
             Age::create(['title' => $age]);
+        }
+
+        foreach (Specialist::all() as $specialist) {
+            foreach (Age::all() as $age) {
+                $specialist->directions()->attach($age->id);
+            }
         }
 
 
@@ -72,6 +111,12 @@ class DatabaseSeeder extends Seeder
 
         foreach ($directions as $direction) {
             Direction::create(['title' => $direction]);
+        }
+
+        foreach (Specialist::all() as $specialist) {
+            foreach (Direction::all() as $direction) {
+                $specialist->directions()->attach($direction->id);
+            }
         }
 
 

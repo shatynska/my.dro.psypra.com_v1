@@ -11099,3 +11099,1049 @@ Did you mean one of these?
 #66 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #67 {main}
 "} 
+[2022-11-30 19:46:11] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"/var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1802293484 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#266</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1802293484\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","specialist":"<pre class=sf-dump id=sf-dump-540023383 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-540023383\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-1823363191 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#1231</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>specialist</span>\" => <span class=sf-dump-note title=\"App\\Models\\Specialist
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1823363191\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-489273069 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-489273069\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-794944677 data-indent-pad=\"  \"><span class=sf-dump-note>array:1</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-794944677\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php:5)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/resources/views/specialists/index.blade.php(6): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+
+[previous exception] [object] (ParseError(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/storage/framework/views/c0846f4a6f49a6e3b8a4b2206e0c2242052e3ecd.php:25)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/storage/framework/views/c504d0e4c115f2496e70d9024dd31b4ab171e9a1.php(23): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+"} 
+[2022-11-30 19:47:03] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"/var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1688106549 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#266</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1688106549\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","specialist":"<pre class=sf-dump id=sf-dump-1108475190 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1108475190\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-1082127027 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#1231</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>specialist</span>\" => <span class=sf-dump-note title=\"App\\Models\\Specialist
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1082127027\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-389541470 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-389541470\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-680051616 data-indent-pad=\"  \"><span class=sf-dump-note>array:1</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-680051616\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php:5)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/resources/views/specialists/index.blade.php(6): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+
+[previous exception] [object] (ParseError(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/storage/framework/views/c0846f4a6f49a6e3b8a4b2206e0c2242052e3ecd.php:25)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/storage/framework/views/c504d0e4c115f2496e70d9024dd31b4ab171e9a1.php(23): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+"} 
+[2022-11-30 19:51:05] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"/var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1279304814 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#266</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1279304814\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","specialist":"<pre class=sf-dump id=sf-dump-409326607 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-409326607\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-135960648 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#1231</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>specialist</span>\" => <span class=sf-dump-note title=\"App\\Models\\Specialist
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Specialist</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [ &#8230;10]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-135960648\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-1002265542 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1002265542\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-2068339767 data-indent-pad=\"  \"><span class=sf-dump-note>array:1</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#1235</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-2068339767\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/resources/views/components/specialist-card.blade.php:5)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/resources/views/specialists/index.blade.php(6): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+
+[previous exception] [object] (ParseError(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/storage/framework/views/c0846f4a6f49a6e3b8a4b2206e0c2242052e3ecd.php:25)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/storage/framework/views/c504d0e4c115f2496e70d9024dd31b4ab171e9a1.php(23): Illuminate\\View\\Factory->renderComponent()
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(109): require('/var/www/my.dro...')
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 {main}
+"} 
+[2022-11-30 19:52:12] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"/var/www/my.dro.psypra.com/current/resources/views/specialists/show.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-597874122 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#267</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-597874122\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","specialist":"<pre class=sf-dump id=sf-dump-1589916760 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Specialist</span> {<a class=sf-dump-ref>#615</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1054;&#1083;&#1100;&#1075;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"8 characters\">&#1055;&#1077;&#1090;&#1088;&#1080;&#1096;&#1080;&#1085;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1985</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2019</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"151 characters\">Aliquid sed repellendus aut ab cumque. Occaecati odio fugiat rerum debitis. Laboriosam ab qui eaque. Est nesciunt voluptatum ea perspiciatis provident.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"178 characters\">Occaecati quas cum ut. Corrupti optio repellat et nobis. Consequatur illum consequuntur amet praesentium. Ut id autem qui qui sed. Impedit illo officia non illo consequuntur qui.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"13 characters\">&#1074;&#1090;&#1088;&#1072;&#1090;&#1080; &#1088;&#1110;&#1076;&#1085;&#1080;&#1093;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>2</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"5 characters\">&#1054;&#1083;&#1100;&#1075;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"8 characters\">&#1055;&#1077;&#1090;&#1088;&#1080;&#1096;&#1080;&#1085;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1985</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2019</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"151 characters\">Aliquid sed repellendus aut ab cumque. Occaecati odio fugiat rerum debitis. Laboriosam ab qui eaque. Est nesciunt voluptatum ea perspiciatis provident.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"178 characters\">Occaecati quas cum ut. Corrupti optio repellat et nobis. Consequatur illum consequuntur amet praesentium. Ut id autem qui qui sed. Impedit illo officia non illo consequuntur qui.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"13 characters\">&#1074;&#1090;&#1088;&#1072;&#1090;&#1080; &#1088;&#1110;&#1076;&#1085;&#1080;&#1093;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1589916760\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/resources/views/specialists/show.blade.php:18)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#49 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#50 {main}
+
+[previous exception] [object] (ParseError(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/storage/framework/views/f1dd4163123a8411dd8fe1f23d86390d995a7b6f.php:28)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#49 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#50 {main}
+"} 
+[2022-11-30 19:52:40] local.ERROR: Unclosed '(' does not match '}' {"view":{"view":"/var/www/my.dro.psypra.com/current/resources/views/specialists/show.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1413453723 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#267</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1413453723\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","specialist":"<pre class=sf-dump id=sf-dump-1934514578 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Specialist</span> {<a class=sf-dump-ref>#615</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"11 characters\">specialists</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:10</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">&#1040;&#1083;&#1100;&#1086;&#1085;&#1072;</span>\"
+    \"<span class=sf-dump-key>last_name</span>\" => \"<span class=sf-dump-str title=\"9 characters\">&#1064;&#1072;&#1090;&#1080;&#1085;&#1089;&#1100;&#1082;&#1072;</span>\"
+    \"<span class=sf-dump-key>year_of_birth</span>\" => \"<span class=sf-dump-str title=\"4 characters\">1981</span>\"
+    \"<span class=sf-dump-key>year_of_starting</span>\" => \"<span class=sf-dump-str title=\"4 characters\">2014</span>\"
+    \"<span class=sf-dump-key>about_text</span>\" => \"<span class=sf-dump-str title=\"195 characters\">Et aut iure magnam non corrupti nihil nemo aliquid. Voluptatem veniam eos laudantium quo vero et. Porro itaque corrupti quas facilis nostrum laboriosam et dolor. Vel animi laboriosam velit dolor.</span>\"
+    \"<span class=sf-dump-key>education_text</span>\" => \"<span class=sf-dump-str title=\"100 characters\">Molestias similique cum ut rem. Ex ut quaerat accusantium maxime. Ut vel architecto quas labore non.</span>\"
+    \"<span class=sf-dump-key>doesnt_work_with</span>\" => \"<span class=sf-dump-str title=\"10 characters\">&#1079;&#1072;&#1083;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1110;</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2022-11-30 19:43:15</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1934514578\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/resources/views/specialists/show.blade.php:18)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#49 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#50 {main}
+
+[previous exception] [object] (ParseError(code: 0): Unclosed '(' does not match '}' at /var/www/my.dro.psypra.com/current/storage/framework/views/f1dd4163123a8411dd8fe1f23d86390d995a7b6f.php:28)
+[stacktrace]
+#0 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/var/www/my.dro...', Array)
+#2 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/var/www/my.dro...', Array)
+#3 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(152): Illuminate\\View\\Engines\\CompilerEngine->get('/var/www/my.dro...', Array)
+#4 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(135): Illuminate\\View\\View->getContents()
+#5 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/View.php(104): Illuminate\\View\\View->renderContents()
+#6 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\\View\\View->render()
+#7 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(835): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(804): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(727): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#20 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(728): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(705): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(669): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#48 /var/www/my.dro.psypra.com/current/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#49 /var/www/my.dro.psypra.com/current/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#50 {main}
+"} 

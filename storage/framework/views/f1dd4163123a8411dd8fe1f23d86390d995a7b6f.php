@@ -24,21 +24,36 @@
 
 </div>
 <div class="row">
-<div class="col-md-6 col-xl-4">
-    <img src="<?php echo e(asset('images/shatynska_big.png')); ?>" alt="" class="img-fluid my-2">
+<div class="col-md-6 col-xl-4 my-4">
+    <img src="<?php echo e(asset('images/'.$specialist->id.'_big.png')); ?>" alt="" class="img-fluid my-2">
 </div>
 
 
-<div class="col-md-6 col-xl-4">
-    <h6>
-        форми роботи
-    </h6>
-    <p>
-        <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <?php echo e($quantity->title); ?>
+<div class="col-md-6 col-xl-4 my-4">
+    <div>
+        <h6>
+            форми роботи
+        </h6>
+        <p>
+            <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($quantity->title); ?>
 
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </p>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </p>
+    </div>
+
+    <div>
+        <h6>
+            напрямки терапії
+        </h6>
+        <p>
+            <?php $__currentLoopData = $specialist->directions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $direction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($direction->title); ?>
+
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </p>
+    </div>
+
     <p>
         <?php 
             echo 2022-$specialist->year_of_birth 

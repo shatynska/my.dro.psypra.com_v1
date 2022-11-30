@@ -14,20 +14,45 @@
 
 </div>
 <div class="row">
-<div class="col-md-6 col-xl-4">
-    <img src="{{asset('images/shatynska_big.png')}}" alt="" class="img-fluid my-2">
+<div class="col-md-6 col-xl-4 my-4">
+    <img src="{{asset('images/'.$specialist->id.'_big.png')}}" alt="" class="img-fluid my-2">
 </div>
 
 
-<div class="col-md-6 col-xl-4">
-    <h6>
-        форми роботи
-    </h6>
-    <p>
-        @foreach($specialist->quantities as $quantity)
-        {{ $quantity->title }}
-        @endforeach
-    </p>
+<div class="col-md-6 col-xl-4 my-4">
+    <div>
+        <h6>
+            форми роботи
+        </h6>
+        <p>
+            @foreach($specialist->quantities as $quantity)
+            {{ $quantity->title }}
+            @endforeach
+        </p>
+    </div>
+
+    <div>
+        <h6>
+            напрямки терапії
+        </h6>
+        <p>
+            @foreach($specialist->directions as $direction)
+            {{ $direction->title }}
+            @endforeach
+        </p>
+    </div>
+
+    <div>
+        <h6>
+            вікові групи
+        </h6>
+        <p>
+            @foreach($specialist->ages as $age)
+            {{ $age->title }}
+            @endforeach
+        </p>
+    </div>
+
     <p>
         @php 
             echo 2022-$specialist->year_of_birth 
