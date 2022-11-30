@@ -1,3 +1,12 @@
-<header class="my-5">
-<a href="/"><h5>Кабінет</h5></a>
-</header><?php /**PATH /var/www/my.dro.psypra.com/current/resources/views/partials/_header.blade.php ENDPATH**/ ?>
+<nav style="background: url('<?php echo e(asset('images/header-fon.png')); ?>') center no-repeat; height: 124px;">
+  <div class="container pt-4 ">
+    <a class="d-flex align-items-center link-light" href="/">
+        <img src="<?php echo e(asset('images/logo.png')); ?>" alt="" class="me-2">
+        <div style="font-size: 12px; line-height:14px">
+            <div>психологи</div>
+            <div>психотерапевти</div>
+            <div>психіатри</div>
+        </div>
+    </a>
+  </div>
+</nav><?php /**PATH /var/www/my.dro.psypra.com/current/resources/views/partials/_header.blade.php ENDPATH**/ ?>

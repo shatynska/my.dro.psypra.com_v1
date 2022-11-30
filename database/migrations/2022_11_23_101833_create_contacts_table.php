@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
+            $table->string('title')->unique();
+            $table->text('description')->nullable();
             $table->foreignId('specialist_id')->constrained()->onDelete('cascade');
-            $table->text('code');
+            $table->foreignId('program_id')->nullable()->constrained()->onDelete('cascade');
+            $table->json('code')->nullable();
             $table->timestamps();
         });
     }

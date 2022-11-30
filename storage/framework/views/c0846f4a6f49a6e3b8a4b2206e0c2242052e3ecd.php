@@ -13,19 +13,21 @@
 <?php unset($__defined_vars); ?>
 
 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.card','data' => ['class' => 'card']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('card'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<a href="/specialists/<?php echo e($specialist['id']); ?>">
-    <img src="<?php echo e(asset('/images/no-image.jpg')); ?>" class="img-fluid my-2" alt="">
-    <h6><?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?></h6>
-    <p>психолог, психотерапевт</p>
+<?php $component->withAttributes(['class' => 'card']); ?>
+<a href="/specialists/<?php echo e($specialist['id']); ?>" class="link-dark">
+    <img src="<?php echo e(asset('/images/shatynska.png')); ?>" class="card-img-top" alt="">
+    <div class="card-body">
+    <h6 class="card-title"><?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?></h6>
+    <span class="card-subtitle">психолог, психотерапевт</span>
 </a>
+</div>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>

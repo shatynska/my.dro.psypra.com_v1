@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Specialist;
+use Illuminate\Http\Request;
 
 class SpecialistController extends Controller
 {
@@ -18,4 +18,6 @@ class SpecialistController extends Controller
         'specialist' => $specialist
     ]);
     }
+
+    
 }

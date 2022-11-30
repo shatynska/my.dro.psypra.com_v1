@@ -22,6 +22,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
 
+RUN apt-get install -y nodejs
+
 WORKDIR /var/www
 
 

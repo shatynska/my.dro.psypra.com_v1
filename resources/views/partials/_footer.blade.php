@@ -1,3 +1,3 @@
-<footer class="my-5">
+<footer class="container">
     <p>copyright@2022, All Rights reserved</p>
 </footer>

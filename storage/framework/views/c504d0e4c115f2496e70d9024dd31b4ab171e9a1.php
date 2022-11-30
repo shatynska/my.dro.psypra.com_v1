@@ -9,7 +9,7 @@
 <?php $component->withAttributes([]); ?>
 
 <?php if (! (count($specialists) == 0)): ?>
-<div class="row">
+<div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-5">
 <?php $__currentLoopData = $specialists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialist): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.specialist-card','data' => ['specialist' => $specialist]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>

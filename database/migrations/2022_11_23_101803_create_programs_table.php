@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->text('code');
+            $table->string('title')->unique();
+            $table->text('description')->nullable();
+            $table->json('code')->nullable();
             $table->timestamps();
         });
     }

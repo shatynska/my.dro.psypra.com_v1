@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->foreignId('specialist_id')->constrained()->onDelete('cascade');
-            $table->foreignId('speciality_id')->constrained()->onDelete('cascade');
+            $table->foreignId('specialty_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

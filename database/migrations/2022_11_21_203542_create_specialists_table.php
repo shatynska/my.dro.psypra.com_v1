@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('last_name');
-            $table->year('year_of_birth');
-            $table->year('year_of_starting');
-            $table->text('about_text');
-            $table->text('education_text');
-            $table->string('doesnt_work_with');
+            $table->year('year_of_birth')->nullable();
+            $table->year('year_of_starting')->nullable();
+            $table->text('about_text')->nullable();
+            $table->text('education_text')->nullable();
+            $table->string('doesnt_work_with')->nullable();
             $table->timestamps();
         });
     }

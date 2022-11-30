@@ -1,16 +1,19 @@
 <x-layout>
 
 <div class="row">
-
-<div class="col-4">
-    <img src="{{asset('images/no-image.jpg')}}" alt="" class="img-fluid">
-</div>
-
-
-<div class="col-8">
+<div class="col">
     <h1>
         {{$specialist->name}} {{$specialist->last_name}}
     </h1>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 col-xl-4">
+    <img src="{{asset('images/shatynska_big.png')}}" alt="" class="img-fluid">
+</div>
+
+
+<div class="col-6">
     <p>
         {{$specialist->year_of_birth}}
     </p>

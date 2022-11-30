@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->foreignId('city_id')->constrained()->onDelete('cascade');
-            $table->text('code');
+            $table->text('description')->nullable();;
+            $table->foreignId('city_id')->nullable()->constrained()->onDelete('cascade');
+            $table->text('code')->nullable();;
             $table->timestamps();
         });
     }
