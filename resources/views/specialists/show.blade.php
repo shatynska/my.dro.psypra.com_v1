@@ -1,24 +1,43 @@
+use App\Models\Specialty;
+
 <x-layout>
 
 <div class="row">
 <div class="col">
-    <h1>
+    <h1 class="mb-2">
         {{$specialist->name}} {{$specialist->last_name}}
     </h1>
+    <h4 class="mb-2">
+        @foreach($specialist->specialties as $specialty)
+        {{ $specialty->title }}
+        @endforeach
+    </h4>
 </div>
+
 </div>
 <div class="row">
 <div class="col-md-6 col-xl-4">
-    <img src="{{asset('images/shatynska_big.png')}}" alt="" class="img-fluid">
+    <img src="{{asset('images/shatynska_big.png')}}" alt="" class="img-fluid my-2">
 </div>
 
 
-<div class="col-6">
+<div class="col-md-6 col-xl-4">
+    <h6>
+        форми роботи
+    </h6>
     <p>
-        {{$specialist->year_of_birth}}
+        @foreach($specialist->quantities as $quantity)
+        {{ $quantity->title }}
+        @endforeach
     </p>
     <p>
-        {{$specialist->year_of_starting}}
+        @php 
+            echo 2022-$specialist->year_of_birth 
+        @endphp 
+        р.
+    </p>
+    <p>
+        початок практиктики: {{$specialist->year_of_starting}}р.
     </p>
     <p>
         {{$specialist->about_text}}

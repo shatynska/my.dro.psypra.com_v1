@@ -15,7 +15,7 @@ class SpecialistController extends Controller
 
     public function show(Specialist $specialist) {
         return view('specialists.show', [
-        'specialist' => $specialist
+        'specialist' => $specialist, 
     ]);
     }
 

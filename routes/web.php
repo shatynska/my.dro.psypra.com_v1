@@ -19,7 +19,3 @@ use App\Http\Controllers\SpecialistController;
 Route::get('/', [SpecialistController::class, 'index'])->name('home');
 
 Route::get('/specialists/{specialist}', [SpecialistController::class, 'show']);
-
-Route::get('/hello', function() {
-    return Blade::render('hello, {{ $another }}, @if(false) my love @else my evil @endif', ['another' => 'hi']);
-});

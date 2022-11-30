@@ -2,10 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Specialist;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Price extends Model
 {
     use HasFactory;
+
+    public function specialists()
+    {
+        return $this->belongsToMany(Specialist::class);
+    }
 }
+
