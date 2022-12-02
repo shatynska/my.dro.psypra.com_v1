@@ -9,73 +9,144 @@
 <?php $component->withAttributes([]); ?>
 
 <div class="row">
-<div class="col">
-    <h1 class="mb-2">
-        <?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?>
+    <div class="col">
+        <h3 class="color-grey ps-4">
+            <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($specialty->title); ?>
 
-    </h1>
-    <h4 class="mb-2">
-        <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <?php echo e($specialty->title); ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </h3>
+        <h1>
+            <?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?>
 
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </h4>
+        </h1>
+    </div>
 </div>
 
-</div>
 <div class="row">
-<div class="col-md-6 col-xl-4 my-4">
-    <img src="<?php echo e(asset('images/'.$specialist->id.'_big.png')); ?>" alt="" class="img-fluid my-2">
-</div>
-
-
-<div class="col-md-6 col-xl-4 my-4">
-    <div>
-        <h6>
-            форми роботи
-        </h6>
-        <p>
-            <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php echo e($quantity->title); ?>
-
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </p>
+    
+    <div class="col-md-6 col-xl-4 my-4">
+        <img src="<?php echo e(asset('images/'.$specialist->id.'_big.png')); ?>" alt="" class="img-fluid my-2">
     </div>
 
-    <div>
-        <h6>
-            напрямки терапії
-        </h6>
-        <p>
-            <?php $__currentLoopData = $specialist->directions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $direction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php echo e($direction->title); ?>
 
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </p>
+    <div class="col-md-6 col-xl-4 my-4">
+        
+        <div>
+            <h6>
+                форми роботи
+            </h6>
+            <p class="ps-4">
+                <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php echo e($quantity->title); ?>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
+                вікові групи
+            </h6>
+            <p class="ps-4">
+                <?php $__currentLoopData = $specialist->ages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $age): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php echo e($age->title); ?>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
+                тривалість
+            </h6>
+            <p class="ps-4">
+                <?php $__currentLoopData = $specialist->durations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $duration): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php echo e($duration->title); ?>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
+                напрямки терапії
+            </h6>
+            <p class="ps-4">
+                <?php $__currentLoopData = $specialist->directions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $direction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php echo e($direction->title); ?>
+
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
+                вік
+            </h6 class="ps-4">
+                <p class="manrope">
+                <?php 
+                    echo 2022-$specialist->year_of_birth 
+                ?> 
+                р.
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
+            початок практиктики 
+            </h6 class="ps-4">
+                <p>
+            <?php echo e($specialist->year_of_starting); ?>р.
+            </p>
+        </div>
+        
     </div>
 
-    <p>
-        <?php 
-            echo 2022-$specialist->year_of_birth 
-        ?> 
-        р.
-    </p>
-    <p>
-        початок практиктики: <?php echo e($specialist->year_of_starting); ?>р.
-    </p>
-    <p>
-        <?php echo e($specialist->about_text); ?>
+    
+    <div class="col-md-6 col-xl-4 my-4">
+        <div class="my-2 d-flex gap-4">
+            <a href="">
+                <img src="<?php echo e(asset('images/programs/messenger.png')); ?>" alt="">
+            </a>
+            <a href="">
+                <img src="<?php echo e(asset('images/programs/telegram.png')); ?>" alt="">
+            </a>
+            <a href="">
+                <img src="<?php echo e(asset('images/programs/zoom.png')); ?>" alt="">
+            </a>
+            <a href="">
+                <img src="<?php echo e(asset('images/programs/skype.png')); ?>" alt="">
+            </a>
 
-    </p>
-    <p>
-        <?php echo e($specialist->education_text); ?>
+        </div>
+        <div class="my-4">
+            <h2 class="color-blue">+380978976847</h2>
+        </div>
+    </div>
 
-    </p>
-    <p>
-        <?php echo e($specialist->doesnt_work_with); ?>
-
-    </p>
 </div>
+
+<div class="row">
+    <div class="col">
+        <p>
+            <?php echo e($specialist->about_text); ?>
+
+        </p>
+        <p>
+            <?php echo e($specialist->education_text); ?>
+
+        </p>
+        <p>
+            <?php echo e($specialist->doesnt_work_with); ?>
+
+        </p>
+    </div>
 </div>
 
  <?php echo $__env->renderComponent(); ?>

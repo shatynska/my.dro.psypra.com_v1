@@ -21,11 +21,11 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['class' => 'card']); ?>
-<a href="/specialists/<?php echo e($specialist->id); ?>" class="link-dark">
+<a href="/specialists/<?php echo e($specialist->id); ?>" class="text-decoration-none">
     <img src="<?php echo e(asset('/images/'.$specialist->id.'.png')); ?>" class="card-img-top" alt="">
     <div class="card-body">
-    <h6 class="card-title"><?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?></h6>
-    <span class="card-subtitle">психолог, психотерапевт</span>
+    <h4 class="card-title"><?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?></h4>
+    <span class="card-subtitle color-grey">психолог, психотерапевт</span>
 </a>
 </div>
  <?php echo $__env->renderComponent(); ?>

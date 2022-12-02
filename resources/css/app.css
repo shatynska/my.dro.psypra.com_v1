@@ -1,15 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-body {
-    background-color: red;
-}
-
-.header {
-    color: white;
-}
-
-h1 {
-    font-size: 200px;
-}

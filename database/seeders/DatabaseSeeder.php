@@ -60,9 +60,9 @@ class DatabaseSeeder extends Seeder
         foreach ($specialties as $specialty) {
             Specialty::create(['title' => $specialty]);
         }
-                
+
         foreach (Specialist::all() as $specialist) {
-            foreach(Specialty::all() as $specialty) {
+            foreach (Specialty::all() as $specialty) {
                 $specialist->specialties()->attach($specialty->id);
             }
         }
@@ -95,7 +95,7 @@ class DatabaseSeeder extends Seeder
 
         foreach (Specialist::all() as $specialist) {
             foreach (Age::all() as $age) {
-                $specialist->directions()->attach($age->id);
+                $specialist->ages()->attach($age->id);
             }
         }
 
@@ -120,10 +120,16 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        $durations = ["разові консультації", "короткотривала психотерапія", "середньотривала психотерапія", "довготривала психотерапія", "ЕМДР", "системно-сімейна"];
+        $durations = ["разові консультації", "короткотривала психотерапія", "середньотривала психотерапія", "довготривала психотерапія"];
 
         foreach ($durations as $duration) {
             Duration::create(['title' => $duration]);
+        }
+
+        foreach (Specialist::all() as $specialist) {
+            foreach (Duration::all() as $duration) {
+                $specialist->durations()->attach($duration->id);
+            }
         }
 
 
