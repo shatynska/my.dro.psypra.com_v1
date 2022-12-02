@@ -1,9 +1,14 @@
+
+
 body,
 .container, a, a:hover {
     color: rgba(18, 50, 99, 1);
     font-family: "Manrope", sans-serif;
     font-size: 1em;
     line-height: 1.5rem;
+}
+.container {
+    display: grid;
 }
 h1 {
     font-size: 3.25em;
