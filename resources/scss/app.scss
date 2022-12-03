@@ -1,15 +1,31 @@
+$light-color: white;
+$dark-color: rgba(18, 50, 99, 1);
+$primary-color: rgba(18, 50, 99, 1);
+$secondary-color: rgba(109, 135, 175, 1);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
 
 
-body,
-.container, a, a:hover {
-    color: rgba(18, 50, 99, 1);
+body {
+    color: $dark-color;
     font-family: "Manrope", sans-serif;
     font-size: 1em;
     line-height: 1.5rem;
 }
+
 .container {
-    display: grid;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 h1 {
     font-size: 3.25em;
     line-height: 3.75rem;
@@ -59,4 +75,7 @@ h6 {
 }
 .color-grey {
     color: rgba(109, 135, 175, 1);
+}
+.one-more {
+    color: yellow;
 }
