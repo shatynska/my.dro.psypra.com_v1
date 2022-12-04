@@ -37,7 +37,7 @@ services:
     image: mysql:8.0
     restart: always
     volumes:
-      - mysql:/var/lib/mysql
+      - ${APP_PATH}/${APP_FOLDER}/tmp/db:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USERNAME: ${DB_USERNAME}
@@ -51,11 +51,23 @@ services:
     networks:
       - default
       
-volumes:
-  mysql:
+  npm:
+    image: node:latest
+    volumes:
+      - ${APP_PATH}/${APP_FOLDER}/:/var/www/my.dro.psypra.com
+    tty: true
+    working_dir: ${APP_PATH}/${APP_FOLDER}/current
+    ports:
+      - 5173:5173
+    entrypoint: /bin/sh -c "npm install && npm add -D sass && npm run dev"
+    networks:
+      - traefik-public
+      - default
+            
 
 networks:
   traefik-public:
     external: true
   default:
+
 
