@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col">
-        <h3 class="color-grey ps-4">
+        <h3 class="secondary-color ps-4">
             <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php echo e($specialty->title); ?>
 
@@ -126,7 +126,7 @@
 
         </div>
         <div class="my-4">
-            <h2 class="color-blue">+380978976847</h2>
+            <h2 class="primary-color">+380978976847</h2>
         </div>
     </div>
 
