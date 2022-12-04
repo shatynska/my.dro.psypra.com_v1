@@ -34,7 +34,7 @@ jobs:
           extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
 
       - name: Install Composer dependencies
-        run: composer install --prefer-dist --optimize-autoloader --no-dev 
+        run: composer install --prefer-dist 
 
       - name: Create deployment artifact
         env:
