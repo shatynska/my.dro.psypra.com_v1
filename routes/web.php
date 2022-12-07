@@ -18,4 +18,4 @@ use App\Http\Controllers\SpecialistController;
 
 Route::get('/', [SpecialistController::class, 'index'])->name('home');
 
-Route::get('/specialists/{specialist}', [SpecialistController::class, 'show']);
+Route::get('/specialists/{id}', [SpecialistController::class, 'show'])->name('specialists.show')->whereNumber('id');

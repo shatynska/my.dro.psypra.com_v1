@@ -8,7 +8,7 @@
             @endforeach
         </h3>
         <h1>
-            {{$specialist->name}} {{$specialist->last_name}}
+            {{ $specialist->name }} {{ $specialist->last_name }}
         </h1>
     </div>
 </div>
@@ -16,7 +16,7 @@
 <div class="row">
     {{-- image --}}
     <div class="col-md-6 col-xl-4 my-4">
-        <img src="{{asset('images/'.$specialist->id.'_big.png')}}" alt="" class="img-fluid my-2">
+        <img src={{ asset('images/'.$specialist->id.'_big.png') }} alt="" class="img-fluid my-2">
     </div>
 
 
@@ -88,7 +88,7 @@
             початок практиктики 
             </h6 class="ps-4">
                 <p>
-            {{$specialist->year_of_starting}}р.
+            {{ $specialist->year_of_starting }}р.
             </p>
         </div>
         
@@ -98,16 +98,16 @@
     <div class="col-md-6 col-xl-4 my-4">
         <div class="my-2 d-flex gap-4">
             <a href="">
-                <img src="{{asset('images/programs/messenger.png')}}" alt="">
+                <img src={{ asset('images/programs/messenger.png') }} alt="">
             </a>
             <a href="">
-                <img src="{{asset('images/programs/telegram.png')}}" alt="">
+                <img src={{ asset('images/programs/telegram.png') }} alt="">
             </a>
             <a href="">
-                <img src="{{asset('images/programs/zoom.png')}}" alt="">
+                <img src={{ asset('images/programs/zoom.png') }} alt="">
             </a>
             <a href="">
-                <img src="{{asset('images/programs/skype.png')}}" alt="">
+                <img src={{ asset('images/programs/skype.png') }} alt="">
             </a>
 
         </div>
@@ -121,13 +121,13 @@
 <div class="row">
     <div class="col">
         <p>
-            {{$specialist->about_text}}
+            {{ $specialist->about_text }}
         </p>
         <p>
-            {{$specialist->education_text}}
+            {{ $specialist->education_text }}
         </p>
         <p>
-            {{$specialist->doesnt_work_with}}
+            {{ $specialist->doesnt_work_with }}
         </p>
     </div>
 </div>

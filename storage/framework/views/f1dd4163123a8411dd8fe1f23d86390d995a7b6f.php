@@ -26,7 +26,7 @@
 <div class="row">
     
     <div class="col-md-6 col-xl-4 my-4">
-        <img src="<?php echo e(asset('images/'.$specialist->id.'_big.png')); ?>" alt="" class="img-fluid my-2">
+        <img src=<?php echo e(asset('images/'.$specialist->id.'_big.png')); ?> alt="" class="img-fluid my-2">
     </div>
 
 
@@ -112,16 +112,16 @@
     <div class="col-md-6 col-xl-4 my-4">
         <div class="my-2 d-flex gap-4">
             <a href="">
-                <img src="<?php echo e(asset('images/programs/messenger.png')); ?>" alt="">
+                <img src=<?php echo e(asset('images/programs/messenger.png')); ?> alt="">
             </a>
             <a href="">
-                <img src="<?php echo e(asset('images/programs/telegram.png')); ?>" alt="">
+                <img src=<?php echo e(asset('images/programs/telegram.png')); ?> alt="">
             </a>
             <a href="">
-                <img src="<?php echo e(asset('images/programs/zoom.png')); ?>" alt="">
+                <img src=<?php echo e(asset('images/programs/zoom.png')); ?> alt="">
             </a>
             <a href="">
-                <img src="<?php echo e(asset('images/programs/skype.png')); ?>" alt="">
+                <img src=<?php echo e(asset('images/programs/skype.png')); ?> alt="">
             </a>
 
         </div>
