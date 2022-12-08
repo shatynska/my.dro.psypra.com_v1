@@ -12,8 +12,7 @@
     <div class="col">
         <h3 class="secondary-color ps-4">
             <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php echo e($specialty->title); ?>
-
+            <?php echo e($specialty->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </h3>
         <h1>
@@ -34,12 +33,23 @@
         
         <div>
             <h6>
+                спеціальності
+            </h6>
+            <p class="ps-4">
+                <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <a href="<?php echo e(route('specialists')); ?>?specialty=<?php echo e($specialty->id); ?>" ><?php echo e($specialty->title); ?></a><?php if(!$loop->last): ?>, <?php endif; ?>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </p>
+        </div>
+
+        
+        <div>
+            <h6>
                 форми роботи
             </h6>
             <p class="ps-4">
                 <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($quantity->title); ?>
-
+                <?php echo e($quantity->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>
@@ -51,8 +61,7 @@
             </h6>
             <p class="ps-4">
                 <?php $__currentLoopData = $specialist->ages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $age): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($age->title); ?>
-
+                <?php echo e($age->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>
@@ -64,8 +73,7 @@
             </h6>
             <p class="ps-4">
                 <?php $__currentLoopData = $specialist->durations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $duration): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($duration->title); ?>
-
+                <?php echo e($duration->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>
@@ -77,8 +85,7 @@
             </h6>
             <p class="ps-4">
                 <?php $__currentLoopData = $specialist->directions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $direction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($direction->title); ?>
-
+                <?php echo e($direction->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>

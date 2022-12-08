@@ -5,9 +5,6 @@
 @foreach($specialists as $specialist)
 <x-specialist-card :specialist="$specialist"/>
 @endforeach
-@foreach($specialists as $specialist)
-<x-specialist-card :specialist="$specialist"/>
-@endforeach
 </div>
 @else
 <p>No specialist found</p>

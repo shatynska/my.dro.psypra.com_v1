@@ -4,7 +4,7 @@
     <div class="col">
         <h3 class="secondary-color ps-4">
             @foreach($specialist->specialties as $specialty)
-            {{ $specialty->title }}
+            {{ $specialty->title }}@if (!$loop->last), @endif
             @endforeach
         </h3>
         <h1>
@@ -24,11 +24,23 @@
         {{-- forms --}}
         <div>
             <h6>
+                спеціальності
+            </h6>
+            <p class="ps-4">
+                @foreach($specialist->specialties as $specialty)
+                <a href="{{ route('specialists') }}?specialty={{ $specialty->id }}" >{{ $specialty->title }}</a>@if (!$loop->last), @endif
+                @endforeach
+            </p>
+        </div>
+
+        {{-- forms --}}
+        <div>
+            <h6>
                 форми роботи
             </h6>
             <p class="ps-4">
                 @foreach($specialist->quantities as $quantity)
-                {{ $quantity->title }}
+                {{ $quantity->title }}@if (!$loop->last), @endif
                 @endforeach
             </p>
         </div>
@@ -40,7 +52,7 @@
             </h6>
             <p class="ps-4">
                 @foreach($specialist->ages as $age)
-                {{ $age->title }}
+                {{ $age->title }}@if (!$loop->last), @endif
                 @endforeach
             </p>
         </div>
@@ -52,7 +64,7 @@
             </h6>
             <p class="ps-4">
                 @foreach($specialist->durations as $duration)
-                {{ $duration->title }}
+                {{ $duration->title }}@if (!$loop->last), @endif
                 @endforeach
             </p>
         </div>
@@ -64,7 +76,7 @@
             </h6>
             <p class="ps-4">
                 @foreach($specialist->directions as $direction)
-                {{ $direction->title }}
+                {{ $direction->title }}@if (!$loop->last), @endif
                 @endforeach
             </p>
         </div>

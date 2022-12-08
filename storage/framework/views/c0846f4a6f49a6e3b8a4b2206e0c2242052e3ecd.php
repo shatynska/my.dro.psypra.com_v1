@@ -21,11 +21,15 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['class' => 'card']); ?>
-<a href=<?php echo e(route('specialists.show', ['id' => $specialist->id])); ?> class="text-decoration-none">
+<a href=<?php echo e(route('specialists.show', ['specialist' => $specialist->id])); ?> class="text-decoration-none">
     <img src=<?php echo e(asset('/images/'.$specialist->id.'.png')); ?> class="card-img-top" alt="">
     <div class="card-body">
     <h4 class="card-title"><?php echo e($specialist->name); ?> <?php echo e($specialist->last_name); ?></h4>
-    <span class="card-subtitle color-grey">психолог, психотерапевт</span>
+    <span class="card-subtitle color-grey">
+        <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php echo e($specialty->title); ?><?php if(!$loop->last): ?>,&nbsp; <?php endif; ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </span>
 </a>
 </div>
  <?php echo $__env->renderComponent(); ?>

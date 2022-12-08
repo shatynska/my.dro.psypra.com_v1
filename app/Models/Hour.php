@@ -10,8 +10,13 @@ class Hour extends Model
 {
     use HasFactory;
 
-    public function days()
+    public function specialists()
     {
-        return $this->belongsToMany(Day::class);
+        return $this->belongsToMany(Specialist::class);
+    }
+
+    public function day()
+    {
+        return $this->belongsTo(Day::class);
     }
 }
