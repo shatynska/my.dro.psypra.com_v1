@@ -7,8 +7,8 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-
-<h1>Hello <?php echo e($attributes->title); ?></h1>
+    
+<h1>Hello <?php echo e($attributes->title); ?> <?php echo e($attribute->title); ?></h1>
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
@@ -16,4 +16,4 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-<?php /**PATH /var/www/my.dro.psypra.com/current/resources/views/attributes/index.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/my.dro.psypra.com/current/resources/views/attributes/show.blade.php ENDPATH**/ ?>

@@ -21,4 +21,6 @@ Route::get('/', [SpecialistController::class, 'index'])->name('specialists');
 
 Route::get('/specialists/{specialist}', [SpecialistController::class, 'show'])->name('specialists.show')->whereNumber('specialist');
 
-Route::get('/attributes', [AttributeController::class, 'index'])->name('attributes.index');
+Route::get('/{attributes}', [AttributeController::class, 'index'])->name('attributes.index');
+
+Route::get('/{attributes}/{attribute}', [AttributeController::class, 'show'])->name('attributes.show');

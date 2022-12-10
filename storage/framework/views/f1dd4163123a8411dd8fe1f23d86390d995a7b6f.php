@@ -31,65 +31,23 @@
 
 
     <div class="col-md-6 col-xl-4 my-4">
-        
-        <div>
-            <h6>
-                спеціальності
-            </h6>
-            <p class="ps-4">
-                <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <a href="<?php echo e(route('attributes.index')); ?>" ><?php echo e($specialty->title); ?></a><?php if(!$loop->last): ?>, <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </p>
-        </div>
 
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.basic-attributes','data' => ['specialist' => $specialist]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('basic-attributes'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['specialist' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($specialist)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
         
-        <div>
-            <h6>
-                форми роботи
-            </h6>
-            <p class="ps-4">
-                <?php $__currentLoopData = $specialist->quantities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $quantity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($quantity->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </p>
-        </div>
-
-        
-        <div>
-            <h6>
-                вікові групи
-            </h6>
-            <p class="ps-4">
-                <?php $__currentLoopData = $specialist->ages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $age): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($age->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </p>
-        </div>
-
-        
-        <div>
-            <h6>
-                тривалість
-            </h6>
-            <p class="ps-4">
-                <?php $__currentLoopData = $specialist->durations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $duration): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($duration->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </p>
-        </div>
-
-        
-        <div>
-            <h6>
-                напрямки терапії
-            </h6>
-            <p class="ps-4">
-                <?php $__currentLoopData = $specialist->directions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $direction): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php echo e($direction->title); ?><?php if(!$loop->last): ?>, <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </p>
-        </div>
 
         
         <div>

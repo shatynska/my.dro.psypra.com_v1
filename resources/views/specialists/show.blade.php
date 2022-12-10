@@ -22,65 +22,9 @@
 
 
     <div class="col-md-6 col-xl-4 my-4">
-        {{-- forms --}}
-        <div>
-            <h6>
-                спеціальності
-            </h6>
-            <p class="ps-4">
-                @foreach($specialist->specialties as $specialty)
-                <a href="{{ route('attributes.index') }}" >{{ $specialty->title }}</a>@if (!$loop->last), @endif
-                @endforeach
-            </p>
-        </div>
 
-        {{-- forms --}}
-        <div>
-            <h6>
-                форми роботи
-            </h6>
-            <p class="ps-4">
-                @foreach($specialist->quantities as $quantity)
-                {{ $quantity->title }}@if (!$loop->last), @endif
-                @endforeach
-            </p>
-        </div>
-
-        {{-- ages --}}
-        <div>
-            <h6>
-                вікові групи
-            </h6>
-            <p class="ps-4">
-                @foreach($specialist->ages as $age)
-                {{ $age->title }}@if (!$loop->last), @endif
-                @endforeach
-            </p>
-        </div>
-
-        {{-- durations --}}
-        <div>
-            <h6>
-                тривалість
-            </h6>
-            <p class="ps-4">
-                @foreach($specialist->durations as $duration)
-                {{ $duration->title }}@if (!$loop->last), @endif
-                @endforeach
-            </p>
-        </div>
-
-        {{-- directions --}}
-        <div>
-            <h6>
-                напрямки терапії
-            </h6>
-            <p class="ps-4">
-                @foreach($specialist->directions as $direction)
-                {{ $direction->title }}@if (!$loop->last), @endif
-                @endforeach
-            </p>
-        </div>
+        <x-basic-attributes :specialist="$specialist" />
+        
 
         {{-- how old --}}
         <div>

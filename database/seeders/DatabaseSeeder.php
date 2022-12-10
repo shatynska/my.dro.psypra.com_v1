@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
                 ],
                 [
                     'title' => 'фахівці',
-                    'database' => 'specialist',
+                    'database' => 'specialists',
                     'extendable' => '0',
                 ],
                 [

@@ -1,5 +1,5 @@
 <x-layout>
-    
-<h1>Hello</h1>
+
+<h1>{{ $attributes->title }}</h1>
 
 </x-layout>
