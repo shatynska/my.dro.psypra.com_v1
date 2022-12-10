@@ -1,4 +1,5 @@
 <x-layout>
+
 {{-- name and specialty --}}
 <div class="row">
     <div class="col">
@@ -28,7 +29,7 @@
             </h6>
             <p class="ps-4">
                 @foreach($specialist->specialties as $specialty)
-                <a href="{{ route('specialists') }}?specialty={{ $specialty->id }}" >{{ $specialty->title }}</a>@if (!$loop->last), @endif
+                <a href="{{ route('attributes.index') }}" >{{ $specialty->title }}</a>@if (!$loop->last), @endif
                 @endforeach
             </p>
         </div>

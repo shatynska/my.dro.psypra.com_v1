@@ -8,6 +8,7 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
+
 <div class="row">
     <div class="col">
         <h3 class="secondary-color ps-4">
@@ -37,7 +38,7 @@
             </h6>
             <p class="ps-4">
                 <?php $__currentLoopData = $specialist->specialties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $specialty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <a href="<?php echo e(route('specialists')); ?>?specialty=<?php echo e($specialty->id); ?>" ><?php echo e($specialty->title); ?></a><?php if(!$loop->last): ?>, <?php endif; ?>
+                <a href="<?php echo e(route('attributes.index')); ?>" ><?php echo e($specialty->title); ?></a><?php if(!$loop->last): ?>, <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </p>
         </div>
