@@ -114,6 +114,25 @@
         </p>
     </div>
 </div>
+<table>
+    <thead>
+        <tr>
+            <th>
+                name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Helen
+            </td>
+            <td>
+                Shatynska
+            </td>
+        </tr>
+    </tbody>
+</table>
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

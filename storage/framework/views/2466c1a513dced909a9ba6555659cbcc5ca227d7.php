@@ -8,7 +8,7 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
     
-<h1>Hello <?php echo e($attributes->title); ?> <?php echo e($attribute->title); ?></h1>
+<h1><?php echo e($attributes->title); ?> <?php echo e($attribute->title); ?></h1>
 
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
