@@ -1,10 +1,6 @@
 <?php
 
-use App\Models\Specialist;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AttributeController;
-use App\Http\Controllers\SpecialistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +13,6 @@ use App\Http\Controllers\SpecialistController;
 |
 */
 
-Route::get('/', [SpecialistController::class, 'index'])->name('specialists');
-
-Route::get('/specialists/{specialist}', [SpecialistController::class, 'show'])->name('specialists.show')->whereNumber('specialist');
-
-Route::get('/{attributes}', [AttributeController::class, 'index'])->name('attributes.index');
-
-Route::get('/{attributes}/{attribute}', [AttributeController::class, 'show'])->name('attributes.show');
+Route::get('/', function () {
+    return view('welcome');
+});

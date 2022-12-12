@@ -1,1 +1,0 @@
-hello, {{ $another }}, @if(true) my love @else my evil @endif

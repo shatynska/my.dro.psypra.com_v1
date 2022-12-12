@@ -1,1 +1,0 @@
-hello, <?php echo e($another); ?>, <?php if(false): ?> my love <?php else: ?> my evil <?php endif; ?><?php /**PATH /var/www/my.dro.psypra.com/current/storage/framework/views/7c0b23bed5bccae965160dbd7219cfe09658c453.blade.php ENDPATH**/ ?>
