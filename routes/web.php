@@ -14,13 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth', 'verified')->group(function () {
+    Route::get('/', function () {
+        return view('main');
+    })->name('main');
+    Route::get('/contacts', function () {
+        return view('contacts');
+    })->name('contacts');
+    Route::get('/education', function () {
+        return view('education');
+    })->name('education');
+    Route::get('/queries', function () {
+        return view('queries');
+    })->name('queries');
+    Route::get('/method', function () {
+        return view('method');
+    })->name('method');
+    Route::get('/schedule', function () {
+        return view('schedule');
+    })->name('schedule');
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+    Route::get('/posts', function () {
+        return view('posts');
+    })->name('posts');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -28,4 +47,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
