@@ -20,6 +20,11 @@ class Specialist extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'last_name',
+    ];
+
     public function specialties()
     {
         return $this->belongsToMany(Specialty::class);
@@ -29,7 +34,7 @@ class Specialist extends Model
     {
         return $this->hasMany(Asset::class);
     }
-    
+
     public function quantities()
     {
         return $this->belongsToMany(Quantity::class);
