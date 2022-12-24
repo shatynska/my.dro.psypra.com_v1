@@ -15,17 +15,22 @@ class PageController extends Controller
     {
         $header = 'Головне';
 
-        $specialist_id = $request->user()->id;
-        $specialist = Specialist::all()->where('id', $specialist_id)->first();
+        $specialist = Specialist::find($request->user()->id);
         $attributes = Attribute::where('is_extendable', true)->get();
         return view('main', compact(['header', 'specialist', 'attributes']));
     }
 
     public function update(MainUpdateRequest $request)
     {
-        $request->user()->fill($request->validated());
+        $specialist = Specialist::find($request->user()->id);
 
-        $request->user()->save();
+        $specialist->update([
+            'name' => $request->input('name')
+        ]);
+
+        // $request->specialists()->fill($request->validated());
+
+        // $request->specialists()->save();
 
         return Redirect::route('main')->with('status', 'main-updated');
     }
