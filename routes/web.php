@@ -16,11 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth', 'verified')->group(function () {
-    Route::get('/', [PageController::class, 'edit'])->name('main.edit');
+    Route::get('/', [PageController::class, 'edit'])->name('main');
     Route::patch('/', [PageController::class, 'update'])->name('main.update');
     Route::get('/contacts', function () {
         return view('contacts');
     })->name('contacts');
+    Route::get('/photos', function () {
+        return view('photos');
+    })->name('photos');
     Route::get('/education', function () {
         return view('education');
     })->name('education');

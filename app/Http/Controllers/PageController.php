@@ -18,7 +18,7 @@ class PageController extends Controller
         $specialist_id = $request->user()->id;
         $specialist = Specialist::all()->where('id', $specialist_id)->first();
         $attributes = Attribute::where('is_extendable', true)->get();
-        return view('main.edit', compact(['header', 'specialist', 'attributes']));
+        return view('main', compact(['header', 'specialist', 'attributes']));
     }
 
     public function update(MainUpdateRequest $request)
@@ -27,6 +27,6 @@ class PageController extends Controller
 
         $request->user()->save();
 
-        return Redirect::route('main.edit')->with('status', 'main-updated');
+        return Redirect::route('main')->with('status', 'main-updated');
     }
 }
