@@ -7,6 +7,7 @@ use App\Models\Age;
 use App\Models\Day;
 use App\Models\City;
 use App\Models\Hour;
+use App\Models\User;
 use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
@@ -14,6 +15,7 @@ use App\Models\Contact;
 use App\Models\Program;
 use App\Models\Duration;
 use App\Models\Quantity;
+use App\Models\Attribute;
 use App\Models\Direction;
 use App\Models\Specialty;
 use App\Models\Specialist;
@@ -30,10 +32,70 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
+        User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        Attribute::insert(
+            [
+                [
+                    'title' => 'спеціальності',
+                    'database' => 'specialties',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'фахівці',
+                    'database' => 'specialists',
+                    'is_extendable' => '0',
+                ],
+                [
+                    'title' => 'форми роботи',
+                    'database' => 'quantities',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'вікові групи',
+                    'database' => 'ages',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'тривалість',
+                    'database' => 'durations',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'напрямки терапії',
+                    'database' => 'directions',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'вартість',
+                    'database' => 'prices',
+                    'is_extendable' => '0',
+                ],
+                [
+                    'title' => 'запити',
+                    'database' => 'queries',
+                    'is_extendable' => '1',
+                ],
+                [
+                    'title' => 'місця',
+                    'database' => 'places',
+                    'is_extendable' => '0',
+                ],
+                [
+                    'title' => 'години',
+                    'database' => 'hours',
+                    'is_extendable' => '0',
+                ],
+                [
+                    'title' => 'контакти',
+                    'database' => 'contacts',
+                    'is_extendable' => '0',
+                ],
+            ]
+        );
 
         Specialist::create(
             [

@@ -17,42 +17,21 @@ services:
       - "traefik.http.routers.${APP_NAME}.tls.certresolver=letsEncrypt"
     depends_on:
       - app
-      - db
-      - npm
     networks:
       - traefik-public
       - default
+      - mysql
 
   app:
     image: getaniftywebsite/laravel:latest
     volumes:
       - ${APP_PATH}/${APP_DOMAIN}/${APP_FOLDER}/:/var/www/${APP_DOMAIN}
       - ${APP_PATH}/${APP_DOMAIN}/${APP_FOLDER}/current/_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
-    depends_on:
-      - db
     networks:
       - traefik-public
       - default
+      - mysql
       
-
-
-  db:
-    image: mysql:8.0
-    restart: always
-    volumes:
-      - ${APP_PATH}/tmp/db:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USERNAME: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - 8191:3306
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-    labels:
-      - traefik.enable=false
-    networks:
-      - default
       
   npm:
     image: node:latest
@@ -62,12 +41,13 @@ services:
     working_dir: /var/www/${APP_DOMAIN}/current
     ports:
       - 5173:5173
-
     networks:
       - traefik-public
       - default
 
 networks:
   traefik-public:
+    external: true
+  mysql:
     external: true
   default:
