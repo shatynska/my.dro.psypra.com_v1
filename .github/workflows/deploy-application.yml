@@ -10,7 +10,7 @@ env:
   SERVER_HOST: 185.233.36.64
   SERVER_USERNAME: root
   SERVER_PORT: 22
-  SERVER_PATH: /var/www/my.dro.psypra.com
+  SERVER_PATH: /var/www/dro.psypra.com/my.dro.psypra.com/prod
 
 
 jobs:
@@ -176,5 +176,5 @@ jobs:
           port: ${{ env.SERVER_PORT }}
           envs: RELEASES_PATH,ARTIFACTS_PATH
           script: |
-            cd $RELEASES_PATH && ls -t -1 | tail -n +6 | xargs rm -rf
-            cd $ARTIFACTS_PATH && ls -t -1 | tail -n +6 | xargs rm -rf
+            cd $RELEASES_PATH && ls -t -1 | tail -n +2 | xargs rm -rf
+            cd $ARTIFACTS_PATH && ls -t -1 | tail -n +2 | xargs rm -rf
