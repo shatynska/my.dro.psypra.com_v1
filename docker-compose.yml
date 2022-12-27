@@ -11,17 +11,18 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-public"
-      - "traefik.http.routers.${APP_NAME}.entrypoints=https"
-      - "traefik.http.routers.${APP_NAME}.rule=Host(`${APP_DOMAIN}.localhost`)"
-      - "traefik.http.routers.${APP_NAME}.tls=true"
-      - "traefik.http.routers.${APP_NAME}.tls.certresolver=letsEncrypt"
+      - "traefik.http.routers.${APP_FOLDER}_${APP_NAME}.entrypoints=https"
+      - "traefik.http.routers.${APP_FOLDER}_${APP_NAME}.rule=Host(`${APP_DOMAIN}.localhost`)"
+      - "traefik.http.routers.${APP_FOLDER}_${APP_NAME}.tls=true"
+      - "traefik.http.routers.${APP_FOLDER}_${APP_NAME}.tls.certresolver=letsEncrypt"
+      - "traefik.http.routers.${APP_FOLDER}_${APP_NAME}.priority=20"
     depends_on:
       - app
     networks:
       - traefik-public
-      - default
       - mysql
-
+      - default
+      
   app:
     image: getaniftywebsite/laravel:latest
     volumes:
@@ -29,9 +30,8 @@ services:
       - ${APP_PATH}/${APP_DOMAIN}/${APP_FOLDER}/current/_docker/app/php.ini:/usr/local/etc/php/conf.d/php.ini
     networks:
       - traefik-public
-      - default
       - mysql
-      
+      - default
       
   npm:
     image: node:latest
@@ -41,10 +41,12 @@ services:
     working_dir: /var/www/${APP_DOMAIN}/current
     ports:
       - 5173:5173
+    entrypoint: /bin/sh -c "npm install && npm add -D sass && npm run dev"
     networks:
       - traefik-public
+      - mysql
       - default
-
+      
 networks:
   traefik-public:
     external: true
