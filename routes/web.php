@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth', 'verified')->group(function () {
-    Route::get('/', [PageController::class, 'edit'])->name('main');
-    Route::patch('/', [PageController::class, 'update'])->name('main.update');
+    Route::get('/', [MainPageController::class, 'edit'])->name('main');
+    Route::patch('/', [MainPageController::class, 'update'])->name('main.update');
     Route::get('/photos', function () {
         return view('photos');
     })->name('photos');

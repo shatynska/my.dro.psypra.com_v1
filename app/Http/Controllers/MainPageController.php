@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use App\Models\Attribute;
+use App\Models\Specialist;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\MainUpdateRequest;
+use Illuminate\Support\Facades\Redirect;
+
+class MainPageController extends Controller
+{
+    public function edit(Request $request)
+    {
+        $header = 'Головне';
+
+        $specialist = Specialist::find($request->user()->id);
+        $attributes = Attribute::where('is_main_attribute', true)->get();
+        return view('main', compact(['header', 'specialist', 'attributes']));
+    }
+
+    public function update(MainUpdateRequest $request)
+    {
+        $specialist = Specialist::find($request->user()->id);
+        $attributes = Attribute::where('is_main_attribute', true)->get();
+
+        $specialist->update([
+            'name' => $request->input('name'),
+            'last_name' => $request->input('last_name'),
+        ]);
+
+        foreach ($attributes as $attribute) {
+            $set_for_sync = [];
+
+            foreach (DB::table($attribute->database)->get() as $attribute_item) {
+                $id = $attribute_item->id;
+                $database = $attribute->database;
+
+                if ($request->has($database . '_' . $id)) {
+                    $set_for_sync[] = $id;
+                };
+
+                $specialist->{$database}()->sync($set_for_sync);
+            }
+        }
+
+        // $request->specialists()->fill($request->validated());
+
+        // $request->specialists()->save();
+
+        return Redirect::route('main')->with('status', 'main-updated');
+    }
+}

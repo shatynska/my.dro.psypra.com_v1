@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Blue node') }}
+            {{ __('Головне') }}
         </h2>
     </x-slot>
 
@@ -30,7 +30,7 @@
 
                     {{-- fieldsets for specialties, forms, ages and so on --}}
                     @foreach($attributes as $attribute)
-                    <x-form-fieldset :attribute="$attribute" />
+                    <x-form-fieldset :$attribute :$specialist />
                     @endforeach  
                     
                     
