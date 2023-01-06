@@ -7,7 +7,7 @@ use App\Models\Attribute;
 use App\Models\Specialist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\MainUpdateRequest;
+use App\Http\Requests\UpdateMainPageRequest;
 use Illuminate\Support\Facades\Redirect;
 
 class MainPageController extends Controller
@@ -21,8 +21,10 @@ class MainPageController extends Controller
         return view('main', compact(['header', 'specialist', 'attributes']));
     }
 
-    public function update(MainUpdateRequest $request)
+    public function update(UpdateMainPageRequest $request)
     {
+
+
         $specialist = Specialist::find($request->user()->id);
         $attributes = Attribute::where('is_main_attribute', true)->get();
 
