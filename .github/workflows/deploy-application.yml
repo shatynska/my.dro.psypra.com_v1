@@ -37,7 +37,7 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --optimize-autoloader --no-dev
 
-      - name: Env file
+      - name: Add production .env file
         env:
           LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
         run: printf "%s" "$LARAVEL_ENV" > ".env"
