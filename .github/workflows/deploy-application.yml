@@ -37,6 +37,13 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --optimize-autoloader --no-dev
 
+      - name: Env file
+        env:
+          LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
+        with:
+          envs: LARAVEL_ENV
+        run: printf "%s" "$LARAVEL_ENV" > ".env"
+
       - name: Optimizing Configuration Loading
         run: php artisan config:cache
 
