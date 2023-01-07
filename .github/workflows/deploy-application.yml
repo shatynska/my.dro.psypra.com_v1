@@ -40,9 +40,7 @@ jobs:
       - name: Env file
         env:
           LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
-        with:
-          envs: LARAVEL_ENV
-          script: printf "%s" "$LARAVEL_ENV" > ".env"
+        run: printf "%s" "$LARAVEL_ENV" > ".env"
 
       - name: Optimizing Configuration Loading
         run: php artisan config:cache
