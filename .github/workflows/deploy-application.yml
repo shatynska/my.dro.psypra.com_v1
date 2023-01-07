@@ -40,8 +40,8 @@ jobs:
       # - name: Optimizing Configuration Loading
       #   run: php artisan config:cache
 
-      # - name: Optimizing Route Loading
-      #   run: php artisan route:cache
+      - name: Optimizing Route Loading
+        run: php artisan route:cache
 
       # - name: Optimizing View Loading
       #   run: php artisan view:cache
