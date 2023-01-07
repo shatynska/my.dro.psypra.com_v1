@@ -37,8 +37,8 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --optimize-autoloader --no-dev
 
-      # - name: Optimizing Configuration Loading
-      #   run: php artisan config:cache
+      - name: Optimizing Configuration Loading
+        run: php artisan config:cache
 
       - name: Optimizing Route Loading
         run: php artisan route:cache
