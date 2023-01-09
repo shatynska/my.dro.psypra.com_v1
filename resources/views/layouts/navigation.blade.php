@@ -12,11 +12,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    @foreach ($navLinks as $navLink)
-                        <x-nav-link :href="route( $navLink->route )" :active="request()->routeIs( $navLink->route )">
-                            {{ $navLink->title }}
-                        </x-nav-link>
-                    @endforeach
+                    <x-nav-links  nav-tag="x-nav-link" :$navLinks />
                 </div>
             </div>
 
@@ -69,9 +65,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('main')" :active="request()->routeIs('main')">
-                {{ __('main') }}
-            </x-responsive-nav-link>
+            <x-nav-links nav-tag="x-responsive-nav-link" :$navLinks />
         </div>
 
         <!-- Responsive Settings Options -->
