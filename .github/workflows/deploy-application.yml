@@ -10,7 +10,7 @@ env:
   SERVER_HOST: 185.233.36.64
   SERVER_USERNAME: root
   SERVER_PORT: 22
-  SERVER_PATH: /var/www/dro.psypra.com/my.dro.psypra.com/green
+  SERVER_PATH: /var/www/test.psypra.com/test.psypra.com/green
 
 jobs:
   create-deployment-artifacts:
