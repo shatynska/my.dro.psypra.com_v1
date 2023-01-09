@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\NavLink;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\View\DynamicComponent;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -16,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Blade::component('dynamic-component', DynamicComponent::class);
     }
 
     /**
