@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\NavLink;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        View::composer(
+            'layouts.navigation',
+            function ($view) {
+                $navLinks = NavLink::orderBy('ordering')->get();
+                $view->with('navLinks', $navLinks);
+            }
+
+        );
     }
 }

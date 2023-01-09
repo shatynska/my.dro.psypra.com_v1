@@ -12,6 +12,7 @@ use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
 use App\Models\Contact;
+use App\Models\NavLink;
 use App\Models\Program;
 use App\Models\Duration;
 use App\Models\Quantity;
@@ -20,6 +21,7 @@ use App\Models\Direction;
 use App\Models\Specialty;
 use App\Models\Specialist;
 use Illuminate\Database\Seeder;
+use Database\Seeders\NavLinkSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,6 +38,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+
+
         Attribute::insert(
             [
                 [
@@ -241,5 +246,9 @@ class DatabaseSeeder extends Seeder
 
         $helen->directions()->attach('1');
         $olga->directions()->attach('1');
+
+        $this->call([
+            NavLinkSeeder::class,
+        ]);
     }
 }

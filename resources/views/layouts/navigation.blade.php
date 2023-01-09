@@ -12,33 +12,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('main')" :active="request()->routeIs('main')">
-                        {{ __('Головне') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('photos')" :active="request()->routeIs('photos')">
-                        {{ __('Фото') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
-                        {{ __('Контакти') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('education')" :active="request()->routeIs('education')">
-                        {{ __('Освіта') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('queries')" :active="request()->routeIs('queries')">
-                        {{ __('Теми') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('method')" :active="request()->routeIs('method')">
-                        {{ __('Мій підхід') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('schedule')" :active="request()->routeIs('schedule')">
-                        {{ __('Розклад') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                        {{ __('Про себе') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
-                        {{ __('Публікації') }}
-                    </x-nav-link>
+                    @foreach ($navLinks as $navLink)
+                        <x-nav-link :href="route( $navLink->route )" :active="request()->routeIs( $navLink->route )">
+                            {{ $navLink->title }}
+                        </x-nav-link>
+                    @endforeach
                 </div>
             </div>
 
