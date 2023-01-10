@@ -8,9 +8,6 @@
     <x-u-section>
         <div class="max-w-xl">
             <section>
-                <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-                    @csrf
-                </form>
 
                 <form method="post" action="{{ route('main.update') }}" class="mt-6 space-y-6">
                     @csrf

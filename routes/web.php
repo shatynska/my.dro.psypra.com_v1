@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\MainPageController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MainPageController;
+use App\Http\Controllers\PhotoPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/', [MainPageController::class, 'edit'])->name('main');
     Route::patch('/', [MainPageController::class, 'update'])->name('main.update');
-    Route::get('/photos', function () {
-        return view('photos');
-    })->name('photos');
+
+    Route::get('/photos', [PhotoPageController::class, 'edit'])->name('photos');
+    Route::patch('/photos', [PhotoPageController::class, 'update'])->name('photos.update');
+
     Route::get('/contacts', function () {
         return view('contacts');
     })->name('contacts');

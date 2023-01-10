@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\NavLink;
+use App\Models\Specialist;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\DynamicComponent;
@@ -30,12 +31,19 @@ class AppServiceProvider extends ServiceProvider
     {
 
         View::composer(
+            '*',
+            function ($view) {
+                $specialist = Specialist::find(1);
+                $view->with('specialist', $specialist);
+            }
+        );
+
+        View::composer(
             'layouts.navigation',
             function ($view) {
                 $navLinks = NavLink::orderBy('ordering')->get();
                 $view->with('navLinks', $navLinks);
             }
-
         );
     }
 }
