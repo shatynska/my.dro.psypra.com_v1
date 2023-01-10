@@ -26,7 +26,7 @@
                     </div>
 
                     {{-- fieldsets for specialties, forms, ages and so on --}}
-                    @foreach($attributes as $attribute)
+                    @foreach($mainAttributes as $attribute)
                     <x-form-fieldset :$attribute :$specialist />
                     @endforeach  
                     

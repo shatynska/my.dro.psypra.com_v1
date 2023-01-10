@@ -8,11 +8,10 @@ class PhotoPageController extends Controller
 {
     public function edit(Request $request)
     {
-        return view('photos');
+        return view('pages.photos');
     }
 
     public function update($request)
     {
-
     }
 }

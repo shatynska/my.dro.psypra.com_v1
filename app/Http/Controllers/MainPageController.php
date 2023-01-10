@@ -12,27 +12,25 @@ use Illuminate\Support\Facades\Redirect;
 
 class MainPageController extends Controller
 {
-    public function edit(Request $request)
+    public function edit()
     {
-        $header = 'Головне';
+        $mainAttributes = Attribute::where('is_main_attribute', true)->get();
 
-        $specialist = Specialist::find($request->user()->id);
-        $attributes = Attribute::where('is_main_attribute', true)->get();
-        return view('main', compact(['header', 'specialist', 'attributes']));
+        return view('pages.main', compact(['mainAttributes']));
     }
 
     public function update(UpdateMainPageRequest $request)
     {
 
         $specialist = Specialist::find($request->user()->id);
-        $attributes = Attribute::where('is_main_attribute', true)->get();
+        $mainAttributes = Attribute::where('is_main_attribute', true)->get();
 
         $specialist->update([
             'name' => $request->input('name'),
             'last_name' => $request->input('last_name'),
         ]);
 
-        foreach ($attributes as $attribute) {
+        foreach ($mainAttributes as $attribute) {
             $set_for_sync = [];
 
             foreach (DB::table($attribute->database)->get() as $attribute_item) {

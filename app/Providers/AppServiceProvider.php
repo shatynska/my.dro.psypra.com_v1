@@ -29,9 +29,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         View::composer(
-            '*',
+            'pages.*',
             function ($view) {
                 $specialist = Specialist::find(1);
                 $view->with('specialist', $specialist);

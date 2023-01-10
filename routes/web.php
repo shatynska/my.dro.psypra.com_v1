@@ -24,25 +24,25 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/photos', [PhotoPageController::class, 'update'])->name('photos.update');
 
     Route::get('/contacts', function () {
-        return view('contacts');
+        return view('pages.contacts');
     })->name('contacts');
     Route::get('/education', function () {
-        return view('education');
+        return view('pages.education');
     })->name('education');
     Route::get('/queries', function () {
-        return view('queries');
+        return view('pages.queries');
     })->name('queries');
     Route::get('/method', function () {
-        return view('method');
+        return view('pages.method');
     })->name('method');
     Route::get('/schedule', function () {
-        return view('schedule');
+        return view('pages.schedule');
     })->name('schedule');
     Route::get('/about', function () {
-        return view('about');
+        return view('pages.about');
     })->name('about');
     Route::get('/posts', function () {
-        return view('posts');
+        return view('pages.posts');
     })->name('posts');
 });
 
