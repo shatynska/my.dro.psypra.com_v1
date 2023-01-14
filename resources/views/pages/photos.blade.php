@@ -18,13 +18,14 @@
                         <x-text-input id="small_photo" name="small_photo" type="file" class="mt-1 block w-full" :value="old('small_photo', $specialist->small_photo)" />
                         <x-input-error class="mt-2" :messages="$errors->get('small_photo')" />
                     </div> 
-                    <img src={{ asset('storage/photos/' . Auth::user()->id . '/small.jpg') }} width="256" height="256"/>
+                    <img src={{ asset('storage/photos/' . Auth::user()->id . '/small.jpg') }} alt="" />
 
                     <div>
                         <x-input-label for="big_photo" :value="__('Велике вертикальне фото')" />
                         <x-text-input id="big_photo" name="big_photo" type="file" class="mt-1 block w-full" :value="old('big_photo', $specialist->small_photo)" />
                         <x-input-error class="mt-2" :messages="$errors->get('big_photo')" />
-                    </div> 
+                    </div>
+                    <img src={{ asset('storage/photos/' . Auth::user()->id . '/big.jpg') }} alt="" />
 
                     <div class="flex items-center gap-4">
                         <x-primary-button>{{ __('Save') }}</x-primary-button>
