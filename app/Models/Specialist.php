@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Models\Age;
 use App\Models\Day;
+use App\Models\User;
+use App\Models\Asset;
 use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
@@ -12,7 +14,6 @@ use App\Models\Duration;
 use App\Models\Quantity;
 use App\Models\Direction;
 use App\Models\Specialty;
-use App\Models\Asset;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -24,6 +25,11 @@ class Specialist extends Model
         'name',
         'last_name',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function specialties()
     {

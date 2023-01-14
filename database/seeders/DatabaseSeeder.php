@@ -35,12 +35,36 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         User::create([
-            'name' => 'Test User',
+            'name' => 'Helen',
             'email' => 'test@example.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ]);
+
+        User::create([
+            'name' => 'Olya',
+            'email' => 'olya@gmail.com',
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'remember_token' => Str::random(10),
+        ]);
+
+        Specialist::create(
+            [
+                'user_id' => '1',
+                'name' => 'Альона',
+                'last_name' => 'Шатинська',
+            ]
+        );
+
+        Specialist::create(
+            [
+                'user_id' => '2',
+                'name' => 'Оля',
+                'last_name' => 'Петришин',
+            ]
+        );
 
         Attribute::insert(
             [
@@ -114,19 +138,6 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        Specialist::create(
-            [
-                'name' => 'Альона',
-                'last_name' => 'Шатинська',
-            ]
-        );
-
-        Specialist::create(
-            [
-                'name' => 'Ольга',
-                'last_name' => 'Петришин',
-            ]
-        );
 
         $specialties = ["психолог", "психотерапевт", "психіатр"];
 
