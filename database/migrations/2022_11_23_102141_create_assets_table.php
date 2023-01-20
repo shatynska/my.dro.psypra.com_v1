@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('specialist_id')->constrained()->onDelete('cascade');
+            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
             $table->unsignedTinyInteger('type')->default(1);
             $table->unsignedTinyInteger('format')->default(1);
             $table->string('description')->nullable();

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('direction_specialist', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('direction_id')->constrained()->onDelete('cascade');
-            $table->foreignId('specialist_id')->constrained()->onDelete('cascade');
+            $table->foreignId('direction_id')->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
         });
     }
 

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('database')->nullable()->unique();
             $table->boolean('is_extendable')->nullable()->default(false);
             $table->boolean('is_main_attribute')->nullable()->default(false);
-            // $table->tinyInteger('way_to_filter')->nullable();
             $table->string('title1')->nullable();
             $table->string('title2')->nullable();
             $table->string('title3')->nullable();

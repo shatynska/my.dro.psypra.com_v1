@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('query_specialist', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('query_id')->constrained()->onDelete('cascade');
-            $table->foreignId('specialist_id')->constrained()->onDelete('cascade');
+            $table->foreignId('query_id')->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
             $table->boolean('is_acceptable')->default(true);
 
         });
