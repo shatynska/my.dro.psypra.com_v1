@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
-            $table->foreignId('program_id')->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('program_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

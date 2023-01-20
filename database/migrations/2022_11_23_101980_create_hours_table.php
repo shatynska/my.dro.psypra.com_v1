@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('hours', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
-            $table->foreignId('day_id')->constrained()->onDelete('set null');
+            $table->foreignId('day_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

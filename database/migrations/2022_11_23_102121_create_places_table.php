@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();;
-            $table->foreignId('city_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('city_id')->nullable()->nullable()->constrained()->onDelete('set null');
             $table->text('code')->nullable();;
             $table->timestamps();
         });

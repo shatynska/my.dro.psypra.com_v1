@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('quantity_specialist', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('quantity_id')->constrained()->onDelete('set null');
-            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
+            $table->foreignId('quantity_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
         });
     }
 

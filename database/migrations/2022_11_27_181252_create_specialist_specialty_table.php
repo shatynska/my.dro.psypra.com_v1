@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('specialist_specialty', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('specialist_id')->constrained()->onDelete('set null');
-            $table->foreignId('specialty_id')->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('specialty_id')->nullable()->constrained()->onDelete('set null');
         });
     }
 
