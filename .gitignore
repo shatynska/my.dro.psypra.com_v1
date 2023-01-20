@@ -16,6 +16,7 @@ yarn-error.log
 /.idea
 /.vscode
 
+/storage/media-library
 docker-compose.prod.yml
 docker-compose.yml
 server.env
