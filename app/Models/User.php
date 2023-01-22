@@ -50,9 +50,11 @@ class User extends Authenticatable implements HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('small')
+            ->performOnCollections('small_photos')
             ->crop('crop-center', 256, 256);
 
         $this->addMediaConversion('big')
+            ->performOnCollections('big_photos')
             ->crop('crop-center', 544, 812);
     }
 
