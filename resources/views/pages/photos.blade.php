@@ -4,11 +4,9 @@
             {{ __('Фото') }}
         </h2>
     </x-slot>
-
     <x-u-section>
         <div class="max-w-xl">
             <section>
-
                 <form method="post" action="{{ route('photos.update') }}" enctype="multipart/form-data" class="mt-6 space-y-6">
                     @csrf
                     @method('patch')
@@ -18,14 +16,14 @@
                         <x-text-input id="small_photo" name="small_photo" type="file" class="mt-1 block w-full" />
                         <x-input-error class="mt-2" :messages="$errors->get('small_photo')" />
                     </div> 
-                    {{-- <img src="{{ auth()->user()->getFirstMediaUrl('small_photos', 'small') }}" alt=""> --}}
+                    <img src="{{ auth()->user()->getFirstMediaUrl('small_photos', 'small') }}" alt="">
 
                     <div>
                         <x-input-label for="big_photo" :value="__('Велике вертикальне фото')" />
                         <x-text-input id="big_photo" name="big_photo" type="file" class="mt-1 block w-full" />
                         <x-input-error class="mt-2" :messages="$errors->get('big_photo')" />
                     </div>
-                    {{-- <img src="{{ auth()->user()->getFirstMediaUrl('big_photos', 'big') }}" alt=""> --}}
+                    <img src="{{ auth()->user()->getFirstMediaUrl('big_photos', 'big') }}" alt="">
 
                     <div class="flex items-center gap-4">
                         <x-primary-button>{{ __('Save') }}</x-primary-button>

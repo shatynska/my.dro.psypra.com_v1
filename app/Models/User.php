@@ -53,8 +53,7 @@ class User extends Authenticatable implements HasMedia
             ->crop('crop-center', 256, 256);
 
         $this->addMediaConversion('big')
-            ->width(544)
-            ->height(812);
+            ->crop('crop-center', 544, 812);
     }
 
     public function specialist()

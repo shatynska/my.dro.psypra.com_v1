@@ -6,9 +6,16 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libzip-dev \
     zip unzip \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    exif \
     git && \
+    docker-php-ext-install exif && \
+    docker-php-ext-enable exif && \
     docker-php-ext-install pdo_mysql && \
     docker-php-ext-install bcmath && \
+    docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg && \
     docker-php-ext-install gd && \
     docker-php-ext-install zip && \
     apt-get clean && \
@@ -21,8 +28,6 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
-
-RUN apt-get install -y nodejs
 
 WORKDIR /var/www
 
