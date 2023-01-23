@@ -13,20 +13,26 @@
 
                     <div>
                         <x-input-label for="small_photo" :value="__('Маленьке квадратне фото')" />
-                        <x-text-input id="small_photo" name="small_photo" type="file" class="mt-1 block w-full" />
+                        <img class="py-4" src="{{ auth()->user()->getFirstMediaUrl('small_photos', 'small') }}" alt="">
+                        @if(auth()->user()->getFirstMediaUrl('small_photos', 'small'))
+                            <x-button>{{ __('Видалити') }}</x-button>
+                        @endif
+                        <x-text-input id="small_photo" name="small_photo" type="file" class="pl-4" />
                         <x-input-error class="mt-2" :messages="$errors->get('small_photo')" />
                     </div> 
-                    <img src="{{ auth()->user()->getFirstMediaUrl('small_photos', 'small') }}" alt="">
-
+                    <hr/>
                     <div>
                         <x-input-label for="big_photo" :value="__('Велике вертикальне фото')" />
-                        <x-text-input id="big_photo" name="big_photo" type="file" class="mt-1 block w-full" />
+                        <img class="py-4"  src="{{ auth()->user()->getFirstMediaUrl('big_photos', 'big') }}" alt="">
+                        @if(auth()->user()->getFirstMediaUrl('big_photos', 'big'))
+                            <x-button>{{ __('Видалити') }}</x-button>
+                        @endif
+                        <x-text-input id="big_photo" name="big_photo" type="file" class="pl-4" />
                         <x-input-error class="mt-2" :messages="$errors->get('big_photo')" />
                     </div>
-                    <img src="{{ auth()->user()->getFirstMediaUrl('big_photos', 'big') }}" alt="">
 
                     <div class="flex items-center gap-4">
-                        <x-primary-button>{{ __('Save') }}</x-primary-button>
+                        <x-primary-button>{{ __('Зберегти') }}</x-primary-button>
 
                         @if (session('status') === 'main-updated')
                             <p

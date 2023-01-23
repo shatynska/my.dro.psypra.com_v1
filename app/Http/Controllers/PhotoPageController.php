@@ -26,20 +26,19 @@ class PhotoPageController extends Controller
         $user = User::find(Auth::user()->id);
 
         if ($request->hasFile('small_photo')) {
-            if ($user->getFirstMedia('small_photos')) {
-                $user->getFirstMedia('small_photos')->delete();
-            }
             $user->addMediaFromRequest('small_photo')
                 ->usingName('small')
                 ->toMediaCollection('small_photos');
+
+            $user->clearMediaCollectionExcept('small_photos', $user->getMedia('small_photos')->last());
         }
+
         if ($request->hasFile('big_photo')) {
-            if ($user->getFirstMedia('big_photo')) {
-                $user->getFirstMedia('big_photo')->delete();
-            }
             $user->addMediaFromRequest('big_photo')
                 ->usingName('big')
                 ->toMediaCollection('big_photos');
+
+            $user->clearMediaCollectionExcept('big_photos', $user->getMedia('big_photos')->last());
         }
 
         return Redirect::route('photos')->with('status', 'main-updated');
