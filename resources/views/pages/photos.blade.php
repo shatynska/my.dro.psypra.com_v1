@@ -7,12 +7,13 @@
     <x-u-section>
         <div class="max-w-xl">
             <section>
-                <div class="space-y-4 my-6">
+                @foreach($photos as $photo)
+                <div class="space-y-2 my-6">
                     
-                    <x-input-label for="small_photo" :value="__('Маленьке квадратне фото')" />
+                    <x-input-label for="{{ $photo[0] }}_photo" :value="__($photo[1])" />
 
-                    @if(auth()->user()->getFirstMediaUrl('small_photos', 'small'))
-                        <img src="{{ auth()->user()->getFirstMediaUrl('small_photos', 'small') }}" alt="">
+                    @if(auth()->user()->getFirstMediaUrl($photo[0].'_photos', $photo[0]))
+                        <img src="{{ auth()->user()->getFirstMediaUrl($photo[0].'_photos', $photo[0]) }}" alt="">
 
                         <form method="post" action="{{ route('photos.update') }}">
                             @csrf
@@ -26,8 +27,8 @@
                         @csrf
                         @method('patch')
                         
-                        <x-text-input id="small_photo" name="small_photo" type="file"  />
-                        <x-input-error class="mt-2" :messages="$errors->get('small_photo')" />
+                        <x-text-input id="{{ $photo[0] }}_photo" name="{{ $photo[0] }}_photo" type="file"  />
+                        <x-input-error class="mt-2" :messages="$errors->get($photo[0].'_photo')" />
                             
                         <div class="flex items-center gap-4">
                             <x-primary-button>{{ __('Завантажити') }}</x-primary-button>
@@ -47,6 +48,8 @@
                 </div>
 
                 <hr />
+
+                @endforeach
 
             </section>
         </div>

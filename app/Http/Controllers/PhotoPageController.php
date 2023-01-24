@@ -13,7 +13,8 @@ class PhotoPageController extends Controller
 {
     public function edit(Request $request)
     {
-        return view('pages.photos');
+        $photos = [['small', 'маленьке фото 256x256'], ['big', 'велике фото 544x812'],];
+        return view('pages.photos', compact(['photos']));
     }
 
     public function update(Request $request)
