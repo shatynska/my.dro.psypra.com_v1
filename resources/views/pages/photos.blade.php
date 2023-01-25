@@ -10,15 +10,17 @@
                 @foreach($photos as $photo)
                 <div class="space-y-2 my-6">
                     
-                    <x-input-label for="{{ $photo[0] }}_photo" :value="__($photo[1])" />
+                    <x-input-label for="{{ $photo['title'] }}_photo" :value="__($photo['description'])" />
 
-                    @if(auth()->user()->getFirstMediaUrl($photo[0].'_photos', $photo[0]))
-                        <img src="{{ auth()->user()->getFirstMediaUrl($photo[0].'_photos', $photo[0]) }}" alt="">
+                    @if(auth()->user()->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
+                        <img src="{{ auth()->user()->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
 
-                        <form method="post" action="{{ route('photos.update') }}">
+                        <form method="post" action="{{ route('photos.destroy') }}">
                             @csrf
-                            @method('delete')                   
-                            <x-button>{{ __('Видалити') }}</x-button>
+                            @method('delete')
+                             
+                            <input type="hidden" name="type" value="{{ $photo['title'] }}"  />
+                            <x-primary-button>{{ __('Видалити') }}</x-primary-button>
                         </form>
                         <div>або</div>
                     @endif
@@ -27,8 +29,9 @@
                         @csrf
                         @method('patch')
                         
-                        <x-text-input id="{{ $photo[0] }}_photo" name="{{ $photo[0] }}_photo" type="file"  />
-                        <x-input-error class="mt-2" :messages="$errors->get($photo[0].'_photo')" />
+                        <x-text-input id="{{ $photo['title'] }}_photo" name="{{ $photo['title'] }}_photo" type="file"  />
+                        <input type="hidden" name="type" value="{{ $photo['title'] }}"  />
+                        <x-input-error class="mt-2" :messages="$errors->get($photo['title'].'_photo')" />
                             
                         <div class="flex items-center gap-4">
                             <x-primary-button>{{ __('Завантажити') }}</x-primary-button>

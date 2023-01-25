@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class PhotoPageController extends Controller
 {
     public function edit(Request $request)
     {
-        $photos = [['small', 'маленьке фото 256x256'], ['big', 'велике фото 544x812'],];
+        $photos = [['title' => 'small', 'description' => 'квадратне фото (мінімально 256x256)'], ['title' => 'big', 'description' => 'вертикальне фото (мінімально 544x812)']];
         return view('pages.photos', compact(['photos']));
     }
 
@@ -23,24 +24,25 @@ class PhotoPageController extends Controller
             'small_photo' => 'image|max:2048|dimensions:min_width=256,min_height:256',
             'big_photo' => 'image|max:2048|dimensions:min_width=544,min_height:812',
         ]);
-
         $user = User::find(Auth::user()->id);
+        $type = $request->type;
 
-        if ($request->hasFile('small_photo')) {
-            $user->addMediaFromRequest('small_photo')
-                ->usingName('small')
-                ->toMediaCollection('small_photos');
+        if ($request->hasFile($type . '_photo')) {
+            $user->addMediaFromRequest($type . '_photo')
+                ->usingName($type)
+                ->toMediaCollection($type . '_photos');
 
-            $user->clearMediaCollectionExcept('small_photos', $user->getMedia('small_photos')->last());
+            $user->clearMediaCollectionExcept($type . '_photos', $user->getMedia($type . '_photos')->last());
         }
 
-        if ($request->hasFile('big_photo')) {
-            $user->addMediaFromRequest('big_photo')
-                ->usingName('big')
-                ->toMediaCollection('big_photos');
+        return Redirect::route('photos')->with('status', 'main-updated');
+    }
 
-            $user->clearMediaCollectionExcept('big_photos', $user->getMedia('big_photos')->last());
-        }
+    public function destroy(Request $request)
+    {
+        $type = $request->type;
+
+        User::find(Auth::user()->id)->clearMediaCollection($type . '_photos');
 
         return Redirect::route('photos')->with('status', 'main-updated');
     }
