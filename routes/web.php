@@ -22,6 +22,7 @@ Route::middleware('auth', 'verified')->group(function () {
 
     Route::get('/photos', [PhotoPageController::class, 'edit'])->name('photos');
     Route::patch('/photos', [PhotoPageController::class, 'update'])->name('photos.update');
+    Route::delete('/photos', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
 
     Route::get('/contacts', function () {
         return view('pages.contacts');
