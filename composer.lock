@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "136d47f6f4a87d306c0b30d42ac0d778",
+    "content-hash": "e3eec639235ce884811f48ca31fca99b",
     "packages": [
         {
             "name": "brick/math",
@@ -3126,16 +3126,16 @@
         },
         {
             "name": "spatie/image",
-            "version": "2.2.4",
+            "version": "2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/image.git",
-                "reference": "c2dc137c52d17bf12aff94ad051370c0f106b322"
+                "reference": "c78e2dbdbced9c1673800e5b813cc8a8127bc5ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/image/zipball/c2dc137c52d17bf12aff94ad051370c0f106b322",
-                "reference": "c2dc137c52d17bf12aff94ad051370c0f106b322",
+                "url": "https://api.github.com/repos/spatie/image/zipball/c78e2dbdbced9c1673800e5b813cc8a8127bc5ac",
+                "reference": "c78e2dbdbced9c1673800e5b813cc8a8127bc5ac",
                 "shasum": ""
             },
             "require": {
@@ -3149,6 +3149,7 @@
                 "symfony/process": "^3.0|^4.0|^5.0|^6.0"
             },
             "require-dev": {
+                "pestphp/pest": "^1.22",
                 "phpunit/phpunit": "^9.5",
                 "symfony/var-dumper": "^4.0|^5.0|^6.0",
                 "vimeo/psalm": "^4.6"
@@ -3178,7 +3179,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/image/tree/2.2.4"
+                "source": "https://github.com/spatie/image/tree/2.2.5"
             },
             "funding": [
                 {
@@ -3190,7 +3191,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-09T10:18:57+00:00"
+            "time": "2023-01-19T17:06:04+00:00"
         },
         {
             "name": "spatie/image-optimizer",
@@ -3248,16 +3249,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "10.7.9",
+            "version": "10.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "cad203e427391f120c872ed89452ce7f786eb07c"
+                "reference": "5c9fb62f8d4019e7fc2741d9812849661d78ed15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/cad203e427391f120c872ed89452ce7f786eb07c",
-                "reference": "cad203e427391f120c872ed89452ce7f786eb07c",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/5c9fb62f8d4019e7fc2741d9812849661d78ed15",
+                "reference": "5c9fb62f8d4019e7fc2741d9812849661d78ed15",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3341,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-medialibrary/issues",
-                "source": "https://github.com/spatie/laravel-medialibrary/tree/10.7.9"
+                "source": "https://github.com/spatie/laravel-medialibrary/tree/10.7.10"
             },
             "funding": [
                 {
@@ -3352,7 +3353,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-12T16:58:45+00:00"
+            "time": "2023-01-19T07:58:23+00:00"
         },
         {
             "name": "spatie/temporary-directory",
