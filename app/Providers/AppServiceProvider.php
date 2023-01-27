@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Models\NavLink;
 use App\Models\Specialist;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\DynamicComponent;
@@ -33,8 +32,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer(
             'pages.*',
             function ($view) {
-                $specialist = Specialist::find(Auth::user()->id);
-                $view->with('specialist', $specialist);
+                $specialist = Specialist::first();
+                $view->with(compact('specialist'));
             }
         );
 
@@ -42,7 +41,7 @@ class AppServiceProvider extends ServiceProvider
             'layouts.navigation',
             function ($view) {
                 $navLinks = NavLink::orderBy('ordering')->get();
-                $view->with('navLinks', $navLinks);
+                $view->with(compact('navLinks'));
             }
         );
     }

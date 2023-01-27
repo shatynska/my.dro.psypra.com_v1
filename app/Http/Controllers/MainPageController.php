@@ -22,7 +22,7 @@ class MainPageController extends Controller
     public function update(UpdateMainPageRequest $request)
     {
 
-        $specialist = Specialist::find($request->user()->id);
+        $specialist = Specialist::first();
         $mainAttributes = Attribute::where('is_main_attribute', true)->get();
 
         $specialist->update([

@@ -16,6 +16,8 @@ use App\Models\Direction;
 use App\Models\Specialty;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class Specialist extends Model
 {
@@ -25,6 +27,15 @@ class Specialist extends Model
         'name',
         'last_name',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::addGlobalScope(function (Builder $builder) {
+            $builder->where('id', auth()->id());
+        });
+    }
 
     public function user()
     {
