@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Attribute;
 use App\Models\Specialist;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\UpdateMainPageRequest;
 use Illuminate\Support\Facades\Redirect;
@@ -44,10 +42,6 @@ class MainPageController extends Controller
                 $specialist->{$database}()->sync($set_for_sync);
             }
         }
-
-        // $request->specialists()->fill($request->validated());
-
-        // $request->specialists()->save();
 
         return Redirect::route('main')->with('status', 'main-updated');
     }

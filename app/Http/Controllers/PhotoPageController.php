@@ -24,15 +24,15 @@ class PhotoPageController extends Controller
             'small_photo' => 'image|max:2048|dimensions:min_width=256,min_height:256',
             'big_photo' => 'image|max:2048|dimensions:min_width=544,min_height:812',
         ]);
-        $user = User::find(Auth::user()->id);
+        $specialist = Specialist::first();
         $type = $request->type;
 
         if ($request->hasFile($type . '_photo')) {
-            $user->addMediaFromRequest($type . '_photo')
+            $specialist->addMediaFromRequest($type . '_photo')
                 ->usingName($type)
                 ->toMediaCollection($type . '_photos');
 
-            $user->clearMediaCollectionExcept($type . '_photos', $user->getMedia($type . '_photos')->last());
+            $specialist->clearMediaCollectionExcept($type . '_photos', $specialist->getMedia($type . '_photos')->last());
         }
 
         return Redirect::route('photos')->with('status', 'main-updated');
@@ -42,7 +42,7 @@ class PhotoPageController extends Controller
     {
         $type = $request->type;
 
-        User::find(Auth::user()->id)->clearMediaCollection($type . '_photos');
+        Specialist::first()->clearMediaCollection($type . '_photos');
 
         return Redirect::route('photos')->with('status', 'main-updated');
     }

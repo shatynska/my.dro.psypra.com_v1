@@ -12,8 +12,8 @@
                     
                     <x-input-label for="{{ $photo['title'] }}_photo" :value="__($photo['description'])" />
 
-                    @if(auth()->user()->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
-                        <img src="{{ auth()->user()->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
+                    @if($specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
+                        <img src="{{ $specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
 
                         <form method="post" action="{{ route('photos.destroy') }}">
                             @csrf

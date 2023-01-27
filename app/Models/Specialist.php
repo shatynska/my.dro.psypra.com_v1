@@ -17,16 +17,22 @@ use App\Models\Specialty;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 
-class Specialist extends Model
+class Specialist extends Model implements HasMedia
 {
     use HasFactory;
+    use InteractsWithMedia;
+
 
     protected $fillable = [
         'name',
         'last_name',
     ];
+
 
     protected static function boot()
     {
@@ -36,6 +42,19 @@ class Specialist extends Model
             $builder->where('id', auth()->id());
         });
     }
+
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('small')
+            ->performOnCollections('small_photos')
+            ->crop('crop-center', 256, 256);
+
+        $this->addMediaConversion('big')
+            ->performOnCollections('big_photos')
+            ->crop('crop-center', 544, 812);
+    }
+
 
     public function user()
     {
