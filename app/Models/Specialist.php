@@ -38,7 +38,7 @@ class Specialist extends Model implements HasMedia
     {
         parent::boot();
 
-        self::addGlobalScope(function (Builder $builder) {
+        self::addGlobalScope('user', function (Builder $builder) {
             $builder->where('id', auth()->id());
         });
     }

@@ -236,8 +236,8 @@ class DatabaseSeeder extends Seeder
 
 
 
-        $helen = Specialist::find('1');
-        $olga = Specialist::find('2');
+        $helen = Specialist::withoutGlobalScope('user')->find('1');
+        $olga = Specialist::withoutGlobalScope('user')->find('2');
 
         $helen->specialties()->attach('1');
         $helen->specialties()->attach('2');
