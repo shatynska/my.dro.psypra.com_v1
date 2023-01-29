@@ -15,22 +15,19 @@
                     @if($specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
                         <img src="{{ $specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
 
-                        <form method="post" action="{{ route('photos.destroy') }}">
+                        <form method="POST" action="{{ route('photos.destroy',  $photo['title'] ) }}">
                             @csrf
-                            @method('delete')
+                            @method('DELETE')
                              
-                            <input type="hidden" name="type" value="{{ $photo['title'] }}"  />
                             <x-primary-button>{{ __('Видалити') }}</x-primary-button>
                         </form>
                         <div>або</div>
                     @endif
  
-                    <form method="post" action="{{ route('photos.update') }}" enctype="multipart/form-data" class="space-y-2">
+                    <form method="POST" action="{{ route('photos.store', $photo['title'] ) }}" enctype="multipart/form-data" class="space-y-2">
                         @csrf
-                        @method('patch')
                         
                         <x-text-input id="{{ $photo['title'] }}_photo" name="{{ $photo['title'] }}_photo" type="file"  />
-                        <input type="hidden" name="type" value="{{ $photo['title'] }}"  />
                         <x-input-error class="mt-2" :messages="$errors->get($photo['title'].'_photo')" />
                             
                         <div class="flex items-center gap-4">

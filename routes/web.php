@@ -18,39 +18,37 @@ use App\Http\Controllers\ContactPageController;
 */
 
 Route::middleware('auth', 'verified')->group(function () {
-    Route::get('/', [MainPageController::class, 'edit'])->name('main');
+    Route::get('/', [MainPageController::class, 'index'])->name('main.index');
     Route::patch('/', [MainPageController::class, 'update'])->name('main.update');
 
-    Route::get('/photos', [PhotoPageController::class, 'edit'])->name('photos');
-    Route::patch('/photos', [PhotoPageController::class, 'update'])->name('photos.update');
-    Route::delete('/photos', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
+    Route::get('/photos', [PhotoPageController::class, 'index'])->name('photos.index');
+    Route::post('/photos/{size}', [PhotoPageController::class, 'store'])->name('photos.store');
+    Route::delete('/photos/{size}', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
 
-    Route::get('/contacts', [ContactPageController::class, 'edit'])->name('contacts');
+    Route::get('/contacts', [ContactPageController::class, 'index'])->name('contacts.index');
+    Route::post('/contacts', [ContactPageController::class, 'store'])->name('contacts.store');
     Route::patch('/contacts', [ContactPageController::class, 'update'])->name('contacts.update');
     Route::delete('/contacts', [ContactPageController::class, 'destroy'])->name('contacts.destroy');
 
 
-    Route::get('/contacts', function () {
-        return view('pages.contacts');
-    })->name('contacts');
     Route::get('/education', function () {
         return view('pages.education');
-    })->name('education');
+    })->name('education.index');
     Route::get('/queries', function () {
         return view('pages.queries');
-    })->name('queries');
+    })->name('queries.index');
     Route::get('/method', function () {
         return view('pages.method');
-    })->name('method');
+    })->name('method.index');
     Route::get('/schedule', function () {
         return view('pages.schedule');
-    })->name('schedule');
+    })->name('schedule.index');
     Route::get('/about', function () {
         return view('pages.about');
-    })->name('about');
+    })->name('about.index');
     Route::get('/posts', function () {
         return view('pages.posts');
-    })->name('posts');
+    })->name('posts.index');
 });
 
 Route::middleware('auth')->group(function () {

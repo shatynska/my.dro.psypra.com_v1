@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class MainPageController extends Controller
 {
-    public function edit()
+    public function index()
     {
         $mainAttributes = Attribute::where('is_main_attribute', true)->get();
 
@@ -43,6 +43,6 @@ class MainPageController extends Controller
             }
         }
 
-        return Redirect::route('main')->with('status', 'main-updated');
+        return Redirect::route('main.index')->with('status', 'main-updated');
     }
 }
