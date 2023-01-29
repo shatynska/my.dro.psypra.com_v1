@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
+use App\Http\Controllers\ContactPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,11 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/photos', [PhotoPageController::class, 'edit'])->name('photos');
     Route::patch('/photos', [PhotoPageController::class, 'update'])->name('photos.update');
     Route::delete('/photos', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
+
+    Route::get('/contacts', [ContactPageController::class, 'edit'])->name('contacts');
+    Route::patch('/contacts', [ContactPageController::class, 'update'])->name('contacts.update');
+    Route::delete('/contacts', [ContactPageController::class, 'destroy'])->name('contacts.destroy');
+
 
     Route::get('/contacts', function () {
         return view('pages.contacts');
