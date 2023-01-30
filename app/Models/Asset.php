@@ -10,9 +10,16 @@ class Asset extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'specialist_id',
+        'type',
+        'format',
+        'description',
+    ];
+
     public function specialist()
     {
         return $this->belongsTo(Specialist::class);
     }
 }
-

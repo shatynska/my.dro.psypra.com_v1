@@ -13,7 +13,8 @@ class Place extends Model
 
     protected $fillable = [
         'title',
-        'type',
+        'description',
+        'city_id',
         'code',
     ];
 

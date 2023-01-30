@@ -10,6 +10,11 @@ class Hour extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'day_id',
+    ];
+
     public function specialists()
     {
         return $this->belongsToMany(Specialist::class);

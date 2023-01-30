@@ -11,9 +11,12 @@ class Day extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+    ];
+
     public function hours()
     {
         return $this->hasMany(Hour::class);
     }
 }
-
