@@ -10,9 +10,12 @@ class Query extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+    ];
+
     public function specialists()
     {
         return $this->belongsToMany(Specialist::class);
     }
 }
-

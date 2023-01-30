@@ -11,14 +11,20 @@ class Contact extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'type',
+        'specialist_id',
+        'program_id',
+    ];
+
     public function specialist()
     {
         return $this->belongsTo(Specialist::class);
     }
 
-    public function program() 
+    public function program()
     {
         return $this->belongsTo(Program::class);
     }
 }
-

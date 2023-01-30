@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
         Specialist::create(
             [
                 'user_id' => '1',
-                'name' => 'Альона',
+                'name' => 'Олена',
                 'last_name' => 'Шатинська',
             ]
         );
@@ -256,8 +256,18 @@ class DatabaseSeeder extends Seeder
         $olga->ages()->attach('4');
         $olga->ages()->attach('5');
 
+        $helen->durations()->attach('1');
+        $helen->durations()->attach('2');
+        $helen->durations()->attach('3');
+        $helen->durations()->attach('4');
+        $olga->durations()->attach('1');
+        $olga->durations()->attach('2');
+        $olga->durations()->attach('3');
+        $olga->durations()->attach('4');
+
         $helen->directions()->attach('1');
         $olga->directions()->attach('1');
+        
 
         $this->call([
             NavLinkSeeder::class,

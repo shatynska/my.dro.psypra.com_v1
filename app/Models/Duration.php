@@ -10,9 +10,13 @@ class Duration extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+    ];
+
     public function specialists()
     {
         return $this->belongsToMany(Specialist::class);
     }
 }
-
