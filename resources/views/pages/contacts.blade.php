@@ -10,12 +10,14 @@
         <div class="max-w-xl">
             <section>
 
+                @foreach($contactTypes as $contactType)
+
                 <form method="post" action="{{ route('contacts.update') }}" class="mt-6 space-y-6">
                     @csrf
                     @method('patch')
 
                     <div>
-                        <x-input-label for="phone" :value="__('Телефон')" />
+                        <x-input-label for="phone" :value="__($contactType->title)" />
                         <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full" :value="old('phone', $specialist->phone)" required autocomplete="phone" />
                         <x-input-error class="mt-2" :messages="$errors->get('phone')" />
                     </div>  
@@ -36,6 +38,9 @@
                     </div>
                     
                 </form>
+
+                @endforeach
+
             </section>
         </div>
     </x-u-section>

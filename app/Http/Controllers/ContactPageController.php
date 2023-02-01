@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Specialist;
+use App\Models\ContactType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -11,7 +12,9 @@ class ContactPageController extends Controller
 {
     public function index()
     {
-        return view('pages.contacts');
+        $contactTypes = ContactType::all();
+
+        return view('pages.contacts', compact(['contactTypes']));
     }
 
     public function store(Request $request)
