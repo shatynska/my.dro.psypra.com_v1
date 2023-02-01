@@ -3,38 +3,31 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Age;
 use App\Models\Day;
 use App\Models\City;
 use App\Models\Hour;
 use App\Models\User;
 use App\Models\Place;
 use App\Models\Price;
-use App\Models\Query;
 use App\Models\Contact;
 use App\Models\Program;
-use App\Models\Duration;
-use App\Models\Quantity;
-use App\Models\Attribute;
-use App\Models\Direction;
-use App\Models\Specialty;
 use App\Models\Specialist;
 use Illuminate\Support\Str;
+use Database\Seeders\AgeSeeder;
 use Illuminate\Database\Seeder;
+use Database\Seeders\QuerySeeder;
 use Database\Seeders\NavLinkSeeder;
+use Database\Seeders\DurationSeeder;
+use Database\Seeders\QuantitySeeder;
+use Database\Seeders\AttributeSeeder;
+use Database\Seeders\DirectionSeeder;
+use Database\Seeders\SpecialtySeeder;
 use Database\Seeders\ContactTypeSeeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
         User::create([
             'name' => 'Helen',
             'email' => 'test@example.com',
@@ -67,126 +60,17 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        Attribute::insert(
-            [
-                [
-                    'title' => 'спеціальності',
-                    'database' => 'specialties',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '1',
-                ],
-                [
-                    'title' => 'фахівці',
-                    'database' => 'specialists',
-                    'is_extendable' => '0',
-                    'is_main_attribute' => '0',
-
-                ],
-                [
-                    'title' => 'форми роботи',
-                    'database' => 'quantities',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '1',
-                ],
-                [
-                    'title' => 'вікові групи',
-                    'database' => 'ages',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '1',
-                ],
-                [
-                    'title' => 'тривалість',
-                    'database' => 'durations',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '1',
-                ],
-                [
-                    'title' => 'напрямки терапії',
-                    'database' => 'directions',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '1',
-                ],
-                [
-                    'title' => 'вартість',
-                    'database' => 'prices',
-                    'is_extendable' => '0',
-                    'is_main_attribute' => '0',
-                ],
-                [
-                    'title' => 'запити',
-                    'database' => 'queries',
-                    'is_extendable' => '1',
-                    'is_main_attribute' => '0',
-                ],
-                [
-                    'title' => 'місця',
-                    'database' => 'places',
-                    'is_extendable' => '0',
-                    'is_main_attribute' => '0',
-                ],
-                [
-                    'title' => 'години',
-                    'database' => 'hours',
-                    'is_extendable' => '0',
-                    'is_main_attribute' => '0',
-                ],
-                [
-                    'title' => 'контакти',
-                    'database' => 'contacts',
-                    'is_extendable' => '0',
-                    'is_main_attribute' => '0',
-                ],
-            ]
-        );
-
-
-        $specialties = ["психолог", "психотерапевт", "психіатр"];
-
-        foreach ($specialties as $specialty) {
-            Specialty::create(['title' => $specialty]);
-        }
-
-
-        $quantities = ["індивідуальна", "парна", "сімейна", "групова"];
-
-        foreach ($quantities as $quantity) {
-            Quantity::create(['title' => $quantity]);
-        }
-
-
-        $ages = ["3+", "6+", "12+", "18+", "30+", "60+"];
-
-        foreach ($ages as $age) {
-            Age::create(['title' => $age]);
-        }
-
-
-        $queries = ["депресія", "стреси", "конфлікти", "самооцінка", "страхи", "головні болі", "втрата", "підлітки"];
-
-        foreach ($queries as $query) {
-            Query::create(['title' => $query]);
-        }
-
-
-        $directions = ["гештальт-терапія", "психоаналітична", "клієнт-центрована", "позитивна", "ЕМДР", "системно-сімейна"];
-
-        foreach ($directions as $direction) {
-            Direction::create(['title' => $direction]);
-        }
-
-
-        $durations = ["разові консультації", "короткотривала психотерапія", "середньотривала психотерапія", "довготривала психотерапія"];
-
-        foreach ($durations as $duration) {
-            Duration::create(['title' => $duration]);
-        }
-
-        foreach (Specialist::all() as $specialist) {
-            foreach (Duration::all() as $duration) {
-                $specialist->durations()->attach($duration->id);
-            }
-        }
-
+        $this->call([
+            AgeSeeder::class,
+            AttributeSeeder::class,
+            DirectionSeeder::class,
+            DurationSeeder::class,
+            SpecialtySeeder::class,
+            NavLinkSeeder::class,
+            ContactTypeSeeder::class,
+            QuantitySeeder::class,
+            QuerySeeder::class,
+        ]);
 
         $cities = ["Дрогобич", "Трускавець", "Борислав", "on-line"];
 
@@ -236,7 +120,6 @@ class DatabaseSeeder extends Seeder
 
 
 
-
         $helen = Specialist::withoutGlobalScope('user')->find('1');
         $olga = Specialist::withoutGlobalScope('user')->find('2');
 
@@ -268,11 +151,5 @@ class DatabaseSeeder extends Seeder
 
         $helen->directions()->attach('1');
         $olga->directions()->attach('1');
-        
-
-        $this->call([
-            NavLinkSeeder::class,
-            ContactTypeSeeder::class,
-        ]);
     }
 }
