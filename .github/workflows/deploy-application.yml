@@ -22,9 +22,6 @@ jobs:
       - name: Install npm
         run: npm ci --only=production
 
-      - name: Add Sass
-        run: npm add -D sass
-
       - name: Npm build
         run: npm run build
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Program;
 use App\Models\Specialist;
+use App\Models\ContactType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -26,5 +27,10 @@ class Contact extends Model
     public function program()
     {
         return $this->belongsTo(Program::class);
+    }
+
+    public function contactTypes()
+    {
+        return $this->hasMany(ContactType::class);
     }
 }
