@@ -22,6 +22,7 @@ use App\Models\Specialist;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Database\Seeders\NavLinkSeeder;
+use Database\Seeders\ContactTypeSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -271,6 +272,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             NavLinkSeeder::class,
+            ContactTypeSeeder::class,
         ]);
     }
 }
