@@ -4,14 +4,16 @@
             {{ __('Фото') }}
         </h2>
     </x-slot>
-    <x-u-section>
-        <div class="max-w-xl">
-            <section>
-                @foreach($photos as $photo)
-                <div class="space-y-2 my-6">
-                    
-                    <x-input-label for="{{ $photo['title'] }}_photo" :value="__($photo['description'])" />
 
+
+                @foreach($photos as $photo)
+        <x-u-section>
+            <div class="max-w-xl">
+                <h2 class="text-lg font-medium text-gray-900">
+                    {{ __($photo['description']) }}
+                </h2>
+
+    
                     @if($specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
                         <img src="{{ $specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
 
@@ -47,11 +49,8 @@
 
                 </div>
 
-                <hr />
+            </x-u-section>
 
-                @endforeach
+        @endforeach
 
-            </section>
-        </div>
-    </x-u-section>
 </x-app-layout>
