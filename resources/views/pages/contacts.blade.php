@@ -15,42 +15,52 @@
                 <h2 class="text-lg font-medium text-gray-900">
                     {{ __($contactType->title) }}
                 </h2>
+                @php
+                $contacts = $specialist->contacts->where('contact_type_id', $contactType->id);
+                @endphp
+                @if($contacts->count())
+                @foreach($contacts as $contact)
 
-                <form method="post" action="{{ route('contacts.store') }}" class="space-y-2">
+                    <form method="post" action="{{ route('contacts.update', $contact) }}" class="space-y-2">
+                        @csrf
+                        @method('patch')
+
+                        <div>
+                            <x-text-input id="title_{{ $contact->id }}" name="title" type="text" class="mt-1 block w-full" :value="old('title', $contact->title)" required />
+                            <x-input-error class="mt-2" :messages="$errors->get('title')" />
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <x-primary-button>{{ __('редагувати') }}</x-primary-button>
+
+                        </div>
+                        
+                    </form>
+
+                    <form method="post" action="{{ route('contacts.destroy', $contact ) }}" class="space-y-2">
+                        @csrf
+                        @method('delete')
+                        <x-primary-button>{{ __('Видалити') }}</x-primary-button>
+                    </form>
+                    @endforeach
+                @endif
+
+                <form method="post" action="{{ route('contacts.store', $contactType ) }}" class="space-y-2">
                     @csrf
-                    @method('patch')
+                    @method('post')
 
                     <div>
-                        <x-text-input id="contact" name="contact" type="text" class="mt-1 block w-full" required autocomplete="contact" />
-                        <x-input-error class="mt-2" :messages="$errors->get('contact')" />
+                        <x-text-input id="title_{{ $contactType->id }}" name="title" type="text" class="mt-1 block w-full" required />
+                        <x-input-error class="mt-2" :messages="$errors->get('title')" />
                     </div>  
                     
-                    
-                    <div class="flex items-center gap-4">
-                        <x-primary-button>{{ __('Редагувати') }}</x-primary-button>
-
-                    </div>
-                    
-                </form>
-                
-                <form method="post" action="{{ route('contacts.destroy') }}" class="space-y-2">
-                    @csrf
-                    @method('delete')
-
-                    <x-primary-button>{{ __('Видалити') }}</x-primary-button>
-                </form>
-
-
-                <form method="post" action="{{ route('contacts.store') }}" class="space-y-2">
-                    @csrf
-
                     <div class="flex items-center gap-4">
                         <x-primary-button>{{ __('Додати') }}</x-primary-button>
 
                     </div>
                     
                 </form>
-   
+
             </div>
         </x-u-section>
     @endforeach

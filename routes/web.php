@@ -26,9 +26,9 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::delete('/photos/{size}', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
 
     Route::get('/contacts', [ContactPageController::class, 'index'])->name('contacts.index');
-    Route::post('/contacts', [ContactPageController::class, 'store'])->name('contacts.store');
-    Route::patch('/contacts', [ContactPageController::class, 'update'])->name('contacts.update');
-    Route::delete('/contacts', [ContactPageController::class, 'destroy'])->name('contacts.destroy');
+    Route::post('/contacts/{contact_type}', [ContactPageController::class, 'store'])->name('contacts.store');
+    Route::patch('/contacts/{contact}', [ContactPageController::class, 'update'])->name('contacts.update');
+    Route::delete('/contacts/{contact}', [ContactPageController::class, 'destroy'])->name('contacts.destroy');
 
 
     Route::get('/education', function () {

@@ -15,7 +15,7 @@ class ContactTypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['телефони', 'поштові скринькі', 'вебсайти', 'соцмережі'];
+        $types = ['телефон', 'e-mail', 'вебсайт'];
 
         foreach ($types as $type) {
             ContactType::create(

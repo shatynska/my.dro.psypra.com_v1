@@ -9,7 +9,6 @@ use App\Models\Hour;
 use App\Models\User;
 use App\Models\Place;
 use App\Models\Price;
-use App\Models\Contact;
 use App\Models\Program;
 use App\Models\Specialist;
 use Illuminate\Support\Str;
@@ -86,17 +85,10 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        $programs = ["телефон", "e-mail", "сайт", "Viber", "WhatApp", "Messenger", "Telegram", "Zoom", "Skype", "GoogleMeet"];
+        $programs = ["Viber", "WhatApp", "Messenger", "Telegram", "Zoom", "Skype", "GoogleMeet"];
 
         foreach ($programs as $program) {
             Program::create(['title' => $program]);
-        }
-
-
-        $contacts = ["+380978976847", "shatynska@gmail.com", "+380673492432", "shatynska.in.ua"];
-
-        foreach ($contacts as $contact) {
-            Contact::create(['title' => $contact, 'specialist_id' => '1', 'program_id' => '1']);
         }
 
 
