@@ -14,7 +14,7 @@ class Contact extends Model
 
     protected $fillable = [
         'title',
-        'type',
+        'type_id',
         'specialist_id',
         'program_id',
     ];
@@ -29,8 +29,8 @@ class Contact extends Model
         return $this->belongsTo(Program::class);
     }
 
-    public function contactTypes()
+    public function contactType()
     {
-        return $this->hasMany(ContactType::class);
+        return $this->belongsTo(ContactType::class);
     }
 }

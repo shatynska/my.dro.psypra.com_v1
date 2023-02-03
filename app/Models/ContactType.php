@@ -14,8 +14,8 @@ class ContactType extends Model
         'title',
     ];
 
-    public function contact()
+    public function contacts()
     {
-        return $this->belongsTo(Contact::class);
+        return $this->hasMany(Contact::class);
     }
 }
