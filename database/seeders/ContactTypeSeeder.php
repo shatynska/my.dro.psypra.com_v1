@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\ContactType;
+use App\Models\Contacts\ContactType;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 

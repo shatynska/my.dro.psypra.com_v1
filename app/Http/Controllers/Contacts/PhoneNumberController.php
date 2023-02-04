@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contacts;
 
-use App\Models\PhoneNumber;
+use App\Models\Contacts\PhoneNumber;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\Contacts\PhoneNumberRequest;

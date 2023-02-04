@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Contacts;
 
-use App\Models\Website;
+use App\Models\Contacts\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\Contacts\WebsiteRequest;
