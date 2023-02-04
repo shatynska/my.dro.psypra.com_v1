@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('phone_numbers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('contact_type_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
-            $table->foreignId('program_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('phone_numbers');
     }
 };
