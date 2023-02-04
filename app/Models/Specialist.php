@@ -10,7 +10,6 @@ use App\Models\Email;
 use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
-use App\Models\Contact;
 use App\Models\Website;
 use App\Models\Duration;
 use App\Models\Quantity;
@@ -102,11 +101,6 @@ class Specialist extends Model implements HasMedia
     public function prices()
     {
         return $this->belongsToMany(Price::class);
-    }
-
-    public function contacts()
-    {
-        return $this->hasMany(Contact::class);
     }
 
     public function phone_numbers()

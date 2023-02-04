@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Contacts;
 
-use App\Models\PhoneNumber;
+use App\Models\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
-use App\Http\Requests\Contacts\PhoneNumberRequest;
+use App\Http\Requests\Contacts\WebsiteRequest;
 
-class PhoneNumberController extends Controller
+class WebsiteController extends Controller
 {
-    public function store(PhoneNumberRequest $request)
+    public function store(WebsiteRequest $request)
     {
 
-        PhoneNumber::create([
+        Website::create([
             'title' => $request->title,
             'specialist_id' => auth()->user()->id,
         ]);
@@ -20,16 +20,16 @@ class PhoneNumberController extends Controller
         return Redirect::route('contacts.index');
     }
 
-    public function update(PhoneNumberRequest $request, PhoneNumber $contact)
+    public function update(WebsiteRequest $request, Website $contact)
     {
 
         return Redirect::route('contacts.index');
     }
 
-    public function destroy(PhoneNumber $contact)
+    public function destroy(Website $contact)
     {
 
-        PhoneNumber::destroy($contact->id);
+        Website::destroy($contact->id);
 
         return Redirect::route('contacts.index');
     }

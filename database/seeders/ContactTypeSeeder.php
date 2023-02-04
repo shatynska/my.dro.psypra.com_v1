@@ -15,12 +15,25 @@ class ContactTypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['телефон', 'e-mail', 'вебсайт'];
+        ContactType::create(
+            [
+                'title' => 'телефон',
+                'database' => 'phone_numbers',
+            ]
+        );
 
-        foreach ($types as $type) {
-            ContactType::create(
-                ['title' => $type]
-            );
-        }
+        ContactType::create(
+            [
+                'title' => 'e-mail',
+                'database' => 'emails',
+            ]
+        );
+
+        ContactType::create(
+            [
+                'title' => 'вебсайт',
+                'database' => 'websites',
+            ]
+        );
     }
 }

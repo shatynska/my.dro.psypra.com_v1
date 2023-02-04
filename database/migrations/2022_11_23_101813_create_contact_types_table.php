@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('contact_types', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
+            $table->string('database')->unique();
             $table->timestamps();
         });
     }

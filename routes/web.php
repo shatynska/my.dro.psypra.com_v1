@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
 use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\Contacts\EmailController;
+use App\Http\Controllers\Contacts\WebsiteController;
 use App\Http\Controllers\Contacts\PhoneNumberController;
 
 
@@ -17,9 +19,15 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::delete('/photos/{size}', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
 
     Route::get('/contacts', [ContactPageController::class, 'index'])->name('contacts.index');
-    Route::post('/contacts/phone-numbers', [PhoneNumberController::class, 'store'])->name('contacts.phone-numbers.store');
-    Route::patch('/contacts/phone-numbers/{contact}', [PhoneNumberController::class, 'update'])->name('contacts.phone-numbers.update');
-    Route::delete('/contacts/phone-numbers/{contact}', [PhoneNumberController::class, 'destroy'])->name('contacts.phone-numbers.destroy');
+    Route::post('/contacts/phone_numbers', [PhoneNumberController::class, 'store'])->name('contacts.phone_numbers.store');
+    Route::patch('/contacts/phone_numbers/{contact}', [PhoneNumberController::class, 'update'])->name('contacts.phone_numbers.update');
+    Route::delete('/contacts/phone_numbers/{contact}', [PhoneNumberController::class, 'destroy'])->name('contacts.phone_numbers.destroy');
+    Route::post('/contacts/emails', [EmailController::class, 'store'])->name('contacts.emails.store');
+    Route::patch('/contacts/emails/{contact}', [EmailController::class, 'update'])->name('contacts.emails.update');
+    Route::delete('/contacts/emails/{contact}', [EmailController::class, 'destroy'])->name('contacts.emails.destroy');
+    Route::post('/contacts/websites', [WebsiteController::class, 'store'])->name('contacts.websites.store');
+    Route::patch('/contacts/websites/{contact}', [WebsiteController::class, 'update'])->name('contacts.websites.update');
+    Route::delete('/contacts/websites/{contact}', [WebsiteController::class, 'destroy'])->name('contacts.websites.destroy');
 
 
     Route::get('/education', function () {

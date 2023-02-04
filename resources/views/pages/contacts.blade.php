@@ -6,19 +6,23 @@
         </h2>
     </x-slot>
 
+    @foreach($contactTypes as $contactType)
+
         <x-u-section>
 
             <div class="max-w-xl">
 
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __('Телефон') }}
+                    {{ __($contactType->title) }}
                 </h2>
+                @php
+                $database = $contactType->database;
+                $contacts = $specialist->$database;
+                @endphp
+                @if($contacts->count())
+                @foreach($contacts as $contact)
 
-                @if($specialist->phone_numbers->count())
-
-                @foreach($specialist->phone_numbers as $contact)
-
-                    <form method="post" action="{{ route('contacts.phone-numbers.update', $contact) }}" class="space-y-2">
+                    <form method="post" action="{{ route('contacts.' . $database . '.update', $contact) }}" class="space-y-2">
                         @csrf
                         @method('patch')
 
@@ -28,13 +32,13 @@
                         </div>
 
                         <div class="flex items-center gap-4">
-                            <x-primary-button>{{ __('редагувати') }}</x-primary-button>
+                            <x-primary-button>{{ __('Редагувати') }}</x-primary-button>
 
                         </div>
                         
                     </form>
 
-                    <form method="post" action="{{ route('contacts.phone-numbers.destroy', $contact ) }}" class="space-y-2">
+                    <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2">
                         @csrf
                         @method('delete')
                         <x-primary-button>{{ __('Видалити') }}</x-primary-button>
@@ -42,7 +46,7 @@
                     @endforeach
                 @endif
 
-                <form method="post" action="{{ route('contacts.phone-numbers.store') }}" class="space-y-2">
+                <form method="post" action="{{ route('contacts.' . $database . '.store') }}" class="space-y-2">
                     @csrf
                     @method('post')
 
@@ -60,5 +64,6 @@
 
             </div>
         </x-u-section>
+    @endforeach
 
 </x-app-layout>

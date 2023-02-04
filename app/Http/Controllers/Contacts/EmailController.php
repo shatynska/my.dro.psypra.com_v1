@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Contacts;
 
-use App\Models\PhoneNumber;
+use App\Models\Email;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
-use App\Http\Requests\Contacts\PhoneNumberRequest;
+use App\Http\Requests\Contacts\EmailRequest;
 
-class PhoneNumberController extends Controller
+class EmailController extends Controller
 {
-    public function store(PhoneNumberRequest $request)
+    public function store(EmailRequest $request)
     {
 
-        PhoneNumber::create([
+        Email::create([
             'title' => $request->title,
             'specialist_id' => auth()->user()->id,
         ]);
@@ -20,16 +20,16 @@ class PhoneNumberController extends Controller
         return Redirect::route('contacts.index');
     }
 
-    public function update(PhoneNumberRequest $request, PhoneNumber $contact)
+    public function update(EmailRequest $request, Email $contact)
     {
 
         return Redirect::route('contacts.index');
     }
 
-    public function destroy(PhoneNumber $contact)
+    public function destroy(Email $contact)
     {
 
-        PhoneNumber::destroy($contact->id);
+        Email::destroy($contact->id);
 
         return Redirect::route('contacts.index');
     }
