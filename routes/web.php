@@ -5,17 +5,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
 use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\Contacts\PhoneNumberController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::middleware('auth', 'verified')->group(function () {
     Route::get('/', [MainPageController::class, 'index'])->name('main.index');
@@ -26,9 +17,9 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::delete('/photos/{size}', [PhotoPageController::class, 'destroy'])->name('photos.destroy');
 
     Route::get('/contacts', [ContactPageController::class, 'index'])->name('contacts.index');
-    Route::post('/contacts/{contact_type}', [ContactPageController::class, 'store'])->name('contacts.store');
-    Route::patch('/contacts/{contact}', [ContactPageController::class, 'update'])->name('contacts.update');
-    Route::delete('/contacts/{contact}', [ContactPageController::class, 'destroy'])->name('contacts.destroy');
+    Route::post('/contacts/phone-numbers', [PhoneNumberController::class, 'store'])->name('contacts.phone-numbers.store');
+    Route::patch('/contacts/phone-numbers/{contact}', [PhoneNumberController::class, 'update'])->name('contacts.phone-numbers.update');
+    Route::delete('/contacts/phone-numbers/{contact}', [PhoneNumberController::class, 'destroy'])->name('contacts.phone-numbers.destroy');
 
 
     Route::get('/education', function () {

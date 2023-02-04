@@ -6,19 +6,22 @@ use App\Models\Age;
 use App\Models\Day;
 use App\Models\User;
 use App\Models\Asset;
+use App\Models\Email;
 use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
 use App\Models\Contact;
+use App\Models\Website;
 use App\Models\Duration;
 use App\Models\Quantity;
 use App\Models\Direction;
 use App\Models\Specialty;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Builder;
+use App\Models\PhoneNumber;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 
@@ -104,6 +107,21 @@ class Specialist extends Model implements HasMedia
     public function contacts()
     {
         return $this->hasMany(Contact::class);
+    }
+
+    public function phone_numbers()
+    {
+        return $this->hasMany(PhoneNumber::class);
+    }
+
+    public function emails()
+    {
+        return $this->hasMany(Email::class);
+    }
+
+    public function websites()
+    {
+        return $this->hasMany(Website::class);
     }
 
     public function days()

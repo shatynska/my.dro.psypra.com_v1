@@ -6,22 +6,19 @@
         </h2>
     </x-slot>
 
-    @foreach($contactTypes as $contactType)
-
         <x-u-section>
 
             <div class="max-w-xl">
 
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __($contactType->title) }}
+                    {{ __('Телефон') }}
                 </h2>
-                @php
-                $contacts = $specialist->contacts->where('contact_type_id', $contactType->id);
-                @endphp
-                @if($contacts->count())
-                @foreach($contacts as $contact)
 
-                    <form method="post" action="{{ route('contacts.update', $contact) }}" class="space-y-2">
+                @if($specialist->phone_numbers->count())
+
+                @foreach($specialist->phone_numbers as $contact)
+
+                    <form method="post" action="{{ route('contacts.phone-numbers.update', $contact) }}" class="space-y-2">
                         @csrf
                         @method('patch')
 
@@ -37,7 +34,7 @@
                         
                     </form>
 
-                    <form method="post" action="{{ route('contacts.destroy', $contact ) }}" class="space-y-2">
+                    <form method="post" action="{{ route('contacts.phone-numbers.destroy', $contact ) }}" class="space-y-2">
                         @csrf
                         @method('delete')
                         <x-primary-button>{{ __('Видалити') }}</x-primary-button>
@@ -45,12 +42,12 @@
                     @endforeach
                 @endif
 
-                <form method="post" action="{{ route('contacts.store', $contactType ) }}" class="space-y-2">
+                <form method="post" action="{{ route('contacts.phone-numbers.store') }}" class="space-y-2">
                     @csrf
                     @method('post')
 
                     <div>
-                        <x-text-input id="title_{{ $contactType->id }}" name="title" type="text" class="mt-1 block w-full" required />
+                        <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" required />
                         <x-input-error class="mt-2" :messages="$errors->get('title')" />
                     </div>  
                     
@@ -63,6 +60,5 @@
 
             </div>
         </x-u-section>
-    @endforeach
 
 </x-app-layout>
