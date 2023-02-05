@@ -15,35 +15,39 @@
                 <h2 class="text-lg font-medium text-gray-900">
                     {{ __($contactType->title) }}
                 </h2>
+
                 @php
-                $database = $contactType->database;
-                $contacts = $specialist->$database;
+                    $database = $contactType->database;
+                    $contacts = $specialist->$database;
                 @endphp
+
                 @if($contacts->count())
-                @foreach($contacts as $contact)
+                
+                    @foreach($contacts as $contact)
 
-                    <form method="post" action="{{ route('contacts.' . $database . '.update', $contact) }}" class="space-y-2">
-                        @csrf
-                        @method('patch')
+                        <form method="post" action="{{ route('contacts.' . $database . '.update', $contact) }}" class="space-y-2">
+                            @csrf
+                            @method('patch')
 
-                        <div>
-                            <x-text-input id="title_{{ $contact->id }}" name="title" type="text" class="mt-1 block w-full" :value="old('title', $contact->title)" required />
-                            <x-input-error class="mt-2" :messages="$errors->get('title')" />
-                        </div>
+                            <div>
+                                <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="old('title', $contact->title)" required />
+                                <x-input-error class="mt-2" :messages="$errors->$database->get('title')" />
+                            </div>
 
-                        <div class="flex items-center gap-4">
-                            <x-primary-button>{{ __('Редагувати') }}</x-primary-button>
+                            <div class="flex items-center gap-4">
+                                <x-primary-button>{{ __('Редагувати') }}</x-primary-button>
+                            </div>
+                            
+                        </form>
 
-                        </div>
-                        
-                    </form>
+                        <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2">
+                            @csrf
+                            @method('delete')
+                            <x-primary-button>{{ __('Видалити') }}</x-primary-button>
+                        </form>
 
-                    <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2">
-                        @csrf
-                        @method('delete')
-                        <x-primary-button>{{ __('Видалити') }}</x-primary-button>
-                    </form>
                     @endforeach
+
                 @endif
 
                 <form method="post" action="{{ route('contacts.' . $database . '.store') }}" class="space-y-2">
@@ -52,18 +56,19 @@
 
                     <div>
                         <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" required />
-                        <x-input-error class="mt-2" :messages="$errors->get('title')" />
+                        <x-input-error class="mt-2" :messages="$errors->$database->get('title')" />
                     </div>  
                     
                     <div class="flex items-center gap-4">
                         <x-primary-button>{{ __('Додати') }}</x-primary-button>
-
                     </div>
                     
                 </form>
 
             </div>
+
         </x-u-section>
+
     @endforeach
 
 </x-app-layout>
