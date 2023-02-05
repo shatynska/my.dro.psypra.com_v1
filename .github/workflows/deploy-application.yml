@@ -32,19 +32,19 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --optimize-autoloader --no-dev
 
-      - name: Add production .env file
-        env:
-          LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
-        run: printf "%s" "$LARAVEL_ENV" > ".env"
+      # - name: Add production .env file
+      #   env:
+      #     LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
+      #   run: printf "%s" "$LARAVEL_ENV" > ".env"
 
-      # - name: Optimizing Configuration Loading
-      #   run: php artisan config:cache
+      # # - name: Optimizing Configuration Loading
+      # #   run: php artisan config:cache
 
-      - name: Optimizing Route Loading
-        run: php artisan route:cache
+      # - name: Optimizing Route Loading
+      #   run: php artisan route:cache
 
-      - name: Optimizing View Loading
-        run: php artisan view:cache
+      # - name: Optimizing View Loading
+      #   run: php artisan view:cache
 
       - name: Create deployment artifact
         env:
