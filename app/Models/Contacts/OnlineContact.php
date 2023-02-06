@@ -1,22 +1,21 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Contacts;
 
-use App\Models\Program;
+use App\Models\Contacts\Program;
 use App\Models\Specialist;
-use App\Models\ContactType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Contact extends Model
+class OnlineContact extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'title',
-        'contact_type_id',
         'specialist_id',
         'program_id',
+        'order'
     ];
 
     public function specialist()
@@ -27,10 +26,5 @@ class Contact extends Model
     public function program()
     {
         return $this->belongsTo(Program::class);
-    }
-
-    public function contactType()
-    {
-        return $this->belongsTo(ContactType::class);
     }
 }

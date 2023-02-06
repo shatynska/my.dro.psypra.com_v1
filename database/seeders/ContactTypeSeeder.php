@@ -35,5 +35,19 @@ class ContactTypeSeeder extends Seeder
                 'database' => 'websites',
             ]
         );
+
+        ContactType::create(
+            [
+                'title' => 'адреса',
+                'database' => 'addresses',
+            ]
+        );
+
+        ContactType::create(
+            [
+                'title' => 'online',
+                'database' => 'online_contacts',
+            ]
+        );
     }
 }

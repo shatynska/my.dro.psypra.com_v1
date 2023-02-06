@@ -7,7 +7,7 @@ use App\Models\Day;
 use App\Models\Hour;
 use App\Models\User;
 use App\Models\Price;
-use App\Models\Program;
+use App\Models\Contacts\Program;
 use App\Models\Specialist;
 use Illuminate\Support\Str;
 use Database\Seeders\AgeSeeder;
@@ -59,6 +59,18 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        $localities = ["Дрогобич", "Трускавець", "Борислав"];
+
+        foreach ($localities as $locality) {
+            Locality::create(['title' => $locality]);
+        }
+
+        $programs = ["Viber", "WhatApp", "Messenger", "Telegram", "Zoom", "Skype", "GoogleMeet"];
+
+        foreach ($programs as $program) {
+            Program::create(['title' => $program]);
+        }
+
         $this->call([
             AgeSeeder::class,
             AttributeSeeder::class,
@@ -67,29 +79,11 @@ class DatabaseSeeder extends Seeder
             SpecialtySeeder::class,
             NavLinkSeeder::class,
             ContactTypeSeeder::class,
+            AddressSeeder::class,
             QuantitySeeder::class,
             QuerySeeder::class,
         ]);
 
-        $localities = ["Дрогобич", "Трускавець", "Борислав"];
-
-        foreach ($localities as $locality) {
-            Locality::create(['title' => $locality]);
-        }
-
-
-        $addresses = ["Лесі Українки 26", "Пилипа Орлика 42", "Сагайдачного 142/1", "Дрогобицька 48"];
-
-        foreach ($addresses as $address) {
-            Address::create(['title' => $address]);
-        }
-
-
-        $programs = ["Viber", "WhatApp", "Messenger", "Telegram", "Zoom", "Skype", "GoogleMeet"];
-
-        foreach ($programs as $program) {
-            Program::create(['title' => $program]);
-        }
 
 
         $prices = ["0", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"];

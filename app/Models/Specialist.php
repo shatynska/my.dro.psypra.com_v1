@@ -14,6 +14,7 @@ use App\Models\Direction;
 use App\Models\Specialty;
 use App\Models\Contacts\Email;
 use App\Models\Contacts\Address;
+use App\Models\Contacts\OnlineContact;
 use App\Models\Contacts\Website;
 use Spatie\MediaLibrary\HasMedia;
 use App\Models\Contacts\PhoneNumber;
@@ -126,5 +127,10 @@ class Specialist extends Model implements HasMedia
     public function addresses()
     {
         return $this->belongsToMany(Address::class);
+    }
+
+    public function onlineContacts()
+    {
+        return $this->hasMany(OnlineContact::class);
     }
 }

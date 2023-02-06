@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
-            $table->unsignedTinyInteger('type')->default(1);
             $table->json('code')->nullable();
             $table->timestamps();
         });
