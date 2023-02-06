@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Contacts;
 
-use App\Models\Place;
+use App\Models\Contacts\Address;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class City extends Model
+class Locality extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,8 @@ class City extends Model
         'title',
     ];
 
-    public function places()
+    public function addresses()
     {
-        return $this->hasMany(Place::class);
+        return $this->hasMany(Address::class);
     }
 }

@@ -4,16 +4,16 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Day;
-use App\Models\City;
 use App\Models\Hour;
 use App\Models\User;
-use App\Models\Place;
 use App\Models\Price;
 use App\Models\Program;
 use App\Models\Specialist;
 use Illuminate\Support\Str;
 use Database\Seeders\AgeSeeder;
 use Illuminate\Database\Seeder;
+use App\Models\Contacts\Address;
+use App\Models\Contacts\Locality;
 use Database\Seeders\QuerySeeder;
 use Database\Seeders\NavLinkSeeder;
 use Database\Seeders\DurationSeeder;
@@ -71,17 +71,17 @@ class DatabaseSeeder extends Seeder
             QuerySeeder::class,
         ]);
 
-        $cities = ["Дрогобич", "Трускавець", "Борислав", "on-line"];
+        $localities = ["Дрогобич", "Трускавець", "Борислав"];
 
-        foreach ($cities as $city) {
-            City::create(['title' => $city]);
+        foreach ($localities as $locality) {
+            Locality::create(['title' => $locality]);
         }
 
 
-        $places = ["Лесі Українки 26", "Пилипа Орлика 42", "Сагайдачного 142/1", "Дрогобицька 48"];
+        $addresses = ["Лесі Українки 26", "Пилипа Орлика 42", "Сагайдачного 142/1", "Дрогобицька 48"];
 
-        foreach ($places as $place) {
-            Place::create(['title' => $place]);
+        foreach ($addresses as $address) {
+            Address::create(['title' => $address]);
         }
 
 

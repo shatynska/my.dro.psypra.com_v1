@@ -6,17 +6,17 @@ use App\Models\Age;
 use App\Models\Day;
 use App\Models\User;
 use App\Models\Asset;
-use App\Models\Contacts\Email;
-use App\Models\Place;
 use App\Models\Price;
 use App\Models\Query;
-use App\Models\Contacts\Website;
 use App\Models\Duration;
 use App\Models\Quantity;
 use App\Models\Direction;
 use App\Models\Specialty;
-use App\Models\Contacts\PhoneNumber;
+use App\Models\Contacts\Email;
+use App\Models\Contacts\Address;
+use App\Models\Contacts\Website;
 use Spatie\MediaLibrary\HasMedia;
+use App\Models\Contacts\PhoneNumber;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -103,6 +103,11 @@ class Specialist extends Model implements HasMedia
         return $this->belongsToMany(Price::class);
     }
 
+    public function days()
+    {
+        return $this->belongsToMany(Day::class);
+    }
+
     public function phone_numbers()
     {
         return $this->hasMany(PhoneNumber::class);
@@ -118,13 +123,8 @@ class Specialist extends Model implements HasMedia
         return $this->hasMany(Website::class);
     }
 
-    public function days()
+    public function addresses()
     {
-        return $this->belongsToMany(Day::class);
-    }
-
-    public function places()
-    {
-        return $this->belongsToMany(Place::class);
+        return $this->belongsToMany(Address::class);
     }
 }

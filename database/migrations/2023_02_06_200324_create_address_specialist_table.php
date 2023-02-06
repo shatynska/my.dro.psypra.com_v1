@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cities', function (Blueprint $table) {
+        Schema::create('address_specialist', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
-            $table->timestamps();
+            $table->foreignId('address_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cities');
+        Schema::dropIfExists('address_specialist');
     }
 };

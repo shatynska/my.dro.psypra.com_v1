@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Contacts;
 
-use App\Models\City;
-use App\Models\Specialist;
+use App\Models\Locality;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Place extends Model
+class Address extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'title',
-        'description',
-        'city_id',
-        'code',
+        'locality_id',
+        'google_link',
+        'google_map',
     ];
 
     public function specialists()
@@ -23,9 +22,8 @@ class Place extends Model
         return $this->belongsToMany(Specialist::class);
     }
 
-    public function city()
+    public function locality()
     {
-        return $this->belongsTo(City::class);
+        return $this->belongsTo(Locality::class);
     }
 }
-
