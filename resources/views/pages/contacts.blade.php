@@ -18,10 +18,10 @@
 
                 @php
                     $database = $contactType->database;
-                    $contacts = $specialist->$database;
+                    $contacts = $specialist->{Str::camel($database)};
                 @endphp
 
-                @if($contacts->count())
+                @if($contacts->count() != 0)
                 
                     @foreach($contacts as $contact)
 

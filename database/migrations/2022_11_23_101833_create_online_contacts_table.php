@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('online_contacts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('online_contacts');
     }
 };

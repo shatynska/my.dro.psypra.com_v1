@@ -6,8 +6,10 @@ use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
 use App\Http\Controllers\ContactPageController;
 use App\Http\Controllers\Contacts\EmailController;
+use App\Http\Controllers\Contacts\AddressController;
 use App\Http\Controllers\Contacts\WebsiteController;
 use App\Http\Controllers\Contacts\PhoneNumberController;
+use App\Http\Controllers\Contacts\OnlineContactController;
 
 
 Route::middleware('auth', 'verified')->group(function () {
@@ -28,6 +30,12 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::post('/contacts/websites', [WebsiteController::class, 'store'])->name('contacts.websites.store');
     Route::patch('/contacts/websites/{contact}', [WebsiteController::class, 'update'])->name('contacts.websites.update');
     Route::delete('/contacts/websites/{contact}', [WebsiteController::class, 'destroy'])->name('contacts.websites.destroy');
+    Route::post('/contacts/addresses', [AddressController::class, 'store'])->name('contacts.addresses.store');
+    Route::patch('/contacts/addresses/{contact}', [AddressController::class, 'update'])->name('contacts.addresses.update');
+    Route::delete('/contacts/addresses/{contact}', [AddressController::class, 'destroy'])->name('contacts.addresses.destroy');
+    Route::post('/contacts/online_contacts', [OnlineContactController::class, 'store'])->name('contacts.online_contacts.store');
+    Route::patch('/contacts/online_contacts/{contact}', [OnlineContactController::class, 'update'])->name('contacts.online_contacts.update');
+    Route::delete('/contacts/online_contacts/{contact}', [OnlineContactController::class, 'destroy'])->name('contacts.online_contacts.destroy');
 
 
     Route::get('/education', function () {

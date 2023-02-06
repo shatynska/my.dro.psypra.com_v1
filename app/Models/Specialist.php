@@ -109,7 +109,7 @@ class Specialist extends Model implements HasMedia
         return $this->belongsToMany(Day::class);
     }
 
-    public function phone_numbers()
+    public function phoneNumbers()
     {
         return $this->hasMany(PhoneNumber::class);
     }
