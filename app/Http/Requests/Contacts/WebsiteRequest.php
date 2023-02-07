@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class WebsiteRequest extends FormRequest
 {
-    protected $errorBag = 'website';
+    protected $errorBag = 'websites';
 
     public function authorize()
     {

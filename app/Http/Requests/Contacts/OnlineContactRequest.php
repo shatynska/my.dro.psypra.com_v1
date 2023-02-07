@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class OnlineContactRequest extends FormRequest
 {
-    protected $errorBag = 'online_contact';
+    protected $errorBag = 'online_contacts';
 
     public function authorize()
     {

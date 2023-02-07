@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
-use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\Contacts\ContactPageController;
 use App\Http\Controllers\Contacts\EmailController;
 use App\Http\Controllers\Contacts\AddressController;
 use App\Http\Controllers\Contacts\WebsiteController;

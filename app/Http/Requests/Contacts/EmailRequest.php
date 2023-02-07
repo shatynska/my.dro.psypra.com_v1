@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class EmailRequest extends FormRequest
 {
-    protected $errorBag = 'email';
+    protected $errorBag = 'emails';
 
     public function authorize()
     {

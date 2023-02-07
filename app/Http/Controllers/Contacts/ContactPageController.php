@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Contacts;
 
+use App\Http\Controllers\Controller;
 use App\Models\Contacts\ContactType;
 
 class ContactPageController extends Controller

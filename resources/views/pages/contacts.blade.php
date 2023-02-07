@@ -31,7 +31,7 @@
 
                             <div>
                                 <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="old('title', $contact->title)" required />
-                                <x-input-error class="mt-2" :messages="$errors->$database->get('title')" />
+                                <x-input-error class="mt-2" :messages="$errors->get('title', $database)" />
                             </div>
 
                             <div class="flex items-center gap-4">

@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class AddressRequest extends FormRequest
 {
-    protected $errorBag = 'address';
+    protected $errorBag = 'addresses';
 
     public function authorize()
     {
