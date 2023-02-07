@@ -40,8 +40,9 @@ class AppServiceProvider extends ServiceProvider
         View::composer(
             'layouts.navigation',
             function ($view) {
+                $specialist = Specialist::first();
                 $navLinks = NavLink::orderBy('ordering')->get();
-                $view->with(compact('navLinks'));
+                $view->with(compact(['navLinks', 'specialist']));
             }
         );
     }

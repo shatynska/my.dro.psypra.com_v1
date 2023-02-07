@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('specialists', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
-            $table->string('name');
-            $table->string('last_name');
+            $table->string('name')->nullable();
+            $table->string('last_name')->nullable();
             $table->timestamps();
         });
     }
