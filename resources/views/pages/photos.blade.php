@@ -25,7 +25,7 @@
                         @csrf
                         @method('DELETE')
                             
-                        <x-primary-button>{{ __('Видалити') }}</x-primary-button>
+                        <x-primary-button>{{ __('Delete') }}</x-primary-button>
                     </form>
 
                     <div>або</div>
@@ -39,7 +39,7 @@
                     <x-input-error class="mt-2" :messages="$errors->get($photo['title'].'_photo')" />
                         
                     <div class="flex items-center gap-4">
-                        <x-primary-button>{{ __('Завантажити') }}</x-primary-button>
+                        <x-primary-button>{{ __('Upload') }}</x-primary-button>
                         
                         @if (session('status') === 'main-updated')
                         <p
@@ -48,7 +48,7 @@
                         x-transition
                         x-init="setTimeout(() => show = false, 2000)"
                         class="text-sm text-gray-600"
-                        >{{ __('Завантажено.') }}</p>
+                        >{{ __('Loaded.') }}</p>
                         @endif
                     </div>
 
