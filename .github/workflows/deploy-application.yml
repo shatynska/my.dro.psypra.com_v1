@@ -46,6 +46,9 @@ jobs:
       - name: Optimizing View Loading
         run: php artisan view:cache
 
+      - name: Storage
+        run: php artisan storage:link
+
       - name: Create deployment artifact
         env:
           GITHUB_SHA: ${{ github.sha }}
@@ -179,8 +182,7 @@ jobs:
             rm -r $RELEASE_PATH/storage
             ln -s -f ../../storage $RELEASE_PATH
             ln -s -n -f ./releases/${{ github.sha }} $ACTIVE_RELEASE_PATH
-            cd ${{ env.SERVER_PATH }}/current
-            php artisan storage:link
+
   clean-up:
     name: "Clean up"
     runs-on: ubuntu-latest
