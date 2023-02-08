@@ -20,7 +20,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Compile CSS and Javascript
-        run: npm install
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+        run: npm ci
           npm run build
 
       - name: Configure php 8.1
@@ -114,7 +117,6 @@ jobs:
           script: |
             chmod -R 0777 ${RELEASE_PATH}/storage
             chmod -R 0777 ${RELEASE_PATH}/bootstrap/cache/
-
 
   run-after-hooks:
     name: "After hook"
