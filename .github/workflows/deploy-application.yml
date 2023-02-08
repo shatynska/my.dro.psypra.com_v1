@@ -92,7 +92,6 @@ jobs:
             mkdir -p ${{ env.SERVER_PATH }}/storage/framework/{cache,sessions,testing,views}
             chmod -R 0777 ${{ env.SERVER_PATH }}/storage
             cd ${{ env.SERVER_PATH }}/releases/${GITHUB_SHA}
-            php artisan storage:link
 
   run-before-hooks:
     name: "Before hook"
@@ -180,7 +179,8 @@ jobs:
             rm -r $RELEASE_PATH/storage
             ln -s -f ../../storage $RELEASE_PATH
             ln -s -n -f ./releases/${{ github.sha }} $ACTIVE_RELEASE_PATH
-
+            cd ${{ env.SERVER_PATH }}/current
+            php artisan storage:link
   clean-up:
     name: "Clean up"
     runs-on: ubuntu-latest
