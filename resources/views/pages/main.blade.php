@@ -10,11 +10,11 @@
         <div class="max-w-xl">
             <section>
 
-                <form method="post" action="{{ route('main.update') }}" class="mt-6 space-y-6">
+                <form method="post" action="{{ route('main.update') }}" class="space-y-6">
                     @csrf
                     @method('patch')
 
-                    <div>
+                    <div class="pt-20">
                         <x-input-label for="name" :value="__('Name')" />
                         <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $specialist->name)" required autocomplete="name" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
