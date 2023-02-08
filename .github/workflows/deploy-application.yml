@@ -93,7 +93,7 @@ jobs:
             tar xzf ${{ env.SERVER_PATH }}/artifacts/${GITHUB_SHA}.tar.gz -C "${{ env.SERVER_PATH }}/releases/${GITHUB_SHA}"
             mkdir -p ${{ env.SERVER_PATH }}/storage/{app,public,framework,logs}
             mkdir -p ${{ env.SERVER_PATH }}/storage/framework/{cache,sessions,testing,views}
-            chmod -R 0775 ${{ env.SERVER_PATH }}/storage
+            chmod -R 0777 ${{ env.SERVER_PATH }}/storage
 
   run-before-hooks:
     name: "Before hook"
@@ -115,8 +115,8 @@ jobs:
           port: ${{ env.SERVER_PORT }}
           envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH
           script: |
-            chmod -R 0775 ${RELEASE_PATH}/storage
-            chmod -R 0775 ${RELEASE_PATH}/bootstrap/cache/
+            chmod -R 0777 ${RELEASE_PATH}/storage
+            chmod -R 0777 ${RELEASE_PATH}/bootstrap/cache/
 
   run-after-hooks:
     name: "After hook"
