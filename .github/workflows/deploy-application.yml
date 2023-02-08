@@ -149,7 +149,9 @@ jobs:
           port: ${{ env.SERVER_PORT }}
           envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,STORAGE_PATH,BASE_PATH,DB_CONNECTION,DB_HOST,DB_DATABASE,DB_PORT,DB_USER,DB_PASSWORD
           script: |
-            docker exec -it dro_green_my_dro_app bash
+            docker ser
+            docker exec -it dro_green_my_dro_app.1.zw58v6vmsybjy7nv8pcrmfhhx bash
+            cd my.dro.psypra.com/current
             php artisan storage:link
 
   activate-release:
