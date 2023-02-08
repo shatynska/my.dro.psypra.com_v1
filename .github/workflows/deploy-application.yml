@@ -37,17 +37,14 @@ jobs:
           LARAVEL_ENV: ${{ secrets.LARAVEL_ENV }}
         run: printf "%s" "$LARAVEL_ENV" > ".env"
 
-      - name: Optimizing Configuration Loading
-        run: php artisan config:cache
+      # - name: Optimizing Configuration Loading
+      #   run: php artisan config:cache
 
       - name: Optimizing Route Loading
         run: php artisan route:cache
 
       - name: Optimizing View Loading
         run: php artisan view:cache
-
-      - name: Storage
-        run: php artisan storage:link
 
       - name: Create deployment artifact
         env:
