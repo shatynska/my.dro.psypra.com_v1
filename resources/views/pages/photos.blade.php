@@ -16,20 +16,23 @@
                 <h2 class="text-lg font-medium text-gray-900">
                     {{ __($photo['description']) }}
                 </h2>
-    
+                <h3 class="text-sm font-small text-gray-900">
+                    {{ __($photo['details']) }}
+                </h3>    
                 @if($specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']))
                     
-                    <img src="{{ $specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt="">
+                    <img src="{{ $specialist->getFirstMediaUrl($photo['title'].'_photos', $photo['title']) }}" alt=""  class="mt-4 ">
 
-                    <form method="POST" action="{{ route('photos.destroy',  $photo['title'] ) }}">
+                    <form method="POST" action="{{ route('photos.destroy',  $photo['title'] ) }}"  class="space-y-2 pb-8">
                         @csrf
                         @method('DELETE')
                             
                         <x-primary-button>{{ __('Delete') }}</x-primary-button>
                     </form>
 
-                    <div>або</div>
-
+                        <h3 class="text-sm font-small text-gray-900">
+                            {{ __('Завантажити інше ' . $photo['description']) }}
+                        </h3>
                 @endif
 
                 <form method="POST" action="{{ route('photos.store', $photo['title'] ) }}" enctype="multipart/form-data" class="space-y-2">

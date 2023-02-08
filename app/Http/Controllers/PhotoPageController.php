@@ -10,7 +10,7 @@ class PhotoPageController extends Controller
 {
     public function index()
     {
-        $photos = [['title' => 'small', 'description' => 'квадратне фото (мінімально 256x256)'], ['title' => 'big', 'description' => 'вертикальне фото (мінімально 544x812)']];
+        $photos = [['title' => 'small', 'description' => 'квадратне фото', 'details' => 'мінімальний розмір 256x256'], ['title' => 'big', 'description' =>'вертикальне фото', 'details' => 'мінімальний розмір 544x812']];
         return view('pages.photos', compact(['photos']));
     }
 

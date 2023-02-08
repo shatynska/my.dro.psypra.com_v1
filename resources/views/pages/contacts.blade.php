@@ -40,13 +40,17 @@
                             
                         </form>
 
-                        <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2">
+                        <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2 pb-8">
                             @csrf
                             @method('delete')
                             <x-primary-button>{{ __('Видалити') }}</x-primary-button>
                         </form>
 
                     @endforeach
+
+                    <h3 class="text-sm font-small text-gray-900">
+                        {{ __('Додати ще один ' . $contactType->title) }}
+                    </h3>
 
                 @endif
 
