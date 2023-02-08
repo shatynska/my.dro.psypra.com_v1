@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('specialist_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('program_id')->nullable()->constrained()->onDelete('set null');
-            $table->integer('order')->default(10);
             $table->timestamps();
         });
     }

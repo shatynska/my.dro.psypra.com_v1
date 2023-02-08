@@ -15,7 +15,6 @@ class OnlineContact extends Model
         'title',
         'specialist_id',
         'program_id',
-        'order'
     ];
 
     public function specialist()
