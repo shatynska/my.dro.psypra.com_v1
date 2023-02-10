@@ -59,6 +59,14 @@
                     @method('post')
 
                     <div>
+                        @if($database == 'addresses')
+                            <select name="localties"  required>
+                            @foreach($localities as $locality)
+                                <option value="{{ $locality->id }}">{{ $locality->title }}</option>
+                            @endforeach
+                            </select>
+                            <x-input-error class="mt-2" :messages="$errors->$database->get('locality')" />
+                        @endif
                         <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" required />
                         <x-input-error class="mt-2" :messages="$errors->$database->get('title')" />
                     </div>  
