@@ -25,26 +25,14 @@
                 
                     @foreach($contacts as $contact)
 
-                        <form method="post" action="{{ route('contacts.' . $database . '.update', $contact) }}" class="space-y-2">
-                            @csrf
-                            @method('patch')
-
-                            <div>
-                                <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="old('title', $contact->title)" required />
-                                <x-input-error class="mt-2" :messages="$errors->get('title', $database)" />
-                            </div>
-
-                            <div class="flex items-center gap-4">
-                                <x-primary-button>{{ __('Редагувати') }}</x-primary-button>
-                            </div>
-                            
-                        </form>
-
-                        <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2 pb-8">
-                            @csrf
-                            @method('delete')
-                            <x-primary-button>{{ __('Видалити') }}</x-primary-button>
-                        </form>
+                    
+                    
+                    <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2 pb-4">
+                        @csrf
+                        <span class="mr-8">{{ $contact->title }} </span>
+                        @method('delete')
+                        <x-primary-button>{{ __('Видалити') }}</x-primary-button>
+                    </form>
 
                     @endforeach
 
