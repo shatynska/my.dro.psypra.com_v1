@@ -19,6 +19,7 @@ class ContactTypeSeeder extends Seeder
             [
                 'title' => 'телефон',
                 'database' => 'phone_numbers',
+                'details' => 'формат: 89078976847',
             ]
         );
 
@@ -26,6 +27,8 @@ class ContactTypeSeeder extends Seeder
             [
                 'title' => 'e-mail',
                 'database' => 'emails',
+                'details' => 'формат: mail@example.com',
+
             ]
         );
 
@@ -33,6 +36,8 @@ class ContactTypeSeeder extends Seeder
             [
                 'title' => 'вебсайт',
                 'database' => 'websites',
+                'details' => 'формат: 89078976847',
+
             ]
         );
 
@@ -40,6 +45,8 @@ class ContactTypeSeeder extends Seeder
             [
                 'title' => 'адреса',
                 'database' => 'addresses',
+                'details' => 'формат: Дрогобич, вул. Лесі Українки 36',
+
             ]
         );
 
@@ -47,6 +54,8 @@ class ContactTypeSeeder extends Seeder
             [
                 'title' => 'online',
                 'database' => 'online_contacts',
+                'details' => 'формат: Viber',
+
             ]
         );
     }

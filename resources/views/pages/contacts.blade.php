@@ -15,6 +15,9 @@
                 <h2 class="text-lg font-medium text-gray-900">
                     {{ __($contactType->title) }}
                 </h2>
+                <h3 class="text-sm font-medium text-gray-500">
+                    {{ __($contactType->details) }}
+                </h3>
 
                 @php
                     $database = $contactType->database;
@@ -24,19 +27,17 @@
                 @if($contacts->count() != 0)
                 
                     @foreach($contacts as $contact)
-
-                    
                     
                     <form method="post" action="{{ route('contacts.' . $database . '.destroy', $contact ) }}" class="space-y-2 pb-4">
                         @csrf
-                        <span class="mr-8">{{ $contact->title }} </span>
+                        <span class="mr-4">{{ $contact->title }} </span>
                         @method('delete')
-                        <x-primary-button>{{ __('Видалити') }}</x-primary-button>
+                        <x-primary-button>{{ __('X') }}</x-primary-button>
                     </form>
 
                     @endforeach
 
-                    <h3 class="text-sm font-small text-gray-900">
+                    <h3 class="text-sm font-small text-gray-900 pt-2">
                         {{ __('Додати ще один ' . $contactType->title) }}
                     </h3>
 

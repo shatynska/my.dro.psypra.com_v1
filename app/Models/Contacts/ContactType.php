@@ -13,5 +13,6 @@ class ContactType extends Model
     protected $fillable = [
         'title',
         'database',
+        'details',
     ];
 }
