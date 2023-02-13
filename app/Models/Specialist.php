@@ -11,13 +11,14 @@ use App\Models\Query;
 use App\Models\Duration;
 use App\Models\Quantity;
 use App\Models\Direction;
+use App\Models\Education;
 use App\Models\Specialty;
 use App\Models\Contacts\Email;
 use App\Models\Contacts\Address;
-use App\Models\Contacts\OnlineContact;
 use App\Models\Contacts\Website;
 use Spatie\MediaLibrary\HasMedia;
 use App\Models\Contacts\PhoneNumber;
+use App\Models\Contacts\OnlineContact;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -132,5 +133,10 @@ class Specialist extends Model implements HasMedia
     public function onlineContacts()
     {
         return $this->hasMany(OnlineContact::class);
+    }
+
+    public function education()
+    {
+        return $this->belongsTo(Education::class);
     }
 }

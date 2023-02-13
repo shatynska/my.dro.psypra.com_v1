@@ -4,10 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PhotoPageController;
-use App\Http\Controllers\Contacts\ContactPageController;
+use App\Http\Controllers\EducationPageController;
 use App\Http\Controllers\Contacts\EmailController;
 use App\Http\Controllers\Contacts\AddressController;
 use App\Http\Controllers\Contacts\WebsiteController;
+use App\Http\Controllers\Contacts\ContactPageController;
 use App\Http\Controllers\Contacts\PhoneNumberController;
 use App\Http\Controllers\Contacts\OnlineContactController;
 
@@ -37,10 +38,9 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/contacts/online_contacts/{contact}', [OnlineContactController::class, 'update'])->name('contacts.online_contacts.update');
     Route::delete('/contacts/online_contacts/{contact}', [OnlineContactController::class, 'destroy'])->name('contacts.online_contacts.destroy');
 
+    Route::get('/education', [EducationPageController::class, 'index'])->name('education.index');
+    Route::patch('/education', [EducationPageController::class, 'update'])->name('education.update');
 
-    Route::get('/education', function () {
-        return view('pages.education');
-    })->name('education.index');
     Route::get('/queries', function () {
         return view('pages.queries');
     })->name('queries.index');
