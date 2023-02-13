@@ -16,9 +16,7 @@
 
                     <div>
                         <x-input-label for="text" :value="__('Текст')" />
-                            <textarea name="text" id="text"  rows="10" class="w-full">
-                                {{ $specialist->education }}
-                            </textarea>
+                            <textarea name="text" id="text"  rows="10" class="w-full">{{ $specialist->education }}</textarea>
                         <x-input-error class="mt-2" :messages="$errors->get('text')" />
                     </div>
  

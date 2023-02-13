@@ -11,7 +11,6 @@ use App\Models\Query;
 use App\Models\Duration;
 use App\Models\Quantity;
 use App\Models\Direction;
-use App\Models\Education;
 use App\Models\Specialty;
 use App\Models\Contacts\Email;
 use App\Models\Contacts\Address;
@@ -35,6 +34,9 @@ class Specialist extends Model implements HasMedia
     protected $fillable = [
         'name',
         'last_name',
+        'education', 
+        'method', 
+        'about',
     ];
 
 
@@ -135,8 +137,4 @@ class Specialist extends Model implements HasMedia
         return $this->hasMany(OnlineContact::class);
     }
 
-    public function education()
-    {
-        return $this->belongsTo(Education::class);
-    }
 }

@@ -16,11 +16,10 @@ class EducationPageController extends Controller
 
     public function update(UpdateEducationPageRequest $request)
     {
-
         $specialist = Specialist::first();
 
         $specialist->update([
-            'test' => $request->input('test'),
+            'education' => $request->input('text'),
         ]);
 
         return Redirect::route('education.index')->with('status', 'main-updated');
