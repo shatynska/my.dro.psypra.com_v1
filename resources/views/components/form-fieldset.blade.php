@@ -18,7 +18,7 @@
             ->firstWhere('id', $attribute_item->id);
         @endphp
         <x-checkbox-input type="checkbox" :checked="old('id', $checked)" name="{{ $attribute->database }}_{{ $attribute_item->id }}"  id="{{ $attribute->database }}_{{ $attribute_item->id }}" />
-        <label for="{{ $attribute->database }}_{{ $attribute_item->id }}"> {{ $attribute_item->title }}
+        <label for="{{ $attribute->database }}_{{ $attribute_item->id }}" class="text-gray-700"> {{ $attribute_item->title }}
         </label>
     </div>
 @endforeach
