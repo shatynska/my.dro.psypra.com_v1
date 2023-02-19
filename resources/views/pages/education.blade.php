@@ -16,8 +16,8 @@
 
                     <div>
                         <x-input-label for="text" :value="__('Про освіту')" />
-                            <textarea name="text" id="text"  rows="16" class="mt-1 block w-full text-gray-700 border-gray-300">{{ $specialist->education }}</textarea>
-                        <x-input-error class="mt-2" :messages="$errors->get('text')" />
+                        <textarea name="text" id="text"  rows="16" class="mt-1 block w-full text-gray-700 border-gray-300">{{ $specialist->education }}</textarea>
+                        <x-input-error class="mt-2" :messages="$errors->get('education')" />
                     </div>
  
                     
