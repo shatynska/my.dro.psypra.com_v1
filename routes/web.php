@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
+use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\PhotoPageController;
+use App\Http\Controllers\MethodPageController;
 use App\Http\Controllers\EducationPageController;
 use App\Http\Controllers\Contacts\EmailController;
 use App\Http\Controllers\Contacts\AddressController;
@@ -41,18 +43,18 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/education', [EducationPageController::class, 'index'])->name('education.index');
     Route::patch('/education', [EducationPageController::class, 'update'])->name('education.update');
 
+    Route::get('/method', [MethodPageController::class, 'index'])->name('method.index');
+    Route::patch('/method', [MethodPageController::class, 'update'])->name('method.update');
+
+    Route::get('/about', [AboutPageController::class, 'index'])->name('about.index');
+    Route::patch('/about', [AboutPageController::class, 'update'])->name('about.update');
+
     Route::get('/queries', function () {
         return view('pages.queries');
     })->name('queries.index');
-    Route::get('/method', function () {
-        return view('pages.method');
-    })->name('method.index');
     Route::get('/schedule', function () {
         return view('pages.schedule');
     })->name('schedule.index');
-    Route::get('/about', function () {
-        return view('pages.about');
-    })->name('about.index');
     Route::get('/posts', function () {
         return view('pages.posts');
     })->name('posts.index');
