@@ -2,43 +2,51 @@
 
 namespace App\Http\Middleware;
 
+use App\Clara\Clara;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
 
 class HandleInertiaRequests extends Middleware
 {
-    /**
-     * The root template that is loaded on the first page visit.
-     *
-     * @var string
-     */
     protected $rootView = 'app';
 
-    /**
-     * Determine the current asset version.
-     */
-    public function version(Request $request): string|null
+    public function version(Request $request): ?string
     {
         return parent::version($request);
     }
 
-    /**
-     * Define the props that are shared by default.
-     *
-     * @return array<string, mixed>
-     */
+    protected function createAcronym($string): ?string
+    {
+        $output = null;
+        $token = strtok($string, ' ');
+        while ($token !== false) {
+            $output .= $token[0];
+            $token = strtok(' ');
+        }
+
+        return $output;
+    }
+
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
             'auth' => [
-                'user' => $request->user(),
+                'user' => $request->user() ? [
+                    'acronym' => $this->createAcronym($request->user()->name),
+                    'id' => $request->user()->id,
+                    'username' => $request->user()->username,
+                    'name' => $request->user()->name,
+                    'email' => $request->user()->email,
+                ] : null,
             ],
-            'ziggy' => function () use ($request) {
-                return array_merge((new Ziggy)->toArray(), [
+            'ziggy' => fn () => [
+                ...(new Ziggy)->toArray(), ...[
                     'location' => $request->url(),
-                ]);
-            },
+                ],
+            ],
+
+            'hasTermsAndPrivacyPolicyFeature' => Clara::hasTermsAndPrivacyPolicyFeature(),
         ]);
     }
 }

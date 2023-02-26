@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Laravel\Pennant\Feature;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 

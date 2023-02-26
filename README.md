@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+### tl;dr
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+```bash
+git clone https://github.com/irsyadadl/inertia.ts.git 'project'
+cd project
+composer install
+cp .env.example .env
+php artisan key:generate
+npm i && npm run build
+```
 
-## About Laravel
+> This project using React `v18` and Laravel `v10`
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Laravel Inertia React w/ Typescript
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+By default, if we use package like Laravel breeze, it'll use regular javascript react by default. But this project is for you who want to use inertia.js with typescript boilerplate.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project has come with some features like:
+- Authentication
+- User Profile
+- User Avatar
+- User Password
+- User Delete
 
-## Learning Laravel
+### The default branch has been renamed!
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**9.x** is now named **laravel-9.x**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+If you have a local clone, you can update it by running the following commands.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+git branch -m 9.x laravel-9.x
+git fetch origin
+git branch -u origin/laravel-9.x laravel-9.x
+git remote set-head origin -a
+```
 
-## Laravel Sponsors
+### About Laravel
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling.
+
+### About Inertia.js
+
+Inertia.js lets you quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers.
+
+### About Typescript
+
+Typescript is a strict syntactical superset of JavaScript and adds optional static typing to the language.
+
+### Available scripts
+
+Feel free to use someting like [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/). It just node package manager I have, so make yours.
+
+```bash
+# Format with prettier
+npm run format
+
+# Start development
+npm run dev
+
+# Build the app
+npm run dev
+
+# Testing for SSR
+npm run test-ssr
+```
+
+### Components
+This project has a few helpers available to you. You can use them in your components like this:
+
+#### useRoute()
+Gives you access to a typed version of [ziggy-js's](https://github.com/tighten/ziggy) route() function.
+
+```tsx
+import useRoute from '@/hooks/useRoute';
+
+export default function SomeComponent() {
+  const route = useRoute();
+
+  return <a href={route('profile.edit')}>Edit profile</a>;
+}
+```
+
+#### useTypedPage()
+Gives you access to a typed version of usePage() from inertia.js
+```tsx
+import useTypedPage from '@/hooks/useTypedPage';
+export default function SomeComponent() {
+    const { props } = useTypedPage<{ canViewThisPage: boolean; }>();
+    const { canViewThisPage, user } = props;
+}
+```
+### Update profile information
+Of course it is not just about authentication, but also about updating user profile information, password, and deleting account.
+
+![Screenshot of the project](https://pbs.twimg.com/media/Fhh7nR0aUAESOfq?format=jpg&name=4096x4096)
+
+If you like making new features, feel free to make a [pull request](https://github.com/irsyadadl/inertia.ts). I'll be happy to review it.
+
+### Thanks to
+
+-   [Laravel](https://github.com/laravel/framework)
+-   [Inertia](https://github.com/inertiajs/inertia) with [React](https://github.com/facebook/react) and [Typescript](https://github.com/microsoft/TypeScript)
+-   [Vite](https://vitejs.dev/) with [Vite plugin](https://github.com/laravel/vite-plugin) and friends
+-   [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) and friends
+-   [clsx](https://github.com/lukeed/clsx)
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+[//]: # '-   **[Teil](https://teil.app/)**'
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   **[Parsinta](https://parsinta.com/)**
+-   **[Irsyad Notes](https://irsyadnotes.com/)**
