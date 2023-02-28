@@ -22,12 +22,11 @@ const ResponsiveNavbar = () => {
                     </Link>
                     <Dropdown triggerWithMenuIcon>
                         <div>
-                            <Dropdown.Link href={route('home')}>Home</Dropdown.Link>
+                            <Dropdown.Link href={route('main')}>Головне</Dropdown.Link>
                         </div>
                         {user ? (
                             <div className='divide-y'>
                                 <div>
-                                    <Dropdown.Link href={route('dashboard')}>Dashboard</Dropdown.Link>
                                     <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
                                 </div>
                                 <div>

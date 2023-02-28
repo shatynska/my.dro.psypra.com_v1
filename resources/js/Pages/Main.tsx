@@ -2,7 +2,7 @@ import { Head } from '@inertiajs/react';
 import AppLayout from '@/Layouts/AppLayout';
 import Container from '@/Components/Container';
 
-export default function Home() {
+export default function Main() {
     return (
         <>
             <Head title='Головне' />
@@ -19,4 +19,4 @@ export default function Home() {
     );
 }
 
-Home.layout = (page: any) => <AppLayout children={page} />;
+Main.layout = (page: any) => <AppLayout children={page} />;

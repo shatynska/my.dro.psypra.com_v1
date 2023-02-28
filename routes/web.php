@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\PhotosController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,15 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+Route::middleware('auth', 'verified')->group(
+    function () {
 
-Route::get('/dashboard', DashboardController::class)->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/about', AboutController::class)->name('about');
-Route::controller(ProfileController::class)->middleware('auth')->group(function () {
-    Route::get('/profile/edit', 'edit')->name('profile.edit');
-    Route::patch('/profile', 'update')->name('profile.update');
-    Route::delete('/profile', 'destroy')->name('profile.destroy');
-});
+        Route::get('/', MainController::class)->name('main');
 
-require __DIR__.'/features.php';
-require __DIR__.'/auth.php';
+        Route::get('/photos', PhotosController::class)->name('photos');
+
+        Route::controller(ProfileController::class)->group(function () {
+            Route::get('/profile/edit', 'edit')->name('profile.edit');
+            Route::patch('/profile', 'update')->name('profile.update');
+            Route::delete('/profile', 'destroy')->name('profile.destroy');
+        });
+    }
+);
+
+
+require __DIR__ . '/features.php';
+require __DIR__ . '/auth.php';

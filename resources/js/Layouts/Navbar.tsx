@@ -18,17 +18,12 @@ export default function Navbar() {
                             </Link>
                         </div>
                         <div className='hidden gap-x-8 sm:-my-px sm:ml-10 sm:flex'>
-                            <NavLink active={route().current('home')} href='/'>
-                                Home
+                            <NavLink active={route().current('main')} href='/'>
+                                Головне
                             </NavLink>
-                            <NavLink active={route().current('about')} href={route('about')}>
-                                About
+                            <NavLink active={route().current('photos')} href={route('photos')}>
+                                Фото
                             </NavLink>
-                            {user && (
-                                <NavLink active={route().current('dashboard')} href='/dashboard'>
-                                    Dashboard
-                                </NavLink>
-                            )}
                         </div>
                     </div>
                     {user ? (
@@ -52,9 +47,6 @@ export default function Navbar() {
                                         <Dropdown.Divider />
                                     </>
                                 ) : null}
-                                <Dropdown.Link isActive={route().current('dashboard')} href={route('dashboard')}>
-                                    Dashboard
-                                </Dropdown.Link>
                                 <Dropdown.Link isActive={route().current('profile.edit')} href={route('profile.edit')}>
                                     Settings
                                 </Dropdown.Link>

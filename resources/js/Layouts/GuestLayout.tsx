@@ -14,7 +14,7 @@ export default function Guest({ description = null, header = null, children }: G
     return (
         <div className='flex min-h-screen flex-col items-center bg-slate-100 pt-6 sm:justify-center sm:pt-0'>
             <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-                <Link href={route('home')}>
+                <Link href={route('main')}>
                     <ApplicationLogo className='mx-auto h-16 w-16 fill-current text-red-500' />
                 </Link>
                 {header !== null && (
