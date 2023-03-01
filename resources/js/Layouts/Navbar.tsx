@@ -38,14 +38,6 @@ export default function Navbar() {
                                         {user?.name}
                                     </div>
                                 }>
-                                {user?.username ? (
-                                    <>
-                                        <div className='px-4 py-0.5 text-sm text-slate-500'>
-                                            <strong className='font-semibold text-slate-900'>{user.username}</strong>
-                                        </div>
-                                        <Dropdown.Divider />
-                                    </>
-                                ) : null}
                                 <Dropdown.Link isActive={route().current('profile.edit')} href={route('profile.edit')}>
                                     Налаштування
                                 </Dropdown.Link>
