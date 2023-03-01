@@ -61,7 +61,7 @@ export default function Login(args: LoginProps) {
                 </div>
 
                 <div className='mt-4'>
-                    <InputLabel forInput='password' value='Password' />
+                    <InputLabel forInput='password' value='Пароль' />
 
                     <TextInput
                         type='password'
@@ -82,19 +82,19 @@ export default function Login(args: LoginProps) {
                             onChange={(e: { target: { checked: any } }) => e.target.checked}
                         />
 
-                        <span className='ml-2 text-sm text-slate-600'>Remember me</span>
+                        <span className='ml-2 text-sm text-slate-600'>Запам`ятати мене</span>
                     </label>
                 </div>
 
                 <div className='mt-4 flex items-center justify-end'>
                     {canResetPassword && (
                         <Link href='/forgot-password' className='text-sm text-slate-600 underline hover:text-slate-900'>
-                            Forgot your password?
+                            Забули пароль?
                         </Link>
                     )}
 
                     <PrimaryButton className='ml-4' disabled={processing} type='submit'>
-                        Log in
+                        Увійти
                     </PrimaryButton>
                 </div>
             </form>
@@ -106,14 +106,9 @@ Login.layout = (page: React.ReactNode) => {
     const route = useRoute();
     return (
         <GuestLayout
-            header='Login'
+            header='Вхід'
             description={
                 <>
-                    Or{' '}
-                    <Link href={route('register')} className='font-medium text-primary-600 hover:text-primary-500'>
-                        register
-                    </Link>{' '}
-                    if you don't have an account
                 </>
             }
             children={page}
