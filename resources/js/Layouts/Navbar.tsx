@@ -41,25 +41,23 @@ export default function Navbar() {
                                 {user?.username ? (
                                     <>
                                         <div className='px-4 py-0.5 text-sm text-slate-500'>
-                                            Signed as{' '}
                                             <strong className='font-semibold text-slate-900'>{user.username}</strong>
                                         </div>
                                         <Dropdown.Divider />
                                     </>
                                 ) : null}
                                 <Dropdown.Link isActive={route().current('profile.edit')} href={route('profile.edit')}>
-                                    Settings
+                                    Налаштування
                                 </Dropdown.Link>
                                 <Dropdown.Divider />
                                 <Dropdown.Link href={route('logout')} method='post' as='button'>
-                                    Log out
+                                    Вийти
                                 </Dropdown.Link>
                             </Dropdown>
                         </div>
                     ) : (
                         <div className='-mb-px flex gap-x-8'>
-                            <NavLink href={route('login')}>Login</NavLink>
-                            <NavLink href={route('register')}>Register</NavLink>
+                            <NavLink href={route('login')}>Увійти</NavLink>
                         </div>
                     )}
                 </div>
