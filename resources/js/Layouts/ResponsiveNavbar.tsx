@@ -23,23 +23,20 @@ const ResponsiveNavbar = () => {
                     <Dropdown triggerWithMenuIcon>
                         <div>
                             <Dropdown.Link href={route('main')}>Головне</Dropdown.Link>
+                            <Dropdown.Link href={route('photos')}>Фото</Dropdown.Link>
                         </div>
                         {user ? (
                             <div className='divide-y'>
                                 <div>
-                                    <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
-                                </div>
-                                <div>
                                     <Dropdown.Link href={route('logout')} method='post' as='button'>
-                                        Log out
+                                        Вийти
                                     </Dropdown.Link>
                                 </div>
                             </div>
                         ) : (
                             <>
                                 <Dropdown.Divider />
-                                <Dropdown.Link href={route('login')}>Login</Dropdown.Link>
-                                <Dropdown.Link href={route('register')}>Register</Dropdown.Link>
+                                <Dropdown.Link href={route('login')}>Увійти</Dropdown.Link>
                             </>
                         )}
                     </Dropdown>
