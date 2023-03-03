@@ -14,7 +14,7 @@ export default function Navbar() {
                     <div className='flex'>
                         <div className='flex shrink-0 items-center'>
                             <Link href='/'>
-                                <ApplicationLogo className='w-8 fill-red-600' />
+                                <ApplicationLogo className='block h-12 invert opacity-90' />
                             </Link>
                         </div>
                         <div className='hidden gap-x-8 sm:-my-px sm:ml-10 sm:flex'>
