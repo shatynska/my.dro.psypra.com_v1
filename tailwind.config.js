@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors');
 module.exports = {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -21,7 +21,7 @@ module.exports = {
                 },
             },
             colors: {
-              primary: colors.orange,
+                primary: colors.cyan,
             },
             fontFamily: {
                 sans: [
@@ -32,5 +32,5 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'),],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
