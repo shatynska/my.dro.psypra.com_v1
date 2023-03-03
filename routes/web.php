@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth', 'verified')->group(
     function () {
 
-        Route::get('/', MainController::class)->name('main');
+        Route::get('/', [MainController::class, 'index'])->name('main');
+        Route::patch('/', [MainController::class, 'update'])->name('main.update');
 
         Route::get('/photos', PhotosController::class)->name('photos');
 

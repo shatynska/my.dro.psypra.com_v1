@@ -2,13 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Inertia\Response;
+use Illuminate\Http\RedirectResponse;
+use App\Http\Requests\MainUpdateRequest;
 
 class MainController extends Controller
 {
-    public function __invoke(Request $request): Response
+    public function index(): Response
     {
         return inertia('Main');
+    }
+
+    public function update(MainUpdateRequest $request): RedirectResponse
+    {
+        $request->user()->fill($request->validated());
+        dd($request);
+
+        $request->user()->save();
+
+        return to_route('main');
     }
 }
