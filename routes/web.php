@@ -20,7 +20,7 @@ Route::middleware('auth', 'verified')->group(
     function () {
 
         Route::get('/', [MainController::class, 'index'])->name('main');
-        Route::patch('/', [MainController::class, 'update'])->name('main.update');
+        Route::patch('/main', [MainController::class, 'update'])->name('main.update');
 
         Route::get('/photos', PhotosController::class)->name('photos');
 

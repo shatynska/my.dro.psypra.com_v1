@@ -16,7 +16,6 @@ class MainController extends Controller
     public function update(MainUpdateRequest $request): RedirectResponse
     {
         $request->user()->fill($request->validated());
-        dd($request);
 
         $request->user()->save();
 

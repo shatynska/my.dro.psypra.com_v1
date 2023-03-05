@@ -23,9 +23,6 @@ interface UpdateProfileInformationProps extends ProfileEditProps {
 
 export default function Main() {
 
-
-
-
     const route = useRoute();
     const user = useTypedPage().props.auth.user;
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
