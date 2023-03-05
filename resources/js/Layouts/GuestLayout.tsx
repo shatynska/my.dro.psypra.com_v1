@@ -23,7 +23,7 @@ export default function Guest({ description = null, header = null, children }: G
                 {description !== null && <p className='mt-2 text-center text-sm text-slate-600'>{description}</p>}
             </div>
 
-            <div className='mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg'>
+            <div className='mt-6 w-full overflow-hidden bg-white px-6 py-8 shadow-md sm:max-w-md sm:rounded-lg'>
                 {children}
             </div>
         </div>
