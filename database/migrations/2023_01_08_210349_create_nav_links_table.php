@@ -8,19 +8,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('nav_links', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('scope');
-            $table->text('value');
+            $table->string('title')->unique();
+            $table->string('route')->unique();
+            $table->integer('ordering')->default(0);
             $table->timestamps();
-
-            $table->unique(['name', 'scope']);
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('nav_links');
     }
 };

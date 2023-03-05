@@ -8,19 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('hours', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('scope');
-            $table->text('value');
+            $table->string('title')->unique();
+            $table->foreignId('day_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
-
-            $table->unique(['name', 'scope']);
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('hours');
     }
 };
