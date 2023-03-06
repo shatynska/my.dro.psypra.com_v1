@@ -26,6 +26,10 @@ export interface InertiaSharedProps {
             email_verified_at: string | null;
             admin: boolean;
         };
+        specialist: {
+            id: number;
+            name: string;
+        };
     };
     errorBags: any;
     errors: any;

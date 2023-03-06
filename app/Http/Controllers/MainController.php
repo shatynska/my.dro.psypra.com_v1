@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Inertia\Response;
+use App\Models\Specialist;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\MainUpdateRequest;
 
@@ -15,9 +16,11 @@ class MainController extends Controller
 
     public function update(MainUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $specialist = Specialist::first();
 
-        $request->user()->save();
+        $specialist->update([
+            'name' => $request->input('name'),
+        ]);
 
         return to_route('main');
     }
