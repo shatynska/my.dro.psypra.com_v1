@@ -20,6 +20,7 @@ class MainController extends Controller
 
         $specialist->update([
             'name' => $request->input('name'),
+            'last_name' => $request->input('last_name'),
         ]);
 
         return to_route('main');

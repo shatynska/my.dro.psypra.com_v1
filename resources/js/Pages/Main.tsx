@@ -17,6 +17,7 @@ export default function Main() {
     const specialist = useTypedPage().props.auth.specialist;
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: specialist.name,
+        last_name: specialist.last_name,
     });
 
     const submit = (e: { preventDefault: () => void }) => {
@@ -56,6 +57,21 @@ export default function Main() {
                                             />
 
                                             <InputError className='mt-2' message={errors.name} />
+                                        </div>
+
+                                        <div>
+                                            <InputLabel forInput='last_name' value='Прізвище' />
+
+                                            <TextInput
+                                                id='last_name'
+                                                type='text'
+                                                value={data.last_name}
+                                                onChange={(e) => setData('last_name', e.target.value)}
+                                                required
+                                                autoComplete='last_name'
+                                            />
+
+                                            <InputError className='mt-2' message={errors.last_name} />
                                         </div>
                                     
 
