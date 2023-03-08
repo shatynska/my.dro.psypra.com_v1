@@ -11,7 +11,11 @@ class MainController extends Controller
 {
     public function index(): Response
     {
-        return inertia('Main');
+        $specialist = Specialist::first();
+
+        return inertia('Main', [
+            'specialist' => $specialist
+        ]);
     }
 
     public function update(MainUpdateRequest $request): RedirectResponse

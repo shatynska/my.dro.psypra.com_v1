@@ -42,6 +42,7 @@ class HandleInertiaRequests extends Middleware
                 'specialist' => $request->user() ? [
                     'id' => $request->user()->specialist->id,
                     'name' => $request->user()->specialist->name,
+                    'last_name' => $request->user()->specialist->last_name,
                 ] : null,
             ],
             'ziggy' => fn () => [

@@ -11,10 +11,15 @@ import { Transition } from '@headlessui/react';
 import useTypedPage from '@/Hooks/useTypedPage';
 import useRoute from '@/Hooks/useRoute';
 
-export default function Main() {
+interface Specialist {
+    name: string,
+    last_name: string
+}
+
+export default function Main({ specialist }:Specialist) {
 
     const route = useRoute();
-    const specialist = useTypedPage().props.auth.specialist;
+    // const specialist = useTypedPage().specialist;
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: specialist.name,
         last_name: specialist.last_name,
@@ -52,7 +57,6 @@ export default function Main() {
                                                 value={data.name}
                                                 onChange={(e) => setData('name', e.target.value)}
                                                 required
-                                                autoFocus
                                                 autoComplete='name'
                                             />
 
