@@ -29,7 +29,6 @@ export interface InertiaSharedProps {
         specialist: {
             id: number;
             name: string;
-            last_name: string;
         };
     };
     errorBags: any;

@@ -16,10 +16,9 @@ interface Specialist {
     last_name: string
 }
 
-export default function Main({ specialist }:Specialist) {
+export default function Main({ specialist }: { specialist: Specialist } ) {
 
     const route = useRoute();
-    // const specialist = useTypedPage().specialist;
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: specialist.name,
         last_name: specialist.last_name,
