@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Inertia\Response;
+use App\Models\Attribute;
 use App\Models\Specialist;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\MainUpdateRequest;
@@ -12,9 +13,11 @@ class MainController extends Controller
     public function index(): Response
     {
         $specialist = Specialist::first();
+        $mainAttributes = Attribute::where('is_main_attribute', true)->get();
 
         return inertia('Main', [
-            'specialist' => $specialist
+            'specialist' => $specialist,
+            'mainAttributes' => $mainAttributes,
         ]);
     }
 

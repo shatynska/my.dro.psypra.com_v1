@@ -16,12 +16,17 @@ interface Specialist {
     last_name: string
 }
 
-export default function Main({ specialist }: { specialist: Specialist } ) {
+interface MainAttribute {
+ title: string;
+}
+
+export default function Main({ specialist, mainAttributes }: { specialist: Specialist, mainAttributes: MainAttribute[] }) {
 
     const route = useRoute();
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: specialist.name,
         last_name: specialist.last_name,
+        title: mainAttributes
     });
 
     const submit = (e: { preventDefault: () => void }) => {
@@ -77,6 +82,20 @@ export default function Main({ specialist }: { specialist: Specialist } ) {
                                             <InputError className='mt-2' message={errors.last_name} />
                                         </div>
                                     
+
+                                        <div>
+                                            <InputLabel forInput='title' value='Щось' />
+
+                                            <TextInput
+                                                id='title'
+                                                type='text'
+                                                value={data.title[0]['title']}
+                                                onChange={(e) => setData('title', e.target.value)}
+                                                autoComplete='title'
+                                            />
+
+                                            <InputError className='mt-2' message={errors.title} />
+                                        </div>
 
                                         <div className='flex items-center gap-4'>
                                             <PrimaryButton disabled={processing}>Зберегти</PrimaryButton>
