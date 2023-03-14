@@ -6,6 +6,7 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
+import Checkbox from '@/Components/Checkbox';
 import { Link, useForm } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
 import useTypedPage from '@/Hooks/useTypedPage';
@@ -82,19 +83,10 @@ export default function Main({ specialist, mainAttributes }: { specialist: Speci
                                             <InputError className='mt-2' message={errors.last_name} />
                                         </div>
                                     
-
                                         <div>
-                                            <InputLabel forInput='title' value='Щось' />
+                                        
+                                            {data.title.map((t) => <h2 className='text-lg font-medium text-slate-900'>{ t.title }</h2>)}
 
-                                            <TextInput
-                                                id='title'
-                                                type='text'
-                                                value={data.title[0]['title']}
-                                                onChange={(e) => setData('title', e.target.value)}
-                                                autoComplete='title'
-                                            />
-
-                                            <InputError className='mt-2' message={errors.title} />
                                         </div>
 
                                         <div className='flex items-center gap-4'>
